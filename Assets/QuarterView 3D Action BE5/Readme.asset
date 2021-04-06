@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aeab3e5f29bee4c859e1bbcbcae785, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 14c4b9c6e45f89548a3cfcc514ca788e, type: 3}
+  title: QuarterView 3D Action
+  sections:
+  - heading: 쿼터뷰 액션(Quarter View Action)
+    text: '쿼터뷰 시점으로 다양한 액션을 펼치며 적들을 물리치고 보스와 싸우는 장르입니다.'
+    linkText: 
+    url: 	
+  - heading: 
+    text: '골드메탈 기초 강좌 BE5 진행에 필요한 에셋 팩으로 애니메이션이 첨부된 3D모델과 파티클을 포함하고 있습니다.'
+    linkText: BE5 강좌 재생목록
+    url: https://www.youtube.com/playlist?list=PLO-mt5Iu5TeYkrBzWKuTCl6IUm_bA6BKy
+  - heading: 
+    text: '골드메탈 출저만 표기하는 전제 하에 자유롭게 사용 가능합니다. (상용 가능)'
+    linkText: 골드메탈 스튜디오
+    url: https://www.goldmetal.co.kr
+  - heading: 
+    text: 'Copyright ⓒ 2021 Goldmetal'
+    linkText:
+    url:
+  loadedLayout: 1
