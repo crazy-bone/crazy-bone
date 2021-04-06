@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     {
         if (jDown && !isJump)
         {
-            rigid.AddForce(Vector3.up * 15, ForceMode.Impulse);
+            rigid.AddForce(Vector3.up * 22, ForceMode.Impulse);
             anim.SetBool("isJump", true);
             anim.SetTrigger("doJump");
             isJump = true;
