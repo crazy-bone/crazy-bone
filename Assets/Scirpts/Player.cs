@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     float vAxis;
     bool wDown;
     bool jDown;
+
     bool isJump;
+    bool isDodge;
 
     Vector3 moveVec;
 
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
         Move();
         Turn();
         Jump();
+        Dodge(); 
        
     }
     void GetInput()
@@ -58,13 +61,31 @@ public class Player : MonoBehaviour
     
     void Jump()
     {
-        if (jDown && !isJump)
+        if (jDown && moveVec == Vector3.zero && !isJump)
         {
             rigid.AddForce(Vector3.up * 22, ForceMode.Impulse);
             anim.SetBool("isJump", true);
             anim.SetTrigger("doJump");
             isJump = true;
         }
+    }
+    void Dodge()
+    {
+        if (jDown && moveVec != Vector3.zero && !isJump)
+        {
+            speed *= 2;
+            anim.SetTrigger("doDodge");
+            isDodge = true;
+
+            Invoke("DodgeOut", 0.4f);
+        }
+    }
+
+    void DodgeOut()
+    {
+        speed *= 0.5f;
+        isDodge = false;
+
     }
 
     void OnCollisionEnter(Collision collision)
