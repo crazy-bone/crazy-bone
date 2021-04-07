@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
     {
         if (jDown && moveVec != Vector3.zero && !isJump && !isDodge)
         {
-            DodgeVec = moveVec;
+            dodgeVec = moveVec;
             speed *= 2;
             anim.SetTrigger("doDodge");
             isDodge = true;
