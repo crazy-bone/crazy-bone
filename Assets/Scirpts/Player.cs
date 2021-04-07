@@ -5,10 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public GameObject[] weapons;
+    public bool[] hasWeapons;
+
     float hAxis;
     float vAxis;
+
     bool wDown;
     bool jDown;
+    bool iDown;
 
     bool isJump;
     bool isDodge;
@@ -19,6 +24,8 @@ public class Player : MonoBehaviour
     Rigidbody rigid;
 
     Animator anim;
+
+    GameObject nearObject;
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,7 +41,8 @@ public class Player : MonoBehaviour
         Move();
         Turn();
         Jump();
-        Dodge(); 
+        Dodge();
+        interation();
        
     }
     void GetInput()
@@ -43,6 +51,7 @@ public class Player : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
         wDown = Input.GetButton("Walk");
         jDown = Input.GetButtonDown("Jump");
+        iDown = Input.GetButtonDown("Interation");
     }
     
     void Move()
@@ -93,6 +102,18 @@ public class Player : MonoBehaviour
 
     }
 
+    void interation()
+    {
+        if (iDown && nearObject != null && ! isJump && ! isDodge)
+        {
+            if(nearObject.tag == "Weapon")
+            {
+                Item item = nearObject.GetComponent<Item>();
+                int weaponIndex = item.value;
+            }
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Floor")
@@ -101,5 +122,18 @@ public class Player : MonoBehaviour
             isJump = false;
            
         }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Weapon")
+            nearObject = other.gameObject;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Weapon")
+            nearObject = null;
+        
     }
 }
