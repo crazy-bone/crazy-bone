@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         Turn();
         Jump();
         Dodge();
-        interation();
+        Interation();
        
     }
     void GetInput()
@@ -102,14 +102,17 @@ public class Player : MonoBehaviour
 
     }
 
-    void interation()
+    void Interation()
     {
-        if (iDown && nearObject != null && ! isJump && ! isDodge)
+        if (iDown && nearObject != null && !isJump && !isDodge)
         {
             if(nearObject.tag == "Weapon")
             {
                 Item item = nearObject.GetComponent<Item>();
                 int weaponIndex = item.value;
+                hasWeapons[weaponIndex] = true;
+
+                Destroy(nearObject);
             }
         }
     }
