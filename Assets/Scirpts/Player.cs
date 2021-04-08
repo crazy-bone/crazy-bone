@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     bool wDown;
     bool jDown;
     bool iDown;
+    bool sDown1;
+    bool sDown2;
+    bool sDown3;
 
     bool isJump;
     bool isDodge;
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
         Jump();
         Dodge();
         Interation();
+        Swap();
        
     }
     void GetInput()
@@ -52,6 +56,9 @@ public class Player : MonoBehaviour
         wDown = Input.GetButton("Walk");
         jDown = Input.GetButtonDown("Jump");
         iDown = Input.GetButtonDown("Interation");
+        sDown1 = Input.GetButtonDown("Swap1");
+        sDown2 = Input.GetButtonDown("Swap2");
+        sDown3 = Input.GetButtonDown("Swap3");
     }
     
     void Move()
@@ -100,6 +107,19 @@ public class Player : MonoBehaviour
         speed *= 0.5f;
         isDodge = false;
 
+    }
+
+    void Swap()
+    {
+        int weaponIndex = -1;
+        if (sDown1) weaponIndex = 0;
+        if (sDown2) weaponIndex = 1;
+        if (sDown3) weaponIndex = 2;
+
+        if ((sDown1 || sDown2 || sDown3) && !isJump && !isDodge)
+        {
+            weapons[weaponIndex].SetActive(true);
+        }
     }
 
     void Interation()
