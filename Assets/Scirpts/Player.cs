@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     bool isJump;
     bool isDodge;
     bool isSwap;
+    bool isBorder;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -78,8 +79,9 @@ public class Player : MonoBehaviour
         if (isSwap)
             moveVec = Vector3.zero;
 
-        transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
-
+        if (!isBorder)
+            transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
+       
         anim.SetBool("isRun", moveVec != Vector3.zero);
         anim.SetBool("isWalk", wDown);
     }
@@ -169,6 +171,25 @@ public class Player : MonoBehaviour
                 Destroy(nearObject);
             }
         }
+    }
+
+
+    void FreezeRotation()
+    {
+        rigid.angularVelocity = Vector3.zero;
+    }
+
+    void StopToWall()
+    {
+        Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
+        isBorder = Physics.Raycast(transform.position, transform.forward, 5, LayerMask.GetMask("Wall"));    
+
+    }
+
+    private void FixedUpdate()
+    {
+        FreezeRotation();
+        StopToWall();
     }
 
     void OnCollisionEnter(Collision collision)
