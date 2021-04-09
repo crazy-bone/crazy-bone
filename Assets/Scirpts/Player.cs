@@ -17,9 +17,11 @@ public class Player : MonoBehaviour
     bool sDown1;
     bool sDown2;
     bool sDown3;
+    bool shiftDown;
 
     bool isJump;
     bool isDodge;
+    bool isSwap;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -61,6 +63,7 @@ public class Player : MonoBehaviour
         sDown1 = Input.GetButtonDown("Swap1");
         sDown2 = Input.GetButtonDown("Swap2");
         sDown3 = Input.GetButtonDown("Swap3");
+        shiftDown = Input.GetButtonDown("shiftDown");
     }
     
     void Move()
@@ -83,7 +86,7 @@ public class Player : MonoBehaviour
     
     void Jump()
     {
-        if (jDown && moveVec == Vector3.zero && !isJump && !isDodge)
+        if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 22, ForceMode.Impulse);
             anim.SetBool("isJump", true);
@@ -93,20 +96,20 @@ public class Player : MonoBehaviour
     }
     void Dodge()
     {
-        if (jDown && moveVec != Vector3.zero && !isJump && !isDodge)
+        if (shiftDown && !isDodge && !isSwap)
         {
             dodgeVec = moveVec;
-            speed *= 2;
+            speed *= 10;
             anim.SetTrigger("doDodge");
             isDodge = true;
 
-            Invoke("DodgeOut", 0.5f);
+            Invoke("DodgeOut", 0.3f);
         }
     }
 
     void DodgeOut()
     {
-        speed *= 0.5f;
+        speed *= 0.1f;
         isDodge = false;
 
     }
@@ -125,7 +128,22 @@ public class Player : MonoBehaviour
 
             equipWeapon = weapons[weaponIndex];
             equipWeapon.SetActive(true);
+
+            anim.SetTrigger("doSwap");
+
+            isSwap = true;
+
+            Invoke("SwapOut", 0.4f);
+
         }
+
+        void SwapOut()
+        {
+            speed *= 0.5f;
+            isSwap = false;
+
+        }
+
     }
 
     void Interation()
