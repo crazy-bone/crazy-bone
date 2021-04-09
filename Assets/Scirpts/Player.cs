@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
     GameObject nearObject;
     GameObject equipWeapon;
 
+    int equipWeaponIndex = -1;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -72,6 +74,9 @@ public class Player : MonoBehaviour
 
         if (isDodge)
             moveVec = dodgeVec;
+
+        if (isSwap)
+            moveVec = Vector3.zero;
 
         transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
 
@@ -116,6 +121,13 @@ public class Player : MonoBehaviour
 
     void Swap()
     {
+        if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
+            return;
+        if (sDown2 && (!hasWeapons[1] || equipWeaponIndex == 1))
+            return;
+        if (sDown3 && (!hasWeapons[2] || equipWeaponIndex == 2))
+            return;
+
         int weaponIndex = -1;
         if (sDown1) weaponIndex = 0;
         if (sDown2) weaponIndex = 1;
@@ -123,9 +135,10 @@ public class Player : MonoBehaviour
 
         if ((sDown1 || sDown2 || sDown3) && !isJump && !isDodge)
         {
-            if(equipWeapon !=null)
+            if (equipWeapon != null)
                 equipWeapon.SetActive(false);
 
+            equipWeaponIndex = weaponIndex;
             equipWeapon = weapons[weaponIndex];
             equipWeapon.SetActive(true);
 
@@ -136,17 +149,14 @@ public class Player : MonoBehaviour
             Invoke("SwapOut", 0.4f);
 
         }
-
-        void SwapOut()
-        {
-            speed *= 0.5f;
-            isSwap = false;
-
-        }
-
     }
 
-    void Interation()
+    void SwapOut()
+    {
+        isSwap = false;
+    }
+
+        void Interation()
     {
         if (iDown && nearObject != null && !isJump && !isDodge)
         {
