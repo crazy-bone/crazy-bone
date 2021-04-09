@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     Animator anim;
 
     GameObject nearObject;
+    GameObject equipWeapon;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -118,7 +120,11 @@ public class Player : MonoBehaviour
 
         if ((sDown1 || sDown2 || sDown3) && !isJump && !isDodge)
         {
-            weapons[weaponIndex].SetActive(true);
+            if(equipWeapon !=null)
+                equipWeapon.SetActive(false);
+
+            equipWeapon = weapons[weaponIndex];
+            equipWeapon.SetActive(true);
         }
     }
 
