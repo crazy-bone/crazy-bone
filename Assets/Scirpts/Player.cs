@@ -8,6 +8,16 @@ public class Player : MonoBehaviour
     public GameObject[] weapons;
     public bool[] hasWeapons;
 
+    public int ammo;
+    public int coin;
+    public int health;
+    public int hasGrenades;
+
+    public int maxAmmo;
+    public int maxCoin;
+    public int macHealth;
+    public int masHasGrenades;
+
     float hAxis;
     float vAxis;
 
@@ -54,7 +64,9 @@ public class Player : MonoBehaviour
         Dodge();
         Interation();
         Swap();
-       
+
+      
+
     }
     void GetInput()
     {
@@ -178,7 +190,7 @@ public class Player : MonoBehaviour
     {
         rigid.angularVelocity = Vector3.zero;
     }
-
+ 
     void StopToWall()
     {
         Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
