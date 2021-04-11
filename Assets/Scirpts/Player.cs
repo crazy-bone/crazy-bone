@@ -7,11 +7,12 @@ public class Player : MonoBehaviour
     public float speed;
     public GameObject[] weapons;
     public bool[] hasWeapons;
+    public GameObject[] grenades;
+    public int hasGrenades;
 
     public int ammo;
     public int coin;
     public int health;
-    public int hasGrenades;
 
     public int maxAmmo;
     public int maxCoin;
@@ -240,7 +241,7 @@ public class Player : MonoBehaviour
                     hasGrenades += item.value;
                     if (hasGrenades > maxHasGrenades)
                         hasGrenades = maxHasGrenades;
-                    break;
+                    break; 
 
             }
             Destroy(other.gameObject);
