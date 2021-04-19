@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     bool wDown;
     bool jDown;
+    bool fDown;
     bool iDown;
     bool sDown1;
     bool sDown2;
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
     bool isDodge;
     bool isSwap;
     bool isBorder;
+    bool isFireReady;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -43,9 +45,10 @@ public class Player : MonoBehaviour
     Animator anim;
 
     GameObject nearObject;
-    GameObject equipWeapon;
+    Weapon equipWeapon;
 
     int equipWeaponIndex = -1;
+    float fireDelay;
 
     // Start is called before the first frame update
     void Awake()
@@ -151,11 +154,11 @@ public class Player : MonoBehaviour
         if ((sDown1 || sDown2 || sDown3) && !isJump && !isDodge)
         {
             if (equipWeapon != null)
-                equipWeapon.SetActive(false);
+                equipWeapon.gameObject.SetActive(false);
 
             equipWeaponIndex = weaponIndex;
-            equipWeapon = weapons[weaponIndex];
-            equipWeapon.SetActive(true);
+            equipWeapon = weapons[weaponIndex].GetComponent<Weapon>();
+            equipWeapon.gameObject.SetActive(true);
 
             anim.SetTrigger("doSwap");
 
