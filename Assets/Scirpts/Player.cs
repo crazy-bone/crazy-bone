@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
         Move();
         Turn();
         Jump();
+        Attack();
         Dodge();
         Interation();
         Swap();
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
         wDown = Input.GetButton("Walk");
         jDown = Input.GetButtonDown("Jump");
+        fDown = Input.GetButtonDown("Fire1");
         iDown = Input.GetButtonDown("Interation");
         sDown1 = Input.GetButtonDown("Swap1");
         sDown2 = Input.GetButtonDown("Swap2");
@@ -117,6 +119,21 @@ public class Player : MonoBehaviour
             isJump = true;
         }
     }
+
+    void Attack()
+    {
+        if (equipWeapon == null)
+            return;
+
+        fireDelay += Time.deltaTime;
+        isFireReady = equipWeapon.rate < fireDelay;
+
+        if (fDown && isFireReady && !isDodge && isSwap)
+        {
+            equipWeapon.Use();
+        }
+    }
+    
     void Dodge()
     {
         if (shiftDown && !isDodge && !isSwap)
