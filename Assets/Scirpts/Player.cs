@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     bool isDodge;
     bool isSwap;
     bool isBorder;
-    bool isFireReady;
+    bool isFireReady =true;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap)
+        if (isSwap || !isFireReady)
             moveVec = Vector3.zero;
 
         if (!isBorder)
