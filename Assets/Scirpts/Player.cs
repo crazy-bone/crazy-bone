@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
 
-    //Animator anim;
+    Animator anim;
 
     GameObject nearObject;
     Weapon equipWeapon;
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        //anim = GetComponentInChildren<Animator>();
+        anim = GetComponentInChildren<Animator>();
 
     }
 
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         if (!isBorder)
             transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
        
-        //anim.SetBool("isRun", moveVec != Vector3.zero);
+        anim.SetBool("isRun", moveVec != Vector3.zero);
         //anim.SetBool("isWalk", wDown);
     }
     
