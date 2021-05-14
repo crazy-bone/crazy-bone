@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rigid;
 
-    Animator anim;
+    //Animator anim;
 
     GameObject nearObject;
     Weapon equipWeapon;
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
-        anim = GetComponentInChildren<Animator>();
+        //anim = GetComponentInChildren<Animator>();
 
     }
 
@@ -100,8 +100,8 @@ public class Player : MonoBehaviour
         if (!isBorder)
             transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
        
-        anim.SetBool("isRun", moveVec != Vector3.zero);
-        anim.SetBool("isWalk", wDown);
+        //anim.SetBool("isRun", moveVec != Vector3.zero);
+        //anim.SetBool("isWalk", wDown);
     }
     
     void Turn()
@@ -114,8 +114,8 @@ public class Player : MonoBehaviour
         if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 22, ForceMode.Impulse);
-            anim.SetBool("isJump", true);
-            anim.SetTrigger("doJump");
+            //anim.SetBool("isJump", true);
+            //anim.SetTrigger("doJump");
             isJump = true;
         }
     }
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
         if (fDown && isFireReady && !isDodge && !isSwap)
         {
             equipWeapon.Use();
-            anim.SetTrigger("doSwing");
+            //anim.SetTrigger("doSwing");
             fireDelay = 0;
         }
     }
@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
         {
             dodgeVec = moveVec;
             speed *= 10;
-            anim.SetTrigger("doDodge");
+            //anim.SetTrigger("doDodge");
             isDodge = true;
 
             Invoke("DodgeOut", 0.3f);
@@ -179,7 +179,7 @@ public class Player : MonoBehaviour
             equipWeapon = weapons[weaponIndex].GetComponent<Weapon>();
             equipWeapon.gameObject.SetActive(true);
 
-            anim.SetTrigger("doSwap");
+            //anim.SetTrigger("doSwap");
 
             isSwap = true;
 
@@ -231,7 +231,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Floor")
         {
-            anim.SetBool("isJump", false); 
+            //anim.SetBool("isJump", false); 
             isJump = false;
            
         }
