@@ -1053,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -6204185299161487116, guid: 66457788f2d46fe46a6b206629406ab2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a42eb24aa95e0d8478de56ba58c12be3, type: 2}
     - target: {fileID: -6170625038081293824, guid: 66457788f2d46fe46a6b206629406ab2, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -1426,6 +1430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6204185299161487116, guid: 67c1b24e0b3cd284e8cffa3784618d2b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a42eb24aa95e0d8478de56ba58c12be3, type: 2}
     - target: {fileID: 919132149155446097, guid: 67c1b24e0b3cd284e8cffa3784618d2b, type: 3}
       propertyPath: m_Name
       value: ronald_fbx
