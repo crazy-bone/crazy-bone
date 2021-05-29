@@ -114,8 +114,8 @@ public class Player : MonoBehaviour
         if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 40, ForceMode.Impulse);
-            //anim.SetBool("isJump", true);
-            //anim.SetTrigger("doJump");
+            anim.SetBool("isJump", true);
+            anim.SetTrigger("doJump");
             isJump = true;
         }
     }
