@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Weapon
   - Melee
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Floor
   - Player
   - Wall
-  - 
+  - Enemy
   - 
   - 
   - 
