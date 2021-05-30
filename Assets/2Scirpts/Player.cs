@@ -132,7 +132,7 @@ public class Player : MonoBehaviour
         {
             equipWeapon.Use();
             //anim.SetTrigger("doSwing");
-            fireDelay = 0;
+            fireDelay = 1;
         }
     }
     
