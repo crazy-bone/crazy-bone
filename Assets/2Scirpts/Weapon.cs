@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -15,6 +16,17 @@ public class Weapon : MonoBehaviour
     public GameObject bullet;
     public Transform bulletCasePos;
     public GameObject bulletCase;
+
+
+    public Text A;
+    public Text B;
+    public Text C;
+    public Text D;
+
+
+    public int wind_velocity;
+
+    Vector3 myHeight;
 
     public void Use()
     {
@@ -45,160 +57,161 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shot()
     {
+
         GameObject intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         Rigidbody bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1000);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1200);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1400);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1600);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1800);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2000);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2200);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2400);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2600);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2800);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 3000);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1000);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1200);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1400);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1600);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1800);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2000);
-        bulletRigid.velocity = bulletPos.forward * -10; 
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2200);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2400);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2600);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2800);
-        bulletRigid.velocity = bulletPos.forward * -10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 3000);
-        bulletRigid.velocity = bulletPos.forward * -10; 
-        yield return new WaitForSeconds(3f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1000);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1200);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1400);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1600);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 1800);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2000);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2200);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2400);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2600);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 2800);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.AddForce(bulletPos.forward * 3000);
-        bulletRigid.velocity = bulletPos.forward * 10;
-        yield return new WaitForSeconds(1f);
+        bulletRigid.velocity = bulletPos.forward * wind_velocity;
+        yield return new WaitForSeconds(4f);
         /*bulletRigid.velocity = bulletPos.forward * 50;//add force도 가능
         yield return new WaitForSeconds(1f);
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
@@ -232,6 +245,22 @@ public class Weapon : MonoBehaviour
         intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         bulletRigid = intantBullet.GetComponent<Rigidbody>();
         bulletRigid.velocity = bulletPos.forward * 250;*/
+     
+    }
+
+    void Update()
+    {
+        GameObject obj = GameObject.Find("Sphere(Clone)");
+
+        Rigidbody X = obj.GetComponent<Rigidbody>();
+
+        
+
+        A.text = string.Format("현재 포탄의 위치 {0}", obj.gameObject.transform.position);
+        B.text = string.Format("현재 포탄의 폭발력 {0}", X.velocity.x);
+        C.text = string.Format("현재 포탄의 mass {0:0.00}kg", X.mass);
+        D.text = string.Format("현재 바람의 방향과 속도 {0:0.00}m/s", wind_velocity);
+        
     }
 
     //use() 메인루틴 -> swing() 서브루틴 -> Use() 메인루틴

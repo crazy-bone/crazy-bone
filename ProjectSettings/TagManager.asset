@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Melee
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
