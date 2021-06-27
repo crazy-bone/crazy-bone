@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     bool isSwap;
     bool isBorder;
     bool isFireReady =true;
+    bool isDamage;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -270,9 +271,25 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-        
+        else if (other.tag == "EnemyBullet")
+        {
+            if (!isDamage)
+            {
+                Bullet enemyBullet = other.GetComponent<Bullet>();
+                health -= enemyBullet.damage;
+                StartCoroutine(OnDamge());
+            }
+        }
     }
 
+    IEnumerator OnDamge()
+    {
+        isDamage = true; 
+
+        yield return new WaitForSeconds(1f);
+
+        isDamage = false;
+    }
 
     void OnTriggerStay(Collider other)
     {
