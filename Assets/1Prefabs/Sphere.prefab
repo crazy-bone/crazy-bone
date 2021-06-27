@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 5898134355196795529}
   - component: {fileID: 5898134355196795534}
   - component: {fileID: -3289919577589830583}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Sphere
-  m_TagString: Bullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

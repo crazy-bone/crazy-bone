@@ -42,8 +42,8 @@ public class Player : MonoBehaviour
     Vector3 dodgeVec;
 
     Rigidbody rigid;
-
     Animator anim;
+    MeshRenderer[] meshs;
 
     GameObject nearObject;
     Weapon equipWeapon;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
-
+        meshs = GetComponentsInChildren<MeshRenderer>();
     }
 
     // Update is called once per frame
@@ -284,11 +284,19 @@ public class Player : MonoBehaviour
 
     IEnumerator OnDamge()
     {
-        isDamage = true; 
+        isDamage = true;
+        foreach (MeshRenderer mesh in meshs)
+        {
+            mesh.material.color = Color.yellow;
+        }
 
         yield return new WaitForSeconds(1f);
 
         isDamage = false;
+        foreach (MeshRenderer mesh in meshs)
+        {
+            mesh.material.color = Color.white;
+        }
     }
 
     void OnTriggerStay(Collider other)
