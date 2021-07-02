@@ -295,7 +295,7 @@ public class Player : MonoBehaviour
         isDamage = false;
         foreach (MeshRenderer mesh in meshs)
         {
-            mesh.material.color = Color.white;
+            mesh.material.color = Color.white; 
         }
     }
 
