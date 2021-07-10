@@ -13,6 +13,6 @@ public class Wind : MonoBehaviour
     {
         Rigidbody bulletRigid = GetComponent<Rigidbody>();
         bulletRigid.velocity = bulletPos.forward * -500;
-        // 트리거 안에 있는동안 계속 적용
+        // 트리거 안에 있는동안 계속 적용/
     }
 }
