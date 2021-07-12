@@ -5,12 +5,17 @@ using UnityEngine;
 public class Boss : Enemy
 {
     public GameObject missile;
+    public GameObject Awl;
     public Transform missilePort;
     public Transform missilePortA;
     public Transform missilePortB;
     public Transform missilePortC;
     public Transform missilePortD;
     public Transform missilePortE;
+    public Transform AwlPort;
+    public Transform AwlPortA;
+    public Transform AwlPortB;
+    public Transform AwlPortC;
     // Start is called before the first frame update
 
     Vector3 lookVec;
@@ -44,15 +49,16 @@ public class Boss : Enemy
         {
             case 0:
             case 1:
+                StartCoroutine(AwlAttack());
                 StartCoroutine(MissileShot());
                 break;
 
             case 2:
             case 3:
-                StartCoroutine(RockShot());
+                StartCoroutine(MissileShot2());
                 break;
             case 4:
-                StartCoroutine(Taunt());
+                StartCoroutine(MissileShot3());
                 break;
         }
     }
@@ -82,7 +88,7 @@ public class Boss : Enemy
 
         StartCoroutine(Think());
     }
-    IEnumerator RockShot()
+    IEnumerator MissileShot2()
     {
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
@@ -109,7 +115,7 @@ public class Boss : Enemy
 
         StartCoroutine(Think());
     }
-    IEnumerator Taunt()
+    IEnumerator MissileShot3()
     {
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
@@ -129,5 +135,21 @@ public class Boss : Enemy
         bossMissile = instantMissile.GetComponent<BossMissile>();
         bossMissile.target = target;
         StartCoroutine(Think());
+    }
+    IEnumerator AwlAttack()
+    {
+        yield return new WaitForSeconds(2.5f);
+        GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
+        instantMissile.GetComponent<BossAwl>();
+
+        instantMissile = Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
+
+        instantMissile.GetComponent<BossAwl>();
+        instantMissile = Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
+
+        instantMissile.GetComponent<BossAwl>();
+        instantMissile = Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
+
+        instantMissile.GetComponent<BossAwl>();
     }
 }
