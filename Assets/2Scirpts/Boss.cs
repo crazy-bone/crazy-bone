@@ -140,15 +140,25 @@ public class Boss : Enemy
     {
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
-        instantMissile.GetComponent<BossAwl>();
+        Rigidbody missileRigid = instantMissile.GetComponent<Rigidbody>();
+        missileRigid.AddForce(AwlPort.up * 100);
 
         instantMissile = Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
+
+        missileRigid = instantMissile.GetComponent<Rigidbody>();
+        missileRigid.AddForce(AwlPort.up * 100);
 
         instantMissile.GetComponent<BossAwl>();
         instantMissile = Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
 
+        missileRigid = instantMissile.GetComponent<Rigidbody>();
+        missileRigid.AddForce(AwlPort.up * 100);
+
         instantMissile.GetComponent<BossAwl>();
         instantMissile = Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
+
+        missileRigid = instantMissile.GetComponent<Rigidbody>();
+        missileRigid.AddForce(AwlPort.up * 100);
 
         instantMissile.GetComponent<BossAwl>();
     }
