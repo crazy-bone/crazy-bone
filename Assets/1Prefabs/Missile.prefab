@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2647417764706789894}
   - component: {fileID: 490305085523655802}
   m_Layer: 15
-  m_Name: Sphere 1 1
+  m_Name: Missile
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4894,7 +4894,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2647417764706789894
