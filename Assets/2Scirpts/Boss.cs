@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
     public GameObject missile;
     public GameObject Awl;
+    public SubBoss SubBossTemplate;
     public Transform missilePort;
     public Transform missilePortA;
     public Transform missilePortB;
@@ -16,11 +17,14 @@ public class Boss : Enemy
     public Transform AwlPortA;
     public Transform AwlPortB;
     public Transform AwlPortC;
+    public Transform[] summonPositions;
+    public int attackPhase = 0; // 전투 페이즈
     // Start is called before the first frame update
-
+    
     Vector3 lookVec;
     Vector3 tauntVec;
     bool isLook;
+    SubBoss[] summonedSubBosses;
 
 
     void Awake()
@@ -39,7 +43,35 @@ public class Boss : Enemy
             transform.LookAt(target.position + lookVec);
         }
 
+        // 전투 페이즈 갱신
+        switch (attackPhase)
+        {
+            case 0: // 페이즈 A
+                if ((float)curHealth/maxHealth <= 3f/3f) // 보스 체력 2/3 이하
+                {
+                    SummonSubBosses();
+                    attackPhase++;
+                }
+                break;
+        }
     }
+
+    void SummonSubBosses()
+    {
+        int i = 0;
+
+        summonedSubBosses = new SubBoss[summonPositions.Length];
+        foreach (Transform position in summonPositions)
+        {
+            if (position == null)
+                continue;
+
+            SubBoss summoned = Instantiate<SubBoss>(SubBossTemplate, position.position, SubBossTemplate.transform.rotation);
+            summoned.gameObject.SetActive(true);
+            summonedSubBosses[i++] = summoned;
+        }
+    }
+
     IEnumerator Think()
     {
         yield return new WaitForSeconds(0.1f);
