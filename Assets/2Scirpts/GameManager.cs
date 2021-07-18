@@ -39,4 +39,11 @@ public class GameManager : MonoBehaviour
 
     }
     */
+
+    void Start()
+    {
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
+        Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
+    }
 }
