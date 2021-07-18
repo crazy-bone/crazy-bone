@@ -4912,6 +4912,7 @@ MonoBehaviour:
   damage: 15
   target: {fileID: 0}
   speed: 10
+  destroyTime: 5
 --- !u!65 &490305085523655802
 BoxCollider:
   m_ObjectHideFlags: 0

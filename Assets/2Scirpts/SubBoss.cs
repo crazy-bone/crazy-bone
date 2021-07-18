@@ -47,6 +47,7 @@ public class SubBoss : MonoBehaviour
         foreach (Transform missilePort in missilePorts)
         {
             BossMissile missile = Instantiate<BossMissile>(missileTemplate, missilePort.position, missilePort.rotation);
+            missile.transform.localScale = new Vector3(1f, 1f, 1f); 
             missile.target = target;
             missile.speed = 50f;
         }
