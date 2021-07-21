@@ -4911,7 +4911,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   target: {fileID: 0}
-  speed: 10
+  moveSpeed: 10
+  turnSpeed: 1
   destroyTime: 5
 --- !u!65 &490305085523655802
 BoxCollider:
