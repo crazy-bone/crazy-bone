@@ -50,10 +50,10 @@ public class Boss : Enemy
             case 0:
             case 1:
                 StartCoroutine(AwlAttack());
+                break;
+            case 2:
                 StartCoroutine(MissileShot());
                 break;
-
-            case 2:
             case 3:
                 StartCoroutine(MissileShot2());
                 break;
@@ -138,28 +138,33 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack()
     {
-        yield return new WaitForSeconds(2.5f);
-        GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
-        Rigidbody missileRigid = instantMissile.GetComponent<Rigidbody>();
-        missileRigid.AddForce(AwlPort.up * 100);
+        yield return new WaitForSeconds(1f);
+        Instantiate(Awl, AwlPort.position, AwlPort.rotation);
+        Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
+        Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
+        Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
 
-        instantMissile = Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(Think());
 
-        missileRigid = instantMissile.GetComponent<Rigidbody>();
-        missileRigid.AddForce(AwlPort.up * 100);
+        //GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
+        //Rigidbody missileRigid = instantMissile.GetComponent<Rigidbody>();
+        //missileRigid.AddForce(AwlPort.up * 1);
 
-        instantMissile.GetComponent<BossAwl>();
-        instantMissile = Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
+        // instantMissile = Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
+        //missileRigid = instantMissile.GetComponent<Rigidbody>();
+        //missileRigid.AddForce(AwlPort.up * 1);
+        //instantMissile.GetComponent<BossAwl>();
 
-        missileRigid = instantMissile.GetComponent<Rigidbody>();
-        missileRigid.AddForce(AwlPort.up * 100);
+        // instantMissile = Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
 
-        instantMissile.GetComponent<BossAwl>();
-        instantMissile = Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
+        //missileRigid = instantMissile.GetComponent<Rigidbody>();
+        //missileRigid.AddForce(AwlPort.up * 1);
+        //instantMissile.GetComponent<BossAwl>();
+        //  instantMissile = Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
 
-        missileRigid = instantMissile.GetComponent<Rigidbody>();
-        missileRigid.AddForce(AwlPort.up * 100);
-
-        instantMissile.GetComponent<BossAwl>();
+        //missileRigid = instantMissile.GetComponent<Rigidbody>();
+        //missileRigid.AddForce(AwlPort.up * 1);
+        //  instantMissile.GetComponent<BossAwl>();
     }
 }

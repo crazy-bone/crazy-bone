@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
-{/*
+{
     public GameObject menuCam;
     public GameObject gameCam;
     public Player player;
@@ -21,22 +21,13 @@ public class GameManager : MonoBehaviour
     public Text B;
     public Text C;
 
-    public Transform bulletPos;
-    public GameObject bullet;
-    public Transform bulletCasePos;
-    public GameObject bulletCase;
-    Vector3 myHeight;
-
-    GameObject obj = GameObject.Find("Sphere(Clone)");
 
     void LateUpdate()
     {
-        myHeight = obj.gameObject.transform.position;
 
-        A.text = string.Format("현재 폭발력의 크기 {0}", 3);
-        B.text = string.Format("A is {0} and B is {1}, {0} - {1} is {2}", 1, 2, 3);
-        C.text = string.Format("A is {0} and B is {1}, {0} - {1} is {2}", 1, 2, 3);
+        A.text = "플레이어 체력 " + player.health + " / " + player.maxHealth;
+        B.text = string.Format("플레이어 코인 {0} / {1}", player.coin, player.maxCoin);
+        C.text = string.Format("장전 수 {0} / {1}", player.ammo, player.maxAmmo);
 
     }
-    */
 }
