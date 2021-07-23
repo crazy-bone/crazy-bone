@@ -70,10 +70,8 @@ public class Player : MonoBehaviour
         Dodge();
         Interation();
         Swap();
-
-      
-
     }
+
     void GetInput()
     {
         hAxis = Input.GetAxisRaw("Horizontal");
@@ -118,6 +116,14 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", true);
             anim.SetTrigger("doJump");
             isJump = true;
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor")
+        {
+            anim.SetBool("isJump", false); 
+            isJump = false;
         }
     }
 
@@ -228,15 +234,7 @@ public class Player : MonoBehaviour
         StopToWall();
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Floor")
-        {
-            //anim.SetBool("isJump", false); 
-            isJump = false;
-           
-        }
-    }
+    
 
     void OnTriggerEnter(Collider other)
     {
