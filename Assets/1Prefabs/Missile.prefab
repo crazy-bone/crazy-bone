@@ -4912,7 +4912,7 @@ MonoBehaviour:
   damage: 15
   target: {fileID: 0}
   moveSpeed: 10
-  turnSpeed: 1
+  turnSpeed: 0.5
   destroyTime: 5
 --- !u!65 &490305085523655802
 BoxCollider:
