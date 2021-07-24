@@ -24,7 +24,7 @@ public class Boss : Enemy
     public Transform AwlPortG;
     public Transform AwlPortH;
     public Transform[] summonPositions;
-    public int attackPhase = 0; // ���� ������
+    public int attackPhase = 0; // 공격 페이즈
     // Start is called before the first frame update
     
     Vector3 lookVec;
@@ -49,11 +49,11 @@ public class Boss : Enemy
             transform.LookAt(target.position + lookVec);
         }
 
-        // ���� ������ ����
+        // 공격 페이즈
         switch (attackPhase)
         {
             case 0: // ������ A
-                if ((float)curHealth/maxHealth <= 3f/3f) // ���� ü�� 2/3 ����
+                if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 2/3 이하인 경우
                 {
                     SummonSubBosses();
                     attackPhase++;
