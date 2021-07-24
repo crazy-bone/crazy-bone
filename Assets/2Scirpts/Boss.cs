@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
     public GameObject missile;
     public GameObject Awl;
+    public SubBoss SubBossTemplate;
     public GameObject AwlNoti;
     public Transform missilePort;
     public Transform missilePortA;
@@ -16,17 +17,20 @@ public class Boss : Enemy
     public Transform AwlPort;
     public Transform AwlPortA;
     public Transform AwlPortB;
-    public Transform AwlPortC;
+    public Transform AwlPortC
     public Transform AwlPortD;
     public Transform AwlPortE;
     public Transform AwlPortF;
     public Transform AwlPortG;
-    public Transform AwlPortH;
+    public Transform AwlPortH;;
+    public Transform[] summonPositions;
+    public int attackPhase = 0; // ���� ������
     // Start is called before the first frame update
-
+    
     Vector3 lookVec;
     Vector3 tauntVec;
     bool isLook;
+    SubBoss[] summonedSubBosses;
 
 
     void Awake()
@@ -45,7 +49,35 @@ public class Boss : Enemy
             transform.LookAt(target.position + lookVec);
         }
 
+        // ���� ������ ����
+        switch (attackPhase)
+        {
+            case 0: // ������ A
+                if ((float)curHealth/maxHealth <= 3f/3f) // ���� ü�� 2/3 ����
+                {
+                    SummonSubBosses();
+                    attackPhase++;
+                }
+                break;
+        }
     }
+
+    void SummonSubBosses()
+    {
+        int i = 0;
+
+        summonedSubBosses = new SubBoss[summonPositions.Length];
+        foreach (Transform position in summonPositions)
+        {
+            if (position == null)
+                continue;
+
+            SubBoss summoned = Instantiate<SubBoss>(SubBossTemplate, position.position, SubBossTemplate.transform.rotation);
+            summoned.gameObject.SetActive(true);
+            summonedSubBosses[i++] = summoned;
+        }
+    }
+
     IEnumerator Think()
     {
         yield return new WaitForSeconds(0.1f);

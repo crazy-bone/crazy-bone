@@ -25,9 +25,16 @@ public class GameManager : MonoBehaviour
     void LateUpdate()
     {
 
-        A.text = "ÇÃ·¹ÀÌ¾î Ã¼·Â " + player.health + " / " + player.maxHealth;
-        B.text = string.Format("ÇÃ·¹ÀÌ¾î ÄÚÀÎ {0} / {1}", player.coin, player.maxCoin);
-        C.text = string.Format("ÀåÀü ¼ö {0} / {1}", player.ammo, player.maxAmmo);
+        A.text = "í”Œë ˆì´ì–´ ì²´ë ¥ " + player.health + " / " + player.maxHealth;
+        B.text = string.Format("í”Œë ˆì´ì–´ ì½”ì¸ {0} / {1}", player.coin, player.maxCoin);
+        C.text = string.Format("ì¥ì „ ìˆ˜ {0} / {1}", player.ammo, player.maxAmmo);
 
+    }
+
+    void Start()
+    {
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
+        Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
     }
 }

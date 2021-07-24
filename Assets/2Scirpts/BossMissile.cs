@@ -6,18 +6,25 @@ using UnityEngine.AI;
 public class BossMissile : Bullet
 {
     public Transform target;
-    NavMeshAgent nav;
-
-    void Awake()
-    {
-        nav = GetComponent<NavMeshAgent>();
-
-    }
+    public float moveSpeed;
+    public float turnSpeed;
+    public float destroyTime;
 
     void Update()
     {
+        // 5ÃÊ ÈÄ ¼Ò¸ê
+        if (destroyTime > 0f)
+            Destroy(gameObject, destroyTime);
 
-        Destroy(gameObject, 5f);
-        nav.SetDestination(target.position);
+        if (target != null)
+        {
+            Vector3 targetPosition = target.position + new Vector3(0f, 5f, 0f);
+            Vector3 direction = targetPosition - transform.position;
+
+            //transform.rotation.SetLookRotation(target.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+        }
     }
 }
