@@ -24,7 +24,8 @@ public class Boss : Enemy
     public Transform AwlPortG;
     public Transform AwlPortH;
     public Transform[] summonPositions;
-    public int attackPhase = 0; // 공격 페이즈
+    /// <summary> 공격 페이즈 </summary>
+    public int attackPhase = 0;
     // Start is called before the first frame update
     
     Vector3 lookVec;
@@ -35,12 +36,16 @@ public class Boss : Enemy
 
     void Awake()
     {
+        base.Awake();
+
         StartCoroutine(Think());
     }
 
     // Update is called once per frame
     void Update()
     {
+        base.Update();
+
         if (isLook)
         {
             float h = Input.GetAxisRaw("Horizontal");
@@ -52,7 +57,7 @@ public class Boss : Enemy
         // 공격 페이즈
         switch (attackPhase)
         {
-            case 0: // ������ A
+            case 0: // 페이즈 A
                 if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 2/3 이하인 경우
                 {
                     SummonSubBosses();

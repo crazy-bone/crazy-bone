@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SubBoss : MonoBehaviour
+public class SubBoss : Enemy
 {
     /// <summary> 플레이어 </summary>
     public Player player;
-    /// <summary> 공격 대상 </summary>
-    public Transform target;
     /// <summary> 미사일 템플릿 Prefab, 클론하여 사용됨 </summary>
     public BossMissile missileTemplate;
     /// <summary> 미사일 발사 위치 </summary>
@@ -32,6 +30,8 @@ public class SubBoss : MonoBehaviour
 
     void Update()
     {
+        base.Update();
+
         navMeshAgent.SetDestination(target.position);
 
         switch (status)

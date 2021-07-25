@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public int maxHealth;
     public int curHealth;
     public Transform target;
+    /// <summary> 체력바 </summary>
+    public Transform HealthBarValue;
 
     Rigidbody rigid;
     BoxCollider boxCollider;
@@ -15,16 +17,29 @@ public class Enemy : MonoBehaviour
     NavMeshAgent nav;
 
 
-    private void Awake()
+    public void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
         nav = GetComponent<NavMeshAgent>();
     }
 
-    void Update()
+    public void Update()
     {
-        nav.SetDestination(target.position);
+        //nav.SetDestination(target.position);
+
+        // 체력바 업데이트
+        UpdateHealthBar();
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (HealthBarValue == null)
+            return;
+        
+        float ratio = (float)curHealth / maxHealth;
+        HealthBarValue.localPosition = new Vector3(1.6f - ratio * 1.6f, 0f, 0f);
+        HealthBarValue.localScale = new Vector3(ratio * 10f, 1f, 1f);
     }
 
     /*private void OnTriggerEnter(Collider other)
