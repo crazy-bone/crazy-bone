@@ -6,7 +6,8 @@ public class Boss : Enemy
 {
     public GameObject missile;
     public GameObject Awl;
-    public SubBoss SubBossTemplate;
+    public SubBoss SubBossRangeTemplate;
+    public SubBoss SubBossMeleeTemplate;
     public GameObject AwlNoti;
     public Transform missilePort;
     public Transform missilePortA;
@@ -57,27 +58,51 @@ public class Boss : Enemy
         // 공격 페이즈
         switch (attackPhase)
         {
-            case 0: // 페이즈 A
-                if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 2/3 이하인 경우
+            case 0: // 페이즈 A 전환
+                if ((float)curHealth/maxHealth <= 2f/3f) // 체력이 2/3 이하인 경우
                 {
-                    SummonSubBosses();
-                    attackPhase++;
+                    attackPhase = 1;
+                    SummonRangeSubBosses();
+                }
+                attackPhase = 1; //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
+                break;
+            case 1: // 페이즈 B 전환
+                if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 1/2 이하인 경우
+                {
+                    attackPhase = 2;
+                    SummonMeleeSubBosses();
                 }
                 break;
         }
     }
 
-    void SummonSubBosses()
+    private void SummonRangeSubBosses()
     {
         int i = 0;
 
-        summonedSubBosses = new SubBoss[summonPositions.Length];
+        summonedSubBosses = new SubBoss[2];
         foreach (Transform position in summonPositions)
         {
             if (position == null)
                 continue;
 
-            SubBoss summoned = Instantiate<SubBoss>(SubBossTemplate, position.position, SubBossTemplate.transform.rotation);
+            SubBoss summoned = Instantiate<SubBoss>(SubBossRangeTemplate, position.position, SubBossRangeTemplate.transform.rotation);
+            summoned.gameObject.SetActive(true);
+            summonedSubBosses[i++] = summoned;
+        }
+    }
+
+    private void SummonMeleeSubBosses()
+    {
+        int i = 0;
+
+        summonedSubBosses = new SubBoss[4];
+        foreach (Transform position in summonPositions)
+        {
+            if (position == null)
+                continue;
+
+            SubBoss summoned = Instantiate<SubBoss>(SubBossMeleeTemplate, position.position, SubBossMeleeTemplate.transform.rotation);
             summoned.gameObject.SetActive(true);
             summonedSubBosses[i++] = summoned;
         }
