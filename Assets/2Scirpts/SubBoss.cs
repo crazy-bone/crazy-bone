@@ -5,6 +5,14 @@ using UnityEngine.AI;
 
 public class SubBoss : Enemy
 {
+    public enum Type
+    {
+        Range,
+        Melee
+    };
+
+    /// <summary> 원거리/근거리 유형 </summary>
+    public Type type;
     /// <summary> 플레이어 </summary>
     public Player player;
     /// <summary> 미사일 템플릿 Prefab, 클론하여 사용됨 </summary>
@@ -49,7 +57,8 @@ public class SubBoss : Enemy
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             player.health -= contactDamage;
-            Destroy(gameObject);
+            if (type == Type.Range) // 원거리 서브웬디고
+                Destroy(gameObject);
         }
     }
 

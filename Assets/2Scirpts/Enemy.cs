@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
     public int curHealth;
     public Transform target;
     /// <summary> 체력바 </summary>
-    public Transform HealthBarValue;
+    public Transform healthBar;
+    /// <summary> 피격 시 넉백 </summary>
+    public float knockBack = 0f;
 
     Rigidbody rigid;
     BoxCollider boxCollider;
@@ -34,12 +36,12 @@ public class Enemy : MonoBehaviour
 
     private void UpdateHealthBar()
     {
-        if (HealthBarValue == null)
+        if (healthBar == null)
             return;
         
         float ratio = (float)curHealth / maxHealth;
-        HealthBarValue.localPosition = new Vector3(1.6f - ratio * 1.6f, 0f, 0f);
-        HealthBarValue.localScale = new Vector3(ratio * 10f, 1f, 1f);
+        healthBar.localPosition = new Vector3(1.6f - ratio * 1.6f, 0f, 0f);
+        healthBar.localScale = new Vector3(ratio * 10f, 1f, 1f);
     }
 
     /*private void OnTriggerEnter(Collider other)
@@ -58,7 +60,7 @@ public class Enemy : MonoBehaviour
         }
     }*/
 
-    IEnumerator OnDamge()
+    IEnumerator OnDamage()
     {
         mat.color = Color.red;
         yield return new WaitForSeconds(0.1f);
@@ -66,6 +68,11 @@ public class Enemy : MonoBehaviour
         if(curHealth > 0)
         {
 
+        }
+
+        if (knockBack > 0f)
+        {
+            transform.Translate(0, 0, -knockBack);
         }
     }
 
