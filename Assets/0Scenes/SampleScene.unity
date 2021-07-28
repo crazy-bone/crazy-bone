@@ -475,7 +475,8 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 100
   target: {fileID: 543450653296319165}
-  HealthBarValue: {fileID: 1902077108}
+  healthBar: {fileID: 1902077108}
+  knockBack: 0
   missile: {fileID: 5230299638399999786, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   Awl: {fileID: 8785843030806325492, guid: 363961fed23f6634abb1d7a20ad23e7f, type: 3}
   SubBossTemplate: {fileID: 833403597}
@@ -2937,7 +2938,8 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 100
   target: {fileID: 543450653296319165}
-  HealthBarValue: {fileID: 336181343}
+  healthBar: {fileID: 336181343}
+  knockBack: 0
   player: {fileID: 1274051769}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   missilePorts:
