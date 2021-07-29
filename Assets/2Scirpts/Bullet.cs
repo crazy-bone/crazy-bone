@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage; 
+    public int damage1;
+    public int damage2;
+    public float timer;
+
+
+    public void Start()
+    {
+        timer = 0;
+
+    }
+    public void Update()
+    {
+        timer += Time.deltaTime;
+    }
 
     void OnCollisionEnter(Collision collision)
     {
