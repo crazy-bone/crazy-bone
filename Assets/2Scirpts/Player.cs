@@ -278,7 +278,7 @@ public class Player : MonoBehaviour
             if (!isDamage)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
-                health -= enemyBullet.damage1;
+                health -= enemyBullet.damage;
 
                 StartCoroutine(OnDamge());
 
@@ -292,18 +292,14 @@ public class Player : MonoBehaviour
             if (!isDamage)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
-                health -= enemyBullet.damage1;
-
-
-                Bullet time = GameObject.Find("Awl").GetComponent<Bullet>();
-
-                if (time.timer > 2)
-                {
-                    health -= enemyBullet.damage2;
-                }
-
-
+                health -= enemyBullet.damage;
             }
+        }
+
+        else if (other.tag == "AwlDamage2")
+        {
+            Bullet enemyBullet = other.GetComponent<Bullet>();
+            health -= enemyBullet.damage;
         }
     }
 
