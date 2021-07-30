@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
         Turn();
         Jump();
         Attack();
-        Dodge();
+       // Dodge();
         Interation();
         Swap();
     }
@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
     {
         hAxis = Input.GetAxisRaw("Horizontal");
         vAxis = Input.GetAxisRaw("Vertical");
-        wDown = Input.GetButton("Walk");
+        wDown = Input.GetButton("Run");
         jDown = Input.GetButtonDown("Jump");
         fDown = Input.GetButtonDown("Fire1");
         iDown = Input.GetButtonDown("Interation");
@@ -97,10 +97,10 @@ public class Player : MonoBehaviour
             moveVec = Vector3.zero;
 
         if (!isBorder)
-            transform.position += moveVec * speed * (wDown ? 0.3f : 1f) * Time.deltaTime;
+            transform.position += moveVec * speed * (wDown ? 2f : 1f) * Time.deltaTime;
        
-        anim.SetBool("isRun", moveVec != Vector3.zero);
-        //anim.SetBool("isWalk", wDown);
+        anim.SetBool("isWalk", moveVec != Vector3.zero);
+        // anim.SetBool("isRun", wDown);
     }
     
     void Turn()
@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
         }
     }
     
-    void Dodge()
+ /*   void Dodge()
     {
         if (shiftDown && !isDodge && !isSwap)
         {
@@ -155,7 +155,7 @@ public class Player : MonoBehaviour
             Invoke("DodgeOut", 0.3f);
         }
     }
-
+ */
     void DodgeOut()
     {
         speed *= 0.1f;
@@ -286,6 +286,10 @@ public class Player : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     IEnumerator OnDamge()
     {
         isDamage = true;
