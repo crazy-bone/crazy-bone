@@ -286,10 +286,6 @@ public class Player : MonoBehaviour
         }
     }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     IEnumerator OnDamge()
     {
         isDamage = true;
