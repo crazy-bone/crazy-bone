@@ -8,9 +8,10 @@ public class Weapon : MonoBehaviour
 
     public enum Type { Melee, Range };
     public Type type;
+    public bool damageEnabled;
     public int damage;
     public float rate;
-    public BoxCollider meleeArea;
+    public MeshCollider meleeArea;
     public TrailRenderer trailEffect;
     public Transform bulletPos;
     public GameObject bullet;
@@ -30,16 +31,26 @@ public class Weapon : MonoBehaviour
 
     public void Use()
     {
-        if(type == Type.Melee)
+        damageEnabled = true;
+        if (type == Type.Melee)
         {
-            StopCoroutine("Swing");
-            StartCoroutine("Swing");
+            //StopCoroutine("Swing");
+            //StartCoroutine("Swing");
+            meleeArea.enabled = true;
         }
         else if (type == Type.Range)
         {
             StartCoroutine("Shot");
         }
+    }
 
+    public void Unuse()
+    {
+        damageEnabled = false;
+        if (type == Type.Melee)
+        {
+            meleeArea.enabled = false;
+        }
     }
 
     IEnumerator Swing()
@@ -105,25 +116,31 @@ public class Weapon : MonoBehaviour
      
     }
 
-/*    void Update()
-    {
-        GameObject obj = GameObject.Find("Sphere(Clone)");
+    /*    void Update()
+        {
+            GameObject obj = GameObject.Find("Sphere(Clone)");
 
-        Rigidbody X = obj.GetComponent<Rigidbody>();
+            Rigidbody X = obj.GetComponent<Rigidbody>();
 
-        
 
-        A.text = string.Format("현재 포탄의 위치 {0}", obj.gameObject.transform.position);
-        B.text = string.Format("현재 포탄의 폭발력 {0}", X.velocity.x);
-        C.text = string.Format("현재 포탄의 mass {0:0.00}kg", X.mass);
-        D.text = string.Format("현재 바람의 방향과 속도 {0:0.00}m/s", wind_velocity);
-        
-    }         
 
- */
+            A.text = string.Format("현재 포탄의 위치 {0}", obj.gameObject.transform.position);
+            B.text = string.Format("현재 포탄의 폭발력 {0}", X.velocity.x);
+            C.text = string.Format("현재 포탄의 mass {0:0.00}kg", X.mass);
+            D.text = string.Format("현재 바람의 방향과 속도 {0:0.00}m/s", wind_velocity);
+
+        }         
+
+     */
 
     //use() 메인루틴 -> swing() 서브루틴 -> Use() 메인루틴
     //use() 메인루틴 + swing() 코루틴(같이 실행되는 것임. co)
     //우리는 코루틴을 쓸거임, 열거형 함수 IEnumerator, 결과를 전달하는 yield
     //
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Enemy")
+            other.GetComponent<Enemy>().OnDamage(10);
+    }
 }

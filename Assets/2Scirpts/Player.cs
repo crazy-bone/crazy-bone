@@ -141,25 +141,33 @@ public class Player : MonoBehaviour
 
         if (fDown && isFireReady && !isDodge && !isSwap)
         {
-            equipWeapon.Use();
             anim.SetTrigger("doSwing");
             fireDelay = 1;
         }
     }
-    
- /*   void Dodge()
-    {
-        if (shiftDown && !isDodge && !isSwap)
-        {
-            dodgeVec = moveVec;
-            speed *= 10;
-            //anim.SetTrigger("doDodge");
-            isDodge = true;
 
-            Invoke("DodgeOut", 0.3f);
-        }
+    void EnableAttackDamage()
+    {
+        equipWeapon.Use();
     }
- */
+    void DisableAttackDamage()
+    {
+        equipWeapon.Unuse();
+    }
+
+    /*   void Dodge()
+       {
+           if (shiftDown && !isDodge && !isSwap)
+           {
+               dodgeVec = moveVec;
+               speed *= 10;
+               //anim.SetTrigger("doDodge");
+               isDodge = true;
+
+               Invoke("DodgeOut", 0.3f);
+           }
+       }
+    */
     void DodgeOut()
     {
         speed *= 0.1f;
