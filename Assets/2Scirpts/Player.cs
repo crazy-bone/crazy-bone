@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
         if (fDown && isFireReady && !isDodge && !isSwap)
         {
             equipWeapon.Use();
-            //anim.SetTrigger("doSwing");
+            anim.SetTrigger("doSwing");
             fireDelay = 1;
         }
     }
