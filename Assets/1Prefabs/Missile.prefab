@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a75ee1b8c909ac4cb4cdebde95159de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 10
   target: {fileID: 0}
   moveSpeed: 10
   turnSpeed: 0.5

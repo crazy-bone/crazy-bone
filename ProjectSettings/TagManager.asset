@@ -12,6 +12,8 @@ TagManager:
   - Bullet
   - EnemyBullet
   - Wall
+  - EnemyAwl
+  - AwlDamage2
   layers:
   - Default
   - TransparentFX
@@ -29,8 +31,8 @@ TagManager:
   - 
   - 
   - EnemyBullet
-  - 
-  - 
+  - EnemyAwl
+  - AwlDamage2
   - 
   - 
   - 

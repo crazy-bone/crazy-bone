@@ -453,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wendigo Body
       objectReference: {fileID: 0}
+    - target: {fileID: 3514808886394512263, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
 --- !u!1 &108281162 stripped
@@ -478,7 +482,8 @@ MonoBehaviour:
   healthBar: {fileID: 1902077108}
   knockBack: 0
   missile: {fileID: 5230299638399999786, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  Awl: {fileID: 8785843030806325492, guid: 363961fed23f6634abb1d7a20ad23e7f, type: 3}
+  Awl: {fileID: 4099900610112121939, guid: 363961fed23f6634abb1d7a20ad23e7f, type: 3}
+  AwlDamage2: {fileID: 2156408165323978584, guid: bc4f30253aa75c34a9394559f6feda0b, type: 3}
   SubBossRangeTemplate: {fileID: 833403597}
   SubBossMeleeTemplate: {fileID: 998063771}
   AwlNoti: {fileID: 5509049570510002483, guid: 11d088022f6564c4d91078a7cbb7737a, type: 3}
