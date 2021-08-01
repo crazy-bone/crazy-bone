@@ -345,7 +345,8 @@ MonoBehaviour:
   healthBar: {fileID: 1902077108}
   knockBack: 0
   missile: {fileID: 5230299638399999786, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  Awl: {fileID: 2120249464756533888, guid: 4eda961601d465b44997cd1856fdb86d, type: 3}
+  Awl: {fileID: 4099900610112121939, guid: 363961fed23f6634abb1d7a20ad23e7f, type: 3}
+  AwlDamage2: {fileID: 2156408165323978584, guid: bc4f30253aa75c34a9394559f6feda0b, type: 3}
   SubBossRangeTemplate: {fileID: 833403597}
   SubBossMeleeTemplate: {fileID: 998063771}
   AwlNoti: {fileID: 5509049570510002483, guid: 11d088022f6564c4d91078a7cbb7737a, type: 3}

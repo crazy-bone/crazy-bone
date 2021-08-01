@@ -6,15 +6,11 @@ using UnityEngine.AI;
 public class BossAwl : Bullet
 {
 
-    void Awake()
-    {
-      
-
-    }
 
     void Update()
     {
 
         Destroy(gameObject, 5f);
     }
+
 }

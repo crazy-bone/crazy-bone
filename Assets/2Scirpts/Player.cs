@@ -51,13 +51,16 @@ public class Player : MonoBehaviour
     int equipWeaponIndex = -1;
     float fireDelay;
 
+
     // Start is called before the first frame update
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         meshs = GetComponentsInChildren<MeshRenderer>();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -70,7 +73,8 @@ public class Player : MonoBehaviour
        // Dodge();
         Interation();
         Swap();
-    }
+
+     }
 
     void GetInput()
     {
@@ -234,11 +238,11 @@ public class Player : MonoBehaviour
         StopToWall();
     }
 
-    
+
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Item")
+        if (other.tag == "Item")
         {
             Item item = other.GetComponent<Item>();
             switch (item.type)
@@ -263,7 +267,7 @@ public class Player : MonoBehaviour
                     hasGrenades += item.value;
                     if (hasGrenades > maxHasGrenades)
                         hasGrenades = maxHasGrenades;
-                    break; 
+                    break;
 
             }
             Destroy(other.gameObject);
@@ -277,14 +281,32 @@ public class Player : MonoBehaviour
                 health -= enemyBullet.damage;
 
                 StartCoroutine(OnDamge());
+
+                if (other.GetComponent<Rigidbody>() != null)
+                    Destroy(other.gameObject);
             }
+        }
 
-            if (other.GetComponent<Rigidbody>() != null)
-                Destroy(other.gameObject);
+        else if (other.tag == "EnemyAwl")
+        {
+            if (!isDamage)
+            {
+                Bullet enemyBullet = other.GetComponent<Bullet>();
+                health -= enemyBullet.damage;
+            }
+        }
 
-
+        else if (other.tag == "AwlDamage2")
+        {
+            Bullet enemyBullet = other.GetComponent<Bullet>();
+            health -= enemyBullet.damage;
         }
     }
+
+
+
+    
+        
 
     IEnumerator OnDamge()
     {
