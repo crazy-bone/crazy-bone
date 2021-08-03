@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 180610587}
   m_Layer: 10
   m_Name: Cube
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7222,7 +7222,7 @@ GameObject:
   - component: {fileID: 810279412}
   m_Layer: 10
   m_Name: Cube (1)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7520,7 +7520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 100
-  target: {fileID: 543450653296319165}
+  target: {fileID: 543450653185383631}
   healthBar: {fileID: 336181343}
   knockBack: 0
   type: 0
@@ -7735,7 +7735,7 @@ GameObject:
   - component: {fileID: 924600705}
   m_Layer: 10
   m_Name: Cube (2)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8236,7 +8236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 100
-  target: {fileID: 543450653296319165}
+  target: {fileID: 543450653185383631}
   healthBar: {fileID: 1580928938}
   knockBack: 20
   type: 1
@@ -15529,7 +15529,7 @@ GameObject:
   - component: {fileID: 1972618124}
   m_Layer: 10
   m_Name: Cube (3)
-  m_TagString: Wall
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15983,11 +15983,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7734392808747046109, guid: 2d1ade198d66df442a2176fd0707ca11, type: 3}
   m_PrefabInstance: {fileID: 7844334018473854994}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &543450653296319165 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6452847563887301806, guid: f2cda99e91c79314a8e037522d6121d1, type: 3}
-  m_PrefabInstance: {fileID: 6775568705550093843}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &675533852080695373
 PrefabInstance:

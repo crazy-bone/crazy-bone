@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
             transform.position += moveVec * speed * (wDown ? 2f : 1f) * Time.deltaTime;
        
         anim.SetBool("isWalk", moveVec != Vector3.zero);
-        // anim.SetBool("isRun", wDown);
+        anim.SetBool("isRun", wDown);
     }
     
     void Turn()
