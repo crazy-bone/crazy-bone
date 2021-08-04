@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public bool[] hasWeapons;
     public GameObject[] grenades;
     public int hasGrenades;
+    public GameManager manager;
 
     public int ammo;
     public int coin;
@@ -35,8 +36,9 @@ public class Player : MonoBehaviour
     bool isDodge;
     bool isSwap;
     bool isBorder;
-    bool isFireReady =true;
+    bool isFireReady = true;
     bool isDamage;
+    bool isDead = false;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -72,9 +74,13 @@ public class Player : MonoBehaviour
         Attack();
        // Dodge();
         Interation();
-        Swap();
+        //Swap();
+        if (health <= 0 && isDead == false)
+        {
+            OnDie();
+        }
 
-     }
+    }
 
     void GetInput()
     {
@@ -97,7 +103,7 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap || !isFireReady)
+        if (isSwap || !isFireReady || isDead)
             moveVec = Vector3.zero;
 
         if (!isBorder)
@@ -114,7 +120,7 @@ public class Player : MonoBehaviour
     
     void Jump()
     {
-        if (jDown && !isJump && !isDodge && !isSwap)
+        if (jDown && !isJump && !isDodge && !isSwap )
         {
             rigid.AddForce(Vector3.up * 40, ForceMode.Impulse);
             anim.SetBool("isJump", true);
@@ -167,7 +173,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void Swap()
+   /* void Swap()
     {
         if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
             return;
@@ -198,7 +204,7 @@ public class Player : MonoBehaviour
 
         }
     }
-
+   */
     void SwapOut()
     {
         isSwap = false;
@@ -304,10 +310,6 @@ public class Player : MonoBehaviour
     }
 
 
-
-    
-        
-
     IEnumerator OnDamge()
     {
         isDamage = true;
@@ -323,6 +325,14 @@ public class Player : MonoBehaviour
         {
             mesh.material.color = Color.white; 
         }
+
+       
+    }
+    void OnDie()
+    {
+        anim.SetTrigger("doDie");
+        isDead = true;
+        manager.GameOver();
     }
 
     void OnTriggerStay(Collider other)
