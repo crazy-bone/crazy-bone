@@ -705,15 +705,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 7988262421168856788}
     m_Position: {x: 450, y: -70, z: 0}
-    m_Position: {x: 750, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5213113801436464830}
     m_Position: {x: -240, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6136979754852068218}
-    m_Position: {x: 290, y: 30, z: 0}
-    m_State: {fileID: 6295448349165420461}
-    m_Position: {x: 519.66956, y: 57.978638, z: 0}
+    m_Position: {x: 20, y: 40, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -5955161901339291465}
@@ -725,13 +722,6 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 170, y: -70, z: 0}
   m_EntryPosition: {x: -380, y: -50, z: 0}
   m_ExitPosition: {x: 170, y: 150, z: 0}
-  - {fileID: -785812100341260489}
-  m_EntryTransitions: []
-  m_StateMachineTransitions: {}
-  m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 290, y: -60, z: 0}
-  m_EntryPosition: {x: -380, y: -50, z: 0}
-  m_ExitPosition: {x: 290, y: 170, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -4702845223507487296}
 --- !u!1101 &-785812100341260489
@@ -824,6 +814,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: doDamaged
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: doSwing
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
