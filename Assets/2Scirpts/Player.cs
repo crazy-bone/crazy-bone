@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public bool[] hasWeapons;
     public GameObject[] grenades;
     public int hasGrenades;
-    public GameManager manager;
 
     public int ammo;
     public int coin;
@@ -36,9 +35,8 @@ public class Player : MonoBehaviour
     bool isDodge;
     bool isSwap;
     bool isBorder;
-    bool isFireReady = true;
+    bool isFireReady =true;
     bool isDamage;
-    bool isDead = false;
 
     Vector3 moveVec;
     Vector3 dodgeVec;
@@ -74,13 +72,9 @@ public class Player : MonoBehaviour
         Attack();
        // Dodge();
         Interation();
-        //Swap();
-        if (health <= 0 && isDead == false)
-        {
-            OnDie();
-        }
+        Swap();
 
-    }
+     }
 
     void GetInput()
     {
@@ -103,14 +97,14 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap || !isFireReady || isDead)
+        if (isSwap || !isFireReady)
             moveVec = Vector3.zero;
 
         if (!isBorder)
             transform.position += moveVec * speed * (wDown ? 2f : 1f) * Time.deltaTime;
        
         anim.SetBool("isWalk", moveVec != Vector3.zero);
-        anim.SetBool("isRun", wDown);
+        // anim.SetBool("isRun", wDown);
     }
     
     void Turn()
@@ -120,7 +114,7 @@ public class Player : MonoBehaviour
     
     void Jump()
     {
-        if (jDown && !isJump && !isDodge && !isSwap )
+        if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 40, ForceMode.Impulse);
             anim.SetBool("isJump", true);
@@ -147,25 +141,33 @@ public class Player : MonoBehaviour
 
         if (fDown && isFireReady && !isDodge && !isSwap)
         {
-            equipWeapon.Use();
-            //anim.SetTrigger("doSwing");
+            anim.SetTrigger("doSwing");
             fireDelay = 1;
         }
     }
-    
- /*   void Dodge()
-    {
-        if (shiftDown && !isDodge && !isSwap)
-        {
-            dodgeVec = moveVec;
-            speed *= 10;
-            //anim.SetTrigger("doDodge");
-            isDodge = true;
 
-            Invoke("DodgeOut", 0.3f);
-        }
+    void EnableAttackDamage()
+    {
+        equipWeapon.Use();
     }
- */
+    void DisableAttackDamage()
+    {
+        equipWeapon.Unuse();
+    }
+
+    /*   void Dodge()
+       {
+           if (shiftDown && !isDodge && !isSwap)
+           {
+               dodgeVec = moveVec;
+               speed *= 10;
+               //anim.SetTrigger("doDodge");
+               isDodge = true;
+
+               Invoke("DodgeOut", 0.3f);
+           }
+       }
+    */
     void DodgeOut()
     {
         speed *= 0.1f;
@@ -173,7 +175,7 @@ public class Player : MonoBehaviour
 
     }
 
-   /* void Swap()
+    void Swap()
     {
         if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
             return;
@@ -204,7 +206,7 @@ public class Player : MonoBehaviour
 
         }
     }
-   */
+
     void SwapOut()
     {
         isSwap = false;
@@ -329,14 +331,6 @@ public class Player : MonoBehaviour
         {
             mesh.material.color = Color.white; 
         }
-
-       
-    }
-    void OnDie()
-    {
-        anim.SetTrigger("doDie");
-        isDead = true;
-        manager.GameOver();
     }
 
     void OnTriggerStay(Collider other)

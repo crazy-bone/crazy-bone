@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject menuPanel;
     public GameObject gamePanel;
-    public GameObject overPanel;
     public Text A;
     public Text B;
     public Text C;
@@ -37,11 +36,5 @@ public class GameManager : MonoBehaviour
         int enemyLayer = LayerMask.NameToLayer("Enemy");
         int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
         Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
-    }
-
-    public void GameOver()
-    {
-        gamePanel.SetActive(false);
-        overPanel.SetActive(true);
     }
 }

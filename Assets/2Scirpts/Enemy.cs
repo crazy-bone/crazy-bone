@@ -60,14 +60,13 @@ public class Enemy : MonoBehaviour
         }
     }*/
 
-    IEnumerator OnDamage()
+    public void OnDamage(int damage)
     {
-        mat.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
+        //mat.color = Color.red;
 
         if(curHealth > 0)
         {
-
+            curHealth -= damage;
         }
 
         if (knockBack > 0f)
