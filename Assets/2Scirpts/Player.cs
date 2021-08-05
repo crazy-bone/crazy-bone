@@ -299,6 +299,8 @@ public class Player : MonoBehaviour
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
+
+                StartCoroutine(OnDamge());
             }
         }
 
@@ -306,9 +308,10 @@ public class Player : MonoBehaviour
         {
             Bullet enemyBullet = other.GetComponent<Bullet>();
             health -= enemyBullet.damage;
+
+            StartCoroutine(OnDamge());
         }
     }
-
 
     IEnumerator OnDamge()
     {
@@ -317,10 +320,11 @@ public class Player : MonoBehaviour
         {
             mesh.material.color = Color.yellow;
         }
-
+        anim.SetTrigger("doDamaged");
         yield return new WaitForSeconds(1f);
 
         isDamage = false;
+
         foreach (MeshRenderer mesh in meshs)
         {
             mesh.material.color = Color.white; 
