@@ -265,8 +265,8 @@ public class Boss : Enemy
 
         yield return new WaitForSeconds(2f);
 
-        Instantiate(Awl, AwlPortD.position, AwlPort.rotation);
-        Instantiate(AwlDamage2, AwlPort.position, AwlPort.rotation);
+        Instantiate(Awl, AwlPortD.position, AwlPortD.rotation);
+        Instantiate(AwlDamage2, AwlPortD.position, AwlPortD.rotation);
 
         Instantiate(Awl, AwlPortE.position, AwlPortE.rotation);
         Instantiate(AwlDamage2, AwlPortE.position, AwlPortE.rotation);
