@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float speed = 15f;
     public GameObject[] weapons;
     public bool[] hasWeapons;
     public GameObject[] grenades;
@@ -165,7 +165,17 @@ public class Player : MonoBehaviour
            {
                dodgeVec = moveVec;
                anim.SetTrigger("doDodge");
-               speed *= 3;
+                
+                if (wDown)
+                {
+                    speed *= 2;
+                }
+
+                if (!wDown)
+                {
+                    speed *= 3;
+                }
+
                isDodge = true;
 
                Invoke("DodgeOut", 0.3f);
@@ -174,7 +184,14 @@ public class Player : MonoBehaviour
     
     void DodgeOut()
     {
-        speed *= 1/3f;
+        if(speed == 30)
+        {
+            speed *= 1 / 2f;
+        }
+        if (speed == 45)
+        {
+            speed *= 1 / 3f;
+        }
         isDodge = false;
 
     }
