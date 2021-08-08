@@ -11,7 +11,7 @@ public class AwlDamage : Bullet
     void Update()
     {
         
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 1f);
     }
 
     void ColliderSystem()
