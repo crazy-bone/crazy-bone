@@ -374,11 +374,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: shiftDown
+    m_Name: xDown
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left shift
+    positiveButton: x
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000

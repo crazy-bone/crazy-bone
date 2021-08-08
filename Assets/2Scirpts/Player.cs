@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     bool sDown1;
     bool sDown2;
     bool sDown3;
-    bool shiftDown;
+    bool xDown;
 
     bool isJump;
     bool isDodge;
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         Turn();
         Jump();
         Attack();
-        // Dodge();
+        Dodge();
         Interation();
         //Swap();
 
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         sDown1 = Input.GetButtonDown("Swap1");
         sDown2 = Input.GetButtonDown("Swap2");
         sDown3 = Input.GetButtonDown("Swap3");
-        shiftDown = Input.GetButtonDown("shiftDown");
+        xDown = Input.GetButtonDown("xDown");
     }
 
     void Move()
@@ -154,22 +154,22 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*   void Dodge()
+     void Dodge()
        {
-           if (shiftDown && !isDodge && !isSwap)
+           if (xDown && !isDodge && !isSwap)
            {
                dodgeVec = moveVec;
-               speed *= 10;
-               //anim.SetTrigger("doDodge");
+               anim.SetTrigger("doDodge");
+               speed *= 3;
                isDodge = true;
 
                Invoke("DodgeOut", 0.3f);
            }
        }
-    */
+    
     void DodgeOut()
     {
-        speed *= 0.1f;
+        speed *= 1/3f;
         isDodge = false;
 
     }
