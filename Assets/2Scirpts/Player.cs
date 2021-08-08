@@ -282,7 +282,7 @@ public class Player : MonoBehaviour
         }
         else if (other.tag == "EnemyBullet")
         {
-            if (!isDamage)
+            if (!isDamage && !isDead)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
@@ -296,7 +296,7 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "EnemyAwl")
         {
-            if (!isDamage)
+            if (!isDamage && !isDead)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
@@ -309,10 +309,15 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "AwlDamage2")
         {
-            Bullet enemyBullet = other.GetComponent<Bullet>();
-            health -= enemyBullet.damage;
+            if (!isDamage && !isDead)
+            {
+                Bullet enemyBullet = other.GetComponent<Bullet>();
+                health -= enemyBullet.damage;
 
-            StartCoroutine(OnDamge());
+                StartCoroutine(OnDamge());
+
+                Destroy(other.gameObject);
+            }
         }
 
         

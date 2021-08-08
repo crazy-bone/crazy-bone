@@ -10,7 +10,7 @@ public class AwlDamage : Bullet
     }
     void Update()
     {
-
+        
         Destroy(gameObject, 5f);
     }
 
