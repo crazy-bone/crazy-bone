@@ -136,6 +136,11 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", false);
             isJump = false;
         }
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isJump", false);
+            isJump = false;
+        }
     }
 
     void Attack()
