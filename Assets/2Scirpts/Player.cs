@@ -53,7 +53,6 @@ public class Player : MonoBehaviour
     int equipWeaponIndex = -1;
     float fireDelay;
 
-    int playerLayer, EnemyLayer;
 
     // Start is called before the first frame update
 
@@ -63,8 +62,6 @@ public class Player : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         meshs = GetComponentsInChildren<MeshRenderer>();
 
-        playerLayer = LayerMask.NameToLayer("Player");
-        EnemyLayer = LayerMask.NameToLayer("EnemyAwl");
     }
 
 
@@ -84,8 +81,6 @@ public class Player : MonoBehaviour
         {
             OnDie();
         }
-
-        Physics.IgnoreLayerCollision(playerLayer, EnemyLayer, true);
     }
 
     void GetInput()
