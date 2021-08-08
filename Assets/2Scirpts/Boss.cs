@@ -117,12 +117,15 @@ public class Boss : Enemy
         switch (ranAction)
         {
             case 0:
+            case 2:
+            case 3:
+            case 4:
                 StartCoroutine(AwlAttack());
                 break;
             case 1:
                 StartCoroutine(AwlAttack2());
                 break;
-            case 2:
+ /*           case 2:
                 StartCoroutine(MissileShot());
                 break;
             case 3:
@@ -131,7 +134,7 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-        }
+   */     }
     }
     IEnumerator MissileShot()
     {
@@ -223,7 +226,6 @@ public class Boss : Enemy
         Instantiate(Awl, AwlPort.position, AwlPort.rotation);
         Instantiate(AwlDamage2, AwlPort.position, AwlPort.rotation);
 
-
         Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
         Instantiate(AwlDamage2, AwlPortA.position, AwlPortA.rotation);
 
@@ -232,7 +234,9 @@ public class Boss : Enemy
 
         Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
         Instantiate(AwlDamage2, AwlPortC.position, AwlPortC.rotation);
+
         yield return new WaitForSeconds(1f);
+
         Instantiate(Awl, AwlPortH.position, AwlPortH.rotation);
         Instantiate(AwlDamage2, AwlPortH.position, AwlPortH.rotation);
 
@@ -272,7 +276,9 @@ public class Boss : Enemy
 
         Instantiate(Awl, AwlPortG.position, AwlPortG.rotation);
         Instantiate(AwlDamage2, AwlPortG.position, AwlPortG.rotation);
+
         yield return new WaitForSeconds(1f);
+
         Instantiate(Awl, AwlPortH.position, AwlPortH.rotation);
         Instantiate(AwlDamage2, AwlPortH.position, AwlPortH.rotation);
 

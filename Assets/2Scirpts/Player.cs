@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
         // Dodge();
         Interation();
         //Swap();
+
         if (health <= 0 && isDead == false)
         {
             OnDie();
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap || !isFireReady || isDead)
+        if (isSwap || !isFireReady || isDead || isDamage)
             moveVec = Vector3.zero;
 
         if (!isBorder)
@@ -315,21 +316,24 @@ public class Player : MonoBehaviour
 
     IEnumerator OnDamge()
     {
-        isDamage = true;
-        foreach (MeshRenderer mesh in meshs)
+        if (isDead == false)
         {
-            mesh.material.color = Color.yellow;
+            isDamage = true;
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.yellow;
+            }
+
+            anim.SetTrigger("doDamaged");
+            yield return new WaitForSeconds(1f);
+
+            isDamage = false;
+
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.white;
+            }
         }
-        anim.SetTrigger("doDamaged");
-        yield return new WaitForSeconds(1f);
-
-        isDamage = false;
-
-        foreach (MeshRenderer mesh in meshs)
-        {
-            mesh.material.color = Color.white;
-        }
-
 
     }
     void OnDie()

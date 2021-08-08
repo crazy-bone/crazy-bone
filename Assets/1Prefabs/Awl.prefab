@@ -644,7 +644,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4099900609391065411}
   - component: {fileID: 4099900610112121932}
-  - component: {fileID: 4099900610112121935}
   - component: {fileID: 4099900610112121934}
   - component: {fileID: 4099900610112121937}
   - component: {fileID: 4099900610112121936}
@@ -690,22 +689,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!54 &4099900610112121935
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4099900610112121939}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!65 &4099900610112121934
 BoxCollider:
   m_ObjectHideFlags: 0
