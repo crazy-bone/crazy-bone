@@ -196,7 +196,7 @@ public class Player : MonoBehaviour
 
     }
 
-    /* void Swap()
+     void Swap()
      {
          if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
              return;
@@ -227,7 +227,7 @@ public class Player : MonoBehaviour
 
          }
      }
-    */
+    
     void SwapOut()
     {
         isSwap = false;
