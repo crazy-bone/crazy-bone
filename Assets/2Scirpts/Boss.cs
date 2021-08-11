@@ -206,7 +206,6 @@ public class Boss : Enemy
         instantMissile = Instantiate(missile, missilePortD.position, missilePortD.rotation);
         bossMissile = instantMissile.GetComponent<BossMissile>();
         bossMissile.target = target;
-
         StartCoroutine(Think());
     }
     IEnumerator AwlAttack()
