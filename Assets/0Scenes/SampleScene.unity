@@ -17305,6 +17305,10 @@ PrefabInstance:
       value: ronald_sworadjst:group1
       objectReference: {fileID: 0}
     - target: {fileID: 1609353402638491312, guid: 2d1ade198d66df442a2176fd0707ca11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609353402638491312, guid: 2d1ade198d66df442a2176fd0707ca11, type: 3}
       propertyPath: m_TagString
       value: Melee
       objectReference: {fileID: 0}
