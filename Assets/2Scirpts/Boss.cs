@@ -30,9 +30,9 @@ public class Boss : Enemy
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
     // Start is called before the first frame update
+    
     Vector3 lookVec;
     Vector3 tauntVec;
-    
     bool isLook;
     SubBoss[] summonedSubBosses;
 
@@ -118,12 +118,15 @@ public class Boss : Enemy
         switch (ranAction)
         {
             case 0:
+            case 2:
+            case 3:
+            case 4:
                 StartCoroutine(AwlAttack());
                 break;
             case 1:
                 StartCoroutine(AwlAttack2());
                 break;
-            case 2:
+ /*           case 2:
                 StartCoroutine(MissileShot());
                 break;
             case 3:
@@ -132,7 +135,7 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-         }
+   */     }
     }
     IEnumerator MissileShot()
     {
