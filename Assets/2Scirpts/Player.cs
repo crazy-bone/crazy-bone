@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
         Attack();
         Dodge();
         Interation();
-        //Swap();
+        Swap();
 
         if (health <= 0 && isDead == false)
         {
