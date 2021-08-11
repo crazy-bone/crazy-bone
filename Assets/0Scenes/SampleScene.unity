@@ -348,6 +348,7 @@ MonoBehaviour:
   target: {fileID: 543450653185383631}
   healthBar: {fileID: 1902077108}
   knockBack: 0
+  body: {fileID: 108281162}
   missile: {fileID: 5230299638399999786, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   Awl: {fileID: 4099900610112121939, guid: 363961fed23f6634abb1d7a20ad23e7f, type: 3}
   AwlDamage: {fileID: 7292831750749488659, guid: b5e680435409ad7408866cbcf8d510fa, type: 3}
@@ -6967,6 +6968,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8794689237605937636, guid: 2d1ade198d66df442a2176fd0707ca11, type: 3}
   m_PrefabInstance: {fileID: 7844334018473854994}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &684697854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1982886907227192439, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
+  m_PrefabInstance: {fileID: 998063767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &698968562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7332,6 +7338,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.74, y: 1.31, z: 1.24}
   m_Center: {x: 0.01, y: 2.02, z: 0}
+--- !u!1 &746304073 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1982886907227192439, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
+  m_PrefabInstance: {fileID: 833403592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &777882812
 GameObject:
   m_ObjectHideFlags: 0
@@ -7599,7 +7610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.47
+      value: 10.708261
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7647,7 +7658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_TagString
@@ -7729,6 +7740,7 @@ MonoBehaviour:
   target: {fileID: 543450653185383631}
   healthBar: {fileID: 336181343}
   knockBack: 0
+  body: {fileID: 746304073}
   type: 0
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
@@ -7818,7 +7830,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ef7a2c8f6d5cd5c4aaf1c9a388b900e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8495,7 +8507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9951324
+      value: -4.995133
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8543,7 +8555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_TagString
@@ -8607,6 +8619,7 @@ MonoBehaviour:
   target: {fileID: 543450653185383631}
   healthBar: {fileID: 1580928938}
   knockBack: 5
+  body: {fileID: 684697854}
   type: 1
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
@@ -8718,7 +8731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: ef7a2c8f6d5cd5c4aaf1c9a388b900e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8756,8 +8769,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 2.08, y: 3.08, z: 9}
-  m_Center: {x: 0.01, y: 0, z: 2.41}
+  m_Size: {x: 3.69, y: 3.93, z: 10.28}
+  m_Center: {x: 0.01, y: 0, z: 4.3}
 --- !u!114 &1012865658
 MonoBehaviour:
   m_ObjectHideFlags: 0

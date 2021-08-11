@@ -17,13 +17,15 @@ public class Enemy : MonoBehaviour
     BoxCollider boxCollider;
     Material mat;
     NavMeshAgent nav;
+    public GameObject body;
+
 
 
     public void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
-        mat = GetComponent<MeshRenderer>().material;
+        mat = body.GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
     }
 
@@ -77,7 +79,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            mat.color = Color.gray;
+            mat.color = Color.gray; 
         }
     }
 
