@@ -7637,6 +7637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7831193859592851486, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef7a2c8f6d5cd5c4aaf1c9a388b900e0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_Name
       value: SubWendigo Range (Template)
@@ -7667,7 +7671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3514808886394512263, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
@@ -7795,6 +7799,47 @@ CapsuleCollider:
   m_Height: 0.079
   m_Direction: 1
   m_Center: {x: 0, y: 0.03, z: -0.005}
+--- !u!23 &833403602
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833403593}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &905964843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8450,7 +8495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.47
+      value: -4.9951324
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8488,6 +8533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7831193859592851486, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef7a2c8f6d5cd5c4aaf1c9a388b900e0, type: 2}
     - target: {fileID: 919132149155446097, guid: 6b0e346960eb6b5498e5b83275144b45, type: 3}
       propertyPath: m_Name
       value: SubWendigo Melee (Template)
@@ -8650,6 +8699,47 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!23 &998063777
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998063768}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1012865656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1609353402638491312, guid: 2d1ade198d66df442a2176fd0707ca11, type: 3}
@@ -8666,7 +8756,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 2.08, y: 3.08, z: 4.68}
+  m_Size: {x: 2.08, y: 3.08, z: 9}
   m_Center: {x: 0.01, y: 0, z: 2.41}
 --- !u!114 &1012865658
 MonoBehaviour:
@@ -8682,7 +8772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   damageEnabled: 0
-  damage: 0
+  damage: 20
   rate: 0
   meleeArea: {fileID: 1012865657}
   trailEffect: {fileID: 1521357836}

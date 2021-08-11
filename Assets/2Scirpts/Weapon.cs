@@ -57,9 +57,9 @@ public class Weapon : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+   /* private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Enemy")
             other.GetComponent<Enemy>().OnDamage(10);
-    }
+    }*/
 }

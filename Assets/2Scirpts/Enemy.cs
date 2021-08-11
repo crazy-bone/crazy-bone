@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
+        mat = GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
     }
 
@@ -44,7 +45,7 @@ public class Enemy : MonoBehaviour
         healthBar.localScale = new Vector3(ratio * 10f, 1f, 1f);
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Melee")
         {
@@ -58,20 +59,25 @@ public class Enemy : MonoBehaviour
             curHealth -= bullet.damage;
             StartCoroutine(OnDamage());
         }
-    }*/
+    }
 
-    public void OnDamage(int damage)
+    IEnumerator OnDamage()
     {
-        //mat.color = Color.red;
+        mat.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
 
         if(curHealth > 0)
         {
-            curHealth -= damage;
+            mat.color = Color.white;
         }
 
         if (knockBack > 0f)
         {
             transform.Translate(0, 0, -knockBack);
+        }
+        else
+        {
+            mat.color = Color.gray;
         }
     }
 
