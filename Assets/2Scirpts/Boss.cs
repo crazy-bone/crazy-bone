@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
     public GameObject missile;
     public GameObject Awl;
+    public GameObject AwlDamage;
     public GameObject AwlDamage2;
     public SubBoss SubBossRangeTemplate;
     public SubBoss SubBossMeleeTemplate;
@@ -29,9 +30,9 @@ public class Boss : Enemy
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
     // Start is called before the first frame update
-    
     Vector3 lookVec;
     Vector3 tauntVec;
+    
     bool isLook;
     SubBoss[] summonedSubBosses;
 
@@ -131,7 +132,7 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-        }
+         }
     }
     IEnumerator MissileShot()
     {
@@ -205,6 +206,7 @@ public class Boss : Enemy
         instantMissile = Instantiate(missile, missilePortD.position, missilePortD.rotation);
         bossMissile = instantMissile.GetComponent<BossMissile>();
         bossMissile.target = target;
+
         StartCoroutine(Think());
     }
     IEnumerator AwlAttack()
@@ -221,19 +223,30 @@ public class Boss : Enemy
         yield return new WaitForSeconds(2f);
 
         Instantiate(Awl, AwlPort.position, AwlPort.rotation);
-        Instantiate(AwlDamage2, AwlPort.position, AwlPort.rotation);
-
+        Instantiate(AwlDamage, AwlPort.position, AwlPort.rotation);
 
         Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
-        Instantiate(AwlDamage2, AwlPortA.position, AwlPortA.rotation);
+        Instantiate(AwlDamage, AwlPortA.position, AwlPortA.rotation);
 
         Instantiate(Awl, AwlPortB.position, AwlPortB.rotation);
-        Instantiate(AwlDamage2, AwlPortB.position, AwlPortB.rotation);
+        Instantiate(AwlDamage, AwlPortB.position, AwlPortB.rotation);
 
         Instantiate(Awl, AwlPortC.position, AwlPortC.rotation);
+        Instantiate(AwlDamage, AwlPortC.position, AwlPortC.rotation);
+
+        yield return new WaitForSeconds(2f);
+
+        Instantiate(AwlDamage2, AwlPort.position, AwlPort.rotation);
+        Instantiate(AwlDamage2, AwlPortA.position, AwlPortA.rotation);
+        Instantiate(AwlDamage2, AwlPortB.position, AwlPortB.rotation);
         Instantiate(AwlDamage2, AwlPortC.position, AwlPortC.rotation);
-        yield return new WaitForSeconds(1f);
+
+
         Instantiate(Awl, AwlPortH.position, AwlPortH.rotation);
+        Instantiate(AwlDamage, AwlPortH.position, AwlPortH.rotation);
+
+        yield return new WaitForSeconds(2f);
+
         Instantiate(AwlDamage2, AwlPortH.position, AwlPortH.rotation);
 
         yield return new WaitForSeconds(2f);
@@ -243,10 +256,6 @@ public class Boss : Enemy
         //GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
         //Rigidbody missileRigid = instantMissile.GetComponent<Rigidbody>();
         //missileRigid.AddForce(AwlPort.up * 1);
-        // instantMissile = Instantiate(Awl, AwlPortA.position, AwlPortA.rotation);
-        //missileRigid = instantMissile.GetComponent<Rigidbody>();
-        //missileRigid.AddForce(AwlPort.up * 1);
-        //instantMissile.GetComponent<BossAwl>();
     }
     IEnumerator AwlAttack2()
     {
@@ -261,19 +270,31 @@ public class Boss : Enemy
 
         yield return new WaitForSeconds(2f);
 
-        Instantiate(Awl, AwlPortD.position, AwlPort.rotation);
-        Instantiate(AwlDamage2, AwlPort.position, AwlPort.rotation);
+        Instantiate(Awl, AwlPortD.position, AwlPortD.rotation);
+        Instantiate(AwlDamage, AwlPortD.position, AwlPortD.rotation);
 
         Instantiate(Awl, AwlPortE.position, AwlPortE.rotation);
-        Instantiate(AwlDamage2, AwlPortE.position, AwlPortE.rotation);
+        Instantiate(AwlDamage, AwlPortE.position, AwlPortE.rotation);
 
         Instantiate(Awl, AwlPortF.position, AwlPortF.rotation);
-        Instantiate(AwlDamage2, AwlPortF.position, AwlPortF.rotation);
+        Instantiate(AwlDamage, AwlPortF.position, AwlPortF.rotation);
 
         Instantiate(Awl, AwlPortG.position, AwlPortG.rotation);
+        Instantiate(AwlDamage, AwlPortG.position, AwlPortG.rotation);
+
+        yield return new WaitForSeconds(2f);
+
+        Instantiate(AwlDamage2, AwlPortD.position, AwlPortD.rotation);
+        Instantiate(AwlDamage2, AwlPortE.position, AwlPortE.rotation);
+        Instantiate(AwlDamage2, AwlPortF.position, AwlPortF.rotation);
         Instantiate(AwlDamage2, AwlPortG.position, AwlPortG.rotation);
-        yield return new WaitForSeconds(1f);
+
+
         Instantiate(Awl, AwlPortH.position, AwlPortH.rotation);
+        Instantiate(AwlDamage, AwlPortH.position, AwlPortH.rotation);
+
+        yield return new WaitForSeconds(2f);
+
         Instantiate(AwlDamage2, AwlPortH.position, AwlPortH.rotation);
 
         yield return new WaitForSeconds(2f);

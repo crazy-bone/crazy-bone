@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float speed = 15f;
     public GameObject[] weapons;
     public bool[] hasWeapons;
     public GameObject[] grenades;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     bool sDown1;
     bool sDown2;
     bool sDown3;
-    bool shiftDown;
+    bool xDown;
 
     bool isJump;
     bool isDodge;
@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
         meshs = GetComponentsInChildren<MeshRenderer>();
+
     }
 
 
@@ -72,14 +73,14 @@ public class Player : MonoBehaviour
         Turn();
         Jump();
         Attack();
-        // Dodge();
+        Dodge();
         Interation();
         Swap();
+
         if (health <= 0 && isDead == false)
         {
             OnDie();
         }
-
     }
 
     void GetInput()
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
         sDown1 = Input.GetButtonDown("Swap1");
         sDown2 = Input.GetButtonDown("Swap2");
         sDown3 = Input.GetButtonDown("Swap3");
-        shiftDown = Input.GetButtonDown("shiftDown");
+        xDown = Input.GetButtonDown("xDown");
     }
 
     void Move()
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap || !isFireReady || isDead)
+        if (isSwap || !isFireReady || isDead || isDamage)
             moveVec = Vector3.zero;
 
         if (!isBorder)
@@ -135,6 +136,11 @@ public class Player : MonoBehaviour
             anim.SetBool("isJump", false);
             isJump = false;
         }
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isJump", false);
+            isJump = false;
+        }
     }
 
     void Attack()
@@ -153,27 +159,44 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*   void Dodge()
+     void Dodge()
        {
-           if (shiftDown && !isDodge && !isSwap)
+           if (xDown && !isDodge && !isSwap)
            {
                dodgeVec = moveVec;
-               speed *= 10;
-               //anim.SetTrigger("doDodge");
+               anim.SetTrigger("doDodge");
+                
+                if (wDown)
+                {
+                    speed *= 2;
+                }
+
+                if (!wDown)
+                {
+                    speed *= 3;
+                }
+
                isDodge = true;
 
                Invoke("DodgeOut", 0.3f);
            }
        }
-    */
+    
     void DodgeOut()
     {
-        speed *= 0.1f;
+        if(speed == 30)
+        {
+            speed *= 1 / 2f;
+        }
+        if (speed == 45)
+        {
+            speed *= 1 / 3f;
+        }
         isDodge = false;
 
     }
 
-    void Swap()
+     void Swap()
      {
          if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
              return;
@@ -281,7 +304,7 @@ public class Player : MonoBehaviour
         }
         else if (other.tag == "EnemyBullet")
         {
-            if (!isDamage)
+            if (!isDamage && !isDead)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
@@ -295,41 +318,53 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "EnemyAwl")
         {
-            if (!isDamage)
+            if (!isDamage && !isDead)
             {
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
 
                 StartCoroutine(OnDamge());
+
+
             }
         }
 
         else if (other.tag == "AwlDamage2")
         {
-            Bullet enemyBullet = other.GetComponent<Bullet>();
-            health -= enemyBullet.damage;
+            if (!isDamage && !isDead)
+            {
+                Bullet enemyBullet = other.GetComponent<Bullet>();
+                health -= enemyBullet.damage;
 
-            StartCoroutine(OnDamge());
+                StartCoroutine(OnDamge());
+
+                Destroy(other.gameObject);
+            }
         }
+
+        
     }
 
     IEnumerator OnDamge()
     {
-        isDamage = true;
-        foreach (MeshRenderer mesh in meshs)
+        if (isDead == false)
         {
-            mesh.material.color = Color.yellow;
+            isDamage = true;
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.yellow;
+            }
+
+            anim.SetTrigger("doDamaged");
+            yield return new WaitForSeconds(1f);
+
+            isDamage = false;
+
+            foreach (MeshRenderer mesh in meshs)
+            {
+                mesh.material.color = Color.white;
+            }
         }
-        anim.SetTrigger("doDamaged");
-        yield return new WaitForSeconds(1f);
-
-        isDamage = false;
-
-        foreach (MeshRenderer mesh in meshs)
-        {
-            mesh.material.color = Color.white;
-        }
-
 
     }
     void OnDie()

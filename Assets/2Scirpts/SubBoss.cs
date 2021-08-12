@@ -57,6 +57,8 @@ public class SubBoss : Enemy
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             player.health -= contactDamage;
+
+
             if (type == Type.Range) // 원거리 서브웬디고
                 Destroy(gameObject);
         }

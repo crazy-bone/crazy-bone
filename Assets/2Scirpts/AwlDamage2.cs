@@ -6,12 +6,12 @@ public class AwlDamage2 : Bullet
 {
     private void Awake()
     {
-        Invoke("ColliderSystem", 2);
+        Invoke("ColliderSystem", 0);
     }
     void Update()
     {
 
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 1f);
     }
 
     void ColliderSystem()
