@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
-        mat = body.GetComponent<MeshRenderer>().material;
+        mat = GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
     }
 
