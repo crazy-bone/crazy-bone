@@ -22,8 +22,6 @@ public class SubBoss : Enemy
     /// <summary> ¡¢√À µ•πÃ¡ˆ </summary>
     public int contactDamage = 10;
 
-    Animator anim;
-
     private enum Status
     {
         IDLE,
@@ -38,28 +36,18 @@ public class SubBoss : Enemy
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    void Awake()
-    {
-        anim = GetComponentInChildren<Animator>();
-    }
-
     void Update()
     {
         base.Update();
 
         navMeshAgent.SetDestination(target.position);
-        
-        
 
         switch (status)
         {
             case Status.IDLE:
                 float distance = Vector3.Distance(transform.position, target.position);
                 if (distance <= navMeshAgent.stoppingDistance)
-                {
                     StartCoroutine(Attack());
-                    anim.SetTrigger("doAttack");
-                }
                 break;
         }
     }
