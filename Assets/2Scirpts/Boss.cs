@@ -72,11 +72,22 @@ public class Boss : Enemy
                 }
                 attackPhase = 1; //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
                 break;
+
             case 1: // 페이즈 B 전환
                 if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 1/2 이하인 경우
                 {
                     attackPhase = 2;
                     SummonMeleeSubBosses();
+                    
+                }
+                attackPhase = 2;
+                break;
+
+            case 2: 
+                if((float)curHealth/maxHealth <= 0f)
+                {
+                    attackPhase = 3;
+                    anim.SetTrigger("doDie");
                     
                 }
                 break;
