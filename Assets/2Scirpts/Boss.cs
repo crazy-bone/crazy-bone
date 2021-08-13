@@ -132,9 +132,10 @@ public class Boss : Enemy
     IEnumerator Think()
     {
         yield return new WaitForSeconds(0.1f);
+        StartCoroutine(AwlAttack2());
 
         int ranAction = Random.Range(0, 5);
-        switch (ranAction)
+        /*switch (ranAction)
         {
             case 0:
                 StartCoroutine(AwlAttack());
@@ -151,7 +152,7 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-         }
+         }*/
     }
     IEnumerator MissileShot()
     {
@@ -283,7 +284,7 @@ public class Boss : Enemy
         Instantiate(AwlNoti, AwlPortD.position, AwlPortD.rotation);
         Instantiate(AwlNoti, AwlPortE.position, AwlPortE.rotation);
         Instantiate(AwlNoti, AwlPortF.position, AwlPortF.rotation);
-        Instantiate(AwlNoti, AwlPortG.position, AwlPort.rotation);
+        Instantiate(AwlNoti, AwlPortG.position, AwlPortG.rotation);
         yield return new WaitForSeconds(1f);
         Instantiate(AwlNoti, AwlPortH.position, AwlPortH.rotation);
 
