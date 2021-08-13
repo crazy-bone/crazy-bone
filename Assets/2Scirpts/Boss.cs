@@ -32,12 +32,13 @@ public class Boss : Enemy
     // Start is called before the first frame update
     Vector3 lookVec;
     Vector3 tauntVec;
+
+    bool isDead = false;
     
     bool isLook = true;
     SubBoss[] summonedSubBosses;
 
     Animator anim;
-
 
     void Awake()
     {
@@ -53,7 +54,7 @@ public class Boss : Enemy
     {
         base.Update();
 
-        if (isLook)
+        if (isLook && isDead == false)
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
@@ -65,7 +66,7 @@ public class Boss : Enemy
         switch (attackPhase)
         {
             case 0: // 페이즈 A 전환
-                if ((float)curHealth/maxHealth <= 2f/3f) // 체력이 2/3 이하인 경우
+                if ((float)curHealth/maxHealth <= 2f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 2/3 이하인 경우
                 {
                     attackPhase = 1;
                     SummonRangeSubBosses();
@@ -74,7 +75,7 @@ public class Boss : Enemy
                 break;
 
             case 1: // 페이즈 B 전환
-                if ((float)curHealth/maxHealth <= 3f/3f) // 체력이 1/2 이하인 경우
+                if ((float)curHealth/maxHealth <= 3f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 1/2 이하인 경우
                 {
                     attackPhase = 2;
                     SummonMeleeSubBosses();
@@ -88,6 +89,7 @@ public class Boss : Enemy
                 {
                     attackPhase = 3;
                     anim.SetTrigger("doDie");
+                    isDead = true;
                     
                 }
                 break;

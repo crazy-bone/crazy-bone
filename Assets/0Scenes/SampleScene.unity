@@ -9996,7 +9996,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709984765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045d314880ccb47469afe63243b927f7, type: 3}
   m_Name: 
@@ -10010,8 +10010,7 @@ MonoBehaviour:
   type: 1
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  missilePorts:
-  - {fileID: 5230299638399999777, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
+  missilePorts: []
   contactDamage: 10
 --- !u!1001 &1728556099
 PrefabInstance:
