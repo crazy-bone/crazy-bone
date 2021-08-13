@@ -3921,6 +3921,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 598a32765e9adc04ab4671e30f10b406, type: 2}
     - target: {fileID: 6222518457578879378, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -4057,7 +4061,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
 --- !u!1 &799334978 stripped
 GameObject:
@@ -4081,7 +4086,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799334978}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045d314880ccb47469afe63243b927f7, type: 3}
   m_Name: 
@@ -4095,7 +4100,8 @@ MonoBehaviour:
   type: 1
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  missilePorts: []
+  missilePorts:
+  - {fileID: 5230299638399999777, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   contactDamage: 10
 --- !u!195 &799334982
 NavMeshAgent:
@@ -4133,19 +4139,25 @@ CapsuleCollider:
   m_Height: 0.08
   m_Direction: 1
   m_Center: {x: 0, y: 0.04, z: -0.01}
---- !u!65 &799334984
-BoxCollider:
+--- !u!95 &799334984
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799334978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1c908867a769891438b2eaa0bdb89824, type: 3}
+  m_Controller: {fileID: 9100000, guid: 464c36f93c00d4a488f17a18586bf0fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &799334985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6449,6 +6461,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 598a32765e9adc04ab4671e30f10b406, type: 2}
     - target: {fileID: 6222518457578879378, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -6585,7 +6601,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a88e053c50481f94e89e2b2c79d3cd50, type: 3}
 --- !u!1 &1374285879 stripped
 GameObject:
@@ -6609,7 +6626,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374285879}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045d314880ccb47469afe63243b927f7, type: 3}
   m_Name: 
@@ -6623,7 +6640,8 @@ MonoBehaviour:
   type: 0
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  missilePorts: []
+  missilePorts:
+  - {fileID: 5230299638399999777, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   contactDamage: 10
 --- !u!195 &1374285883
 NavMeshAgent:
@@ -6661,19 +6679,24 @@ CapsuleCollider:
   m_Height: 0.08
   m_Direction: 1
   m_Center: {x: 0, y: 0.04, z: -0.01}
---- !u!65 &1374285885
-BoxCollider:
+--- !u!95 &1374285885
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374285879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 1c908867a769891438b2eaa0bdb89824, type: 3}
+  m_Controller: {fileID: 9100000, guid: 464c36f93c00d4a488f17a18586bf0fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &1374285886
 Rigidbody:
   m_ObjectHideFlags: 0

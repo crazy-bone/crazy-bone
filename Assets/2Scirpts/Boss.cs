@@ -33,13 +33,17 @@ public class Boss : Enemy
     Vector3 lookVec;
     Vector3 tauntVec;
     
-    bool isLook;
+    bool isLook = true;
     SubBoss[] summonedSubBosses;
+
+    Animator anim;
 
 
     void Awake()
     {
         base.Awake();
+
+        anim = GetComponent<Animator>();
 
         StartCoroutine(Think());
     }
@@ -73,6 +77,7 @@ public class Boss : Enemy
                 {
                     attackPhase = 2;
                     SummonMeleeSubBosses();
+                    
                 }
                 break;
         }
@@ -104,6 +109,7 @@ public class Boss : Enemy
             if (position == null)
                 continue;
 
+            anim.SetTrigger("doSummon");
             SubBoss summoned = Instantiate<SubBoss>(SubBossMeleeTemplate, position.position, SubBossMeleeTemplate.transform.rotation);
             summoned.gameObject.SetActive(true);
             summonedSubBosses[i++] = summoned;
