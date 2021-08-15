@@ -132,10 +132,9 @@ public class Boss : Enemy
     IEnumerator Think()
     {
         yield return new WaitForSeconds(0.1f);
-        StartCoroutine(AwlAttack2());
 
         int ranAction = Random.Range(0, 5);
-        /*switch (ranAction)
+        switch (ranAction)
         {
             case 0:
                 StartCoroutine(AwlAttack());
@@ -152,10 +151,12 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-         }*/
+         }
     }
     IEnumerator MissileShot()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePort.position, missilePort.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
@@ -182,6 +183,8 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot2()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
@@ -209,7 +212,10 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot3()
     {
-        yield return new WaitForSeconds(2.5f);
+        anim.SetTrigger("doOrbit");
+
+        yield return new WaitForSeconds(1f);
+
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
         bossMissile.target = target;
@@ -231,6 +237,8 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(1f);
 
         Instantiate(AwlNoti, AwlPort.position, AwlPort.rotation);
@@ -279,6 +287,7 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack2()
     {
+        anim.SetTrigger("doOrbit");
         yield return new WaitForSeconds(1f);
 
         Instantiate(AwlNoti, AwlPortD.position, AwlPortD.rotation);
