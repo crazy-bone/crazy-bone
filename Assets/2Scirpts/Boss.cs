@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
+
+    public GameObject particle;
+    public GameObject Player;
     public GameObject missile;
     public GameObject Awl;
     public GameObject AwlDamage;
@@ -27,6 +30,8 @@ public class Boss : Enemy
     public Transform AwlPortG;
     public Transform AwlPortH;
     public Transform[] summonPositions;
+
+
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
     // Start is called before the first frame update
@@ -45,8 +50,10 @@ public class Boss : Enemy
         base.Awake();
 
         anim = GetComponent<Animator>();
-
-        StartCoroutine(Think());
+        if (isDead != false)
+        {
+            StartCoroutine(Think());
+        }
     }
 
     // Update is called once per frame
@@ -66,7 +73,7 @@ public class Boss : Enemy
         switch (attackPhase)
         {
             case 0: // 페이즈 A 전환
-                if ((float)curHealth/maxHealth <= 2f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 2/3 이하인 경우
+                if ((float)curHealth/maxHealth <= 2f/3f && (float)curHealth / maxHealth >= 1/2f) // 체력이 2/3 이하인 경우
                 {
                     attackPhase = 1;
                     SummonRangeSubBosses();
@@ -75,8 +82,9 @@ public class Boss : Enemy
                 break;
 
             case 1: // 페이즈 B 전환
-                if ((float)curHealth/maxHealth <= 3f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 1/2 이하인 경우
+                if ((float)curHealth/maxHealth <= 1f/2f && (float)curHealth / maxHealth >= 0f) // 체력이 1/2 이하인 경우
                 {
+                    Heal();
                     attackPhase = 2;
                     SummonMeleeSubBosses();
                     
@@ -153,6 +161,22 @@ public class Boss : Enemy
                 break;
          }
     }
+
+    IEnumerator Heal()
+    {
+        yield return new WaitForSeconds(1.0f);
+        
+        anim.SetTrigger("doHeal");
+        particle.SetActive(true);
+        curHealth += 10;
+        yield return new WaitForSeconds(1.0f);
+        
+        curHealth += 10;
+        particle.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
+
+    }
+
     IEnumerator MissileShot()
     {
         anim.SetTrigger("doOrbit");
