@@ -23,7 +23,7 @@ public class SubBoss : Enemy
     public int contactDamage = 10;
 
     Animator anim;
-    bool isdead;
+    bool isdead = false;
 
     private enum Status
     {
@@ -53,8 +53,7 @@ public class SubBoss : Enemy
         if(isdead == false)
         navMeshAgent.SetDestination(target.position);
         
-        
-
+       
         switch (status)
         {
             case Status.IDLE:
@@ -66,7 +65,7 @@ public class SubBoss : Enemy
                 }
                 break;
             case Status.Die:
-                if(curHealth/maxHealth <= 0)
+                if((float)curHealth/maxHealth <= 0f)
                 {
                     anim.SetTrigger("doDie");
                     isdead = true;
