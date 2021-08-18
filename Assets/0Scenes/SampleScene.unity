@@ -894,8 +894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31375d5d9fc1824fb5934516c0c9269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  curHealth: 100
+  maxHealth: 200
+  curHealth: 200
   target: {fileID: 543450653185383631}
   healthBar: {fileID: 1902077108}
   knockBack: 0
@@ -8279,8 +8279,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 3.69, y: 3.93, z: 10.28}
-  m_Center: {x: 0.01, y: 0, z: 4.3}
+  m_Size: {x: 3.69, y: 3.93, z: 13.67}
+  m_Center: {x: 0.01, y: 0, z: 6.96}
 --- !u!114 &1012865658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14802,7 +14802,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709984765}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 045d314880ccb47469afe63243b927f7, type: 3}
   m_Name: 

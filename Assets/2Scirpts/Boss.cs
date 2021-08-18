@@ -50,9 +50,14 @@ public class Boss : Enemy
         base.Awake();
 
         anim = GetComponent<Animator>();
-        if (isDead != false)
+        if (isDead == false)
         {
             StartCoroutine(Think());
+        }
+
+        if ((float)curHealth/maxHealth <= 1f/2f)
+        {
+            Heal();
         }
     }
 
@@ -73,23 +78,24 @@ public class Boss : Enemy
         switch (attackPhase)
         {
             case 0: // 페이즈 A 전환
-                if ((float)curHealth/maxHealth <= 2f/3f && (float)curHealth / maxHealth >= 1/2f) // 체력이 2/3 이하인 경우
+                if ((float)curHealth/maxHealth <= 2f/3f ) // 체력이 2/3 이하인 경우
                 {
+                    anim.SetTrigger("doHeal");
                     attackPhase = 1;
-                    SummonRangeSubBosses();
+                    Heal();
+
+                    //SummonRangeSubBosses();
                 }
-                attackPhase = 1; //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
+                //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
                 break;
 
             case 1: // 페이즈 B 전환
-                if ((float)curHealth/maxHealth <= 1f/2f && (float)curHealth / maxHealth >= 0f) // 체력이 1/2 이하인 경우
+                if ((float)curHealth/maxHealth <= 1f/2f ) // 체력이 1/2 이하인 경우
                 {
-                    Heal();
                     attackPhase = 2;
                     SummonMeleeSubBosses();
                     
                 }
-                attackPhase = 2;
                 break;
 
             case 2: 
@@ -162,19 +168,19 @@ public class Boss : Enemy
          }
     }
 
-    IEnumerator Heal()
+    void Heal()
     {
-        yield return new WaitForSeconds(1.0f);
-        
-        anim.SetTrigger("doHeal");
         particle.SetActive(true);
-        curHealth += 10;
-        yield return new WaitForSeconds(1.0f);
-        
-        curHealth += 10;
-        particle.SetActive(false);
-        yield return new WaitForSeconds(1.0f);
+        curHealth += 50;
+        Disable();
+        StartCoroutine(Disable());
+    }
 
+    IEnumerator Disable()
+    {
+        yield return new WaitForSeconds(3f);
+
+        particle.SetActive(false);
     }
 
     IEnumerator MissileShot()
