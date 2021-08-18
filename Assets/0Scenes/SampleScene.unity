@@ -930,6 +930,7 @@ MonoBehaviour:
   - {fileID: 2024774548}
   - {fileID: 1738252134}
   attackPhase: 0
+  summonedSubBosses: []
 --- !u!65 &302025582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14816,7 +14817,8 @@ MonoBehaviour:
   type: 1
   player: {fileID: 514652970}
   missileTemplate: {fileID: 2647417764706789894, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
-  missilePorts: []
+  missilePorts:
+  - {fileID: 5230299638399999777, guid: 92ea98521253c094d90675624fbc16bf, type: 3}
   contactDamage: 10
 --- !u!1001 &1728556099
 PrefabInstance:

@@ -41,7 +41,7 @@ public class Boss : Enemy
     bool isDead = false;
     
     bool isLook = true;
-    SubBoss[] summonedSubBosses;
+    public SubBoss[] summonedSubBosses;
 
     Animator anim;
 
