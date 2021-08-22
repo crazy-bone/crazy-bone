@@ -15,13 +15,18 @@ public class GameManager : MonoBehaviour
     public int enemyCntB;
     public int enemyCntC;
 
-    public GameObject menuPanel;
+    public Menu menuPanel;
     public GameObject gamePanel;
     public GameObject overPanel;
     public Text A;
     public Text B;
     public Text C;
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            menuPanel.Toggle();
+    }
 
     void LateUpdate()
     {
