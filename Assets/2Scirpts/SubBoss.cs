@@ -23,11 +23,14 @@ public class SubBoss : Enemy
     public int contactDamage = 10;
 
     Animator anim;
+    bool isdead = false;
 
     private enum Status
     {
         IDLE,
-        Attack
+        Attack,
+        Die
+
     }
 
     private NavMeshAgent navMeshAgent;
@@ -47,21 +50,31 @@ public class SubBoss : Enemy
     {
         base.Update();
 
+        if(isdead == false)
         navMeshAgent.SetDestination(target.position);
         
-        
-
+       
         switch (status)
         {
             case Status.IDLE:
                 float distance = Vector3.Distance(transform.position, target.position);
-                if (distance <= navMeshAgent.stoppingDistance)
+                if (distance <= navMeshAgent.stoppingDistance && isdead == false)
                 {
                     StartCoroutine(Attack());
                     anim.SetTrigger("doAttack");
                 }
                 break;
+            case Status.Die:
+                if((float)curHealth/maxHealth <= 0f)
+                {
+                    anim.SetTrigger("doDie");
+                    isdead = true;
+
+                }
+                break;
         }
+
+
     }
 
     private void OnCollisionEnter(Collision collision)

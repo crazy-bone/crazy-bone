@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
+
+    public GameObject particle;
+    public GameObject Player;
     public GameObject missile;
     public GameObject Awl;
     public GameObject AwlDamage;
@@ -27,6 +30,8 @@ public class Boss : Enemy
     public Transform AwlPortG;
     public Transform AwlPortH;
     public Transform[] summonPositions;
+
+
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
     // Start is called before the first frame update
@@ -36,7 +41,7 @@ public class Boss : Enemy
     bool isDead = false;
     
     bool isLook = true;
-    SubBoss[] summonedSubBosses;
+    public SubBoss[] summonedSubBosses;
 
     Animator anim;
 
@@ -45,8 +50,15 @@ public class Boss : Enemy
         base.Awake();
 
         anim = GetComponent<Animator>();
+        if (isDead == false)
+        {
+            StartCoroutine(Think());
+        }
 
-        StartCoroutine(Think());
+        if ((float)curHealth/maxHealth <= 1f/2f)
+        {
+            Heal();
+        }
     }
 
     // Update is called once per frame
@@ -66,22 +78,24 @@ public class Boss : Enemy
         switch (attackPhase)
         {
             case 0: // 페이즈 A 전환
-                if ((float)curHealth/maxHealth <= 2f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 2/3 이하인 경우
+                if ((float)curHealth/maxHealth <= 2f/3f ) // 체력이 2/3 이하인 경우
                 {
+                    anim.SetTrigger("doHeal");
                     attackPhase = 1;
-                    SummonRangeSubBosses();
+                    Heal();
+
+                    //SummonRangeSubBosses();
                 }
-                attackPhase = 1; //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
+                //TODO: 페이즈 적용 전까지만 임시로 페이즈 A 건너뜀
                 break;
 
             case 1: // 페이즈 B 전환
-                if ((float)curHealth/maxHealth <= 3f/3f && (float)curHealth / maxHealth >= 0f) // 체력이 1/2 이하인 경우
+                if ((float)curHealth/maxHealth <= 1f/2f ) // 체력이 1/2 이하인 경우
                 {
                     attackPhase = 2;
                     SummonMeleeSubBosses();
                     
                 }
-                attackPhase = 2;
                 break;
 
             case 2: 
@@ -132,10 +146,9 @@ public class Boss : Enemy
     IEnumerator Think()
     {
         yield return new WaitForSeconds(0.1f);
-        StartCoroutine(AwlAttack2());
 
         int ranAction = Random.Range(0, 5);
-        /*switch (ranAction)
+        switch (ranAction)
         {
             case 0:
                 StartCoroutine(AwlAttack());
@@ -152,10 +165,28 @@ public class Boss : Enemy
             case 4:
                 StartCoroutine(MissileShot3());
                 break;
-         }*/
+         }
     }
+
+    void Heal()
+    {
+        particle.SetActive(true);
+        curHealth += 50;
+        Disable();
+        StartCoroutine(Disable());
+    }
+
+    IEnumerator Disable()
+    {
+        yield return new WaitForSeconds(3f);
+
+        particle.SetActive(false);
+    }
+
     IEnumerator MissileShot()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePort.position, missilePort.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
@@ -182,6 +213,8 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot2()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(2.5f);
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
@@ -209,7 +242,10 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot3()
     {
-        yield return new WaitForSeconds(2.5f);
+        anim.SetTrigger("doOrbit");
+
+        yield return new WaitForSeconds(1f);
+
         GameObject instantMissile = Instantiate(missile, missilePortE.position, missilePortE.rotation);
         BossMissile bossMissile = instantMissile.GetComponent<BossMissile>();
         bossMissile.target = target;
@@ -231,6 +267,8 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack()
     {
+        anim.SetTrigger("doOrbit");
+
         yield return new WaitForSeconds(1f);
 
         Instantiate(AwlNoti, AwlPort.position, AwlPort.rotation);
@@ -279,6 +317,7 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack2()
     {
+        anim.SetTrigger("doOrbit");
         yield return new WaitForSeconds(1f);
 
         Instantiate(AwlNoti, AwlPortD.position, AwlPortD.rotation);

@@ -51,6 +51,7 @@ public class Enemy : MonoBehaviour
     {
         if(other.tag == "Melee")
         {
+            
             Weapon weapon = other.GetComponent<Weapon>();
             curHealth -= weapon.damage;
             StartCoroutine(OnDamage());
@@ -65,12 +66,12 @@ public class Enemy : MonoBehaviour
 
     IEnumerator OnDamage()
     {
-       // mat.color = Color.red;
+        //mat.color = Color.red;
         yield return new WaitForSeconds(0.1f);
 
         if(curHealth > 0)
         {
-           // mat.color = Color.white;
+          // mat.color = Color.white;
         }
 
         if (knockBack > 0f)
@@ -79,7 +80,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-           // mat.color = Color.gray; 
+          // mat.color = Color.gray; 
         }
     }
 
