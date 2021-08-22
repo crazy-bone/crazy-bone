@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Wall")
         {
+            // 벽을 맞을 시 제거
             Destroy(gameObject);
         }
     }

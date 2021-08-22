@@ -11,7 +11,7 @@ Shader "Custom/Shader"
     {
         Tags { "RenderType"="Opaque" }
         LOD 200
-
+            // 양면쉐이더 설정
             cull off
 
         CGPROGRAM

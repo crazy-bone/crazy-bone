@@ -22,6 +22,7 @@ public class Weapon : MonoBehaviour
 
     public void Use()
     {
+        // 무기의 타입에 맞게 공격하는 로직. 단, 아직 원거리 무기는 없음
         damageEnabled = true;
         if (type == Type.Melee)
         {
@@ -45,6 +46,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Swing()
     {
+        // 무기의 범위와 이펙트를 시간에 순서에 따라 배치
         yield return new WaitForSeconds(0.1f); //0.1초 대기
         meleeArea.enabled = true;
         trailEffect.enabled = true;

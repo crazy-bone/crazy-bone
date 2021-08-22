@@ -57,6 +57,8 @@ public class Boss : Enemy
 
         if ((float)curHealth/maxHealth <= 1f/2f)
         {
+            // 피가 줄어들면 Heal로직 
+            //TODO: Heal할때 재단으로 웬디고가 이동하는 로직 구현하기
             Heal();
         }
     }
@@ -145,6 +147,8 @@ public class Boss : Enemy
 
     IEnumerator Think()
     {
+        // 공격을 랜덤하게 배치함
+        //TODO: 기획 내용에 따라 보스 패턴을 변경, 아직 불분명
         yield return new WaitForSeconds(0.1f);
 
         int ranAction = Random.Range(0, 5);
@@ -170,6 +174,7 @@ public class Boss : Enemy
 
     void Heal()
     {
+        // 힐을 하고 파티클 효과를 몇 초 뒤에 사라지게 하는 로직 
         particle.SetActive(true);
         curHealth += 50;
         Disable();
@@ -185,6 +190,7 @@ public class Boss : Enemy
 
     IEnumerator MissileShot()
     {
+        // 웬디고 바로 앞 미사일 5개 배치
         anim.SetTrigger("doOrbit");
 
         yield return new WaitForSeconds(2.5f);
@@ -213,6 +219,7 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot2()
     {
+        // 시간을 두고 가로 선상의 배치 순서대로 미사일
         anim.SetTrigger("doOrbit");
 
         yield return new WaitForSeconds(2.5f);
@@ -242,6 +249,7 @@ public class Boss : Enemy
     }
     IEnumerator MissileShot3()
     {
+        // 일제히 가로 선상의 배치 된 미사일
         anim.SetTrigger("doOrbit");
 
         yield return new WaitForSeconds(1f);
@@ -267,6 +275,7 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack()
     {
+        // 수직선 모양의 AWl
         anim.SetTrigger("doOrbit");
 
         yield return new WaitForSeconds(1f);
@@ -317,6 +326,7 @@ public class Boss : Enemy
     }
     IEnumerator AwlAttack2()
     {
+        // 정사각형 모양의 Awl
         anim.SetTrigger("doOrbit");
         yield return new WaitForSeconds(1f);
 

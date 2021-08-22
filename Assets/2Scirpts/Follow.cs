@@ -17,6 +17,7 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Player을 따라가는 카메라 설정
         transform.position = target.position + offset;
     }
 }

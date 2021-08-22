@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // 무기 타입에 따라 데미지
         if(other.tag == "Melee")
         {
             
@@ -66,6 +67,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator OnDamage()
     {
+        //TODO: mesh를 넣었음에도 찾을 수 없다는 오류가 뜸
         //mat.color = Color.red;
         yield return new WaitForSeconds(0.1f);
 

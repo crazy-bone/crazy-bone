@@ -14,8 +14,9 @@ public class AwlDamage : Bullet
         Destroy(gameObject, 1f);
     }
 
-    void ColliderSystem()
+    void ColliderSystem() 
     {
+        // Awl에 Triger 넣으니까 계속 밀리는 현상 해결하기 위해서 Awl 하위 오브젝트인 Empty에 범위만 넣고 Damage를 입힘 
         Collider collider = GetComponent<Collider>();
         collider.isTrigger = true;
     }

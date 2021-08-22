@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 함수 모음
         GetInput();
         Move();
         Turn();
@@ -79,12 +80,14 @@ public class Player : MonoBehaviour
 
         if (health <= 0 && isDead == false)
         {
+            // 피가 0이하면 죽음. 한번 죽었을시 계속 죽지 않도록 isDead의 조건 추가
             OnDie();
         }
     }
 
     void GetInput()
     {
+        // 입력값 모음
         hAxis = Input.GetAxisRaw("Horizontal");
         vAxis = Input.GetAxisRaw("Vertical");
         wDown = Input.GetButton("Run");
@@ -99,6 +102,7 @@ public class Player : MonoBehaviour
 
     void Move()
     {
+        // 플레이어의 이동
         moveVec = new Vector3(hAxis, 0, vAxis).normalized;
 
         if (isDodge)
@@ -121,6 +125,7 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
+        // 점프 여러 제약을 걸어둠
         if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 40, ForceMode.Impulse);
@@ -131,6 +136,7 @@ public class Player : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
+        // Floor과 Wall을 맞았을때 점프가 끝나야 하기 때문에 설정
         if (collision.gameObject.tag == "Floor")
         {
             anim.SetBool("isJump", false);
@@ -145,6 +151,7 @@ public class Player : MonoBehaviour
 
     void Attack()
     {
+        // 무기를 들었을때, 공격로직, isFireReady가 만족할때, 즉 fireDelay가 끝나면 공격할 수 있음
         if (equipWeapon == null)
             return;
 
@@ -161,6 +168,7 @@ public class Player : MonoBehaviour
 
      void Dodge()
        {
+        // 플레이어 구르기 로직
            if (xDown && !isDodge && !isSwap)
            {
                dodgeVec = moveVec;
@@ -184,6 +192,7 @@ public class Player : MonoBehaviour
     
     void DodgeOut()
     {
+        // 닷지를 끝낼 즈음에 속도 원상복귀, 달리기냐 걷기냐에 따라 다름
         if(speed == 30)
         {
             speed *= 1 / 2f;
@@ -198,6 +207,7 @@ public class Player : MonoBehaviour
 
      void Swap()
      {
+        //TODO: SWap로직, 애니메이션 없으므로 아직 미구현
          if (sDown1 && (!hasWeapons[0] || equipWeaponIndex == 0))
              return;
          if (sDown2 && (!hasWeapons[1] || equipWeaponIndex == 1))
@@ -235,6 +245,7 @@ public class Player : MonoBehaviour
 
     void Interation()
     {
+        // 아이템 줍기
         if (iDown && nearObject != null && !isJump && !isDodge)
         {
             if (nearObject.tag == "Weapon")
@@ -251,11 +262,13 @@ public class Player : MonoBehaviour
 
     void FreezeRotation()
     {
+        // 혼자서 도는 버그 수정
         rigid.angularVelocity = Vector3.zero;
     }
 
     void StopToWall()
     {
+        // 벽을 뚫어버리는 버그 수정
         Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
         isBorder = Physics.Raycast(transform.position, transform.forward, 5, LayerMask.GetMask("Wall"));
 
@@ -263,6 +276,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Update랑 분리함
         FreezeRotation();
         StopToWall();
     }
@@ -271,6 +285,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // 아이템에 충돌 시 해당 아이템 값의 수치를 올려줌
         if (other.tag == "Item")
         {
             Item item = other.GetComponent<Item>();
@@ -347,6 +362,7 @@ public class Player : MonoBehaviour
 
     IEnumerator OnDamge()
     {
+        // 데미지를 받을 때 표현하기 위해서 mesh 색깔이 바뀌는 로직
         if (isDead == false)
         {
             isDamage = true;
@@ -369,6 +385,7 @@ public class Player : MonoBehaviour
     }
     void OnDie()
     {
+        // 죽을 때
         anim.SetTrigger("doDie");
         isDead = true;
         manager.GameOver();
@@ -376,6 +393,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        // 무기가 있을때 충돌을 인지시킴
         if (other.tag == "Weapon")
             nearObject = other.gameObject;
     }

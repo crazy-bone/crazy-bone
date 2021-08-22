@@ -16,6 +16,7 @@ public class AwlDamage2 : Bullet
 
     void ColliderSystem()
     {
+        //Awl Damage¿Í °°À½
         Collider collider = GetComponent<Collider>();
         collider.isTrigger = true;
     }
