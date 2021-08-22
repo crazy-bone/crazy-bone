@@ -20,13 +20,26 @@ public class Menu : MonoBehaviour
 
     public void Resume()
     {
-        fadeIn.StartFadeIn(.9f, 0f, .2f);
+        fadeIn.StartFadeIn(.9f, 0f, .2f, OnMenuClosed);
         Time.timeScale = 1f;
+    }
+
+    public void Toggle()
+    {
+        if (gameObject.activeSelf)
+            Resume();
+        else
+            Open();
     }
 
     private void OnMenuOpened()
     {
         Time.timeScale = 0f;
+    }
+
+    private void OnMenuClosed()
+    {
+        optionModal.SetActive(false);
     }
 
     public void OnStartButtonClicked()
