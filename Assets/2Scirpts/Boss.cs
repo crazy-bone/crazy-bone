@@ -99,11 +99,24 @@ public class Boss : Enemy
                     
                 }
                 break;
-
-            case 2: 
-                if((float)curHealth/maxHealth <= 0f)
+            case 2:
+                if((float)curHealth/maxHealth <= 1f/3f ) // 체력 1/3 이하인 경우
                 {
                     attackPhase = 3;
+                    SummonRangeSubBosses();
+                }
+                break;
+            case 3:
+                if ((float)curHealth / maxHealth <= 1f / 4f) // 체력 1/4 이하인 경우
+                {
+                    attackPhase = 4;
+                    Heal();
+                }
+                break;
+            case 4: 
+                if((float)curHealth/maxHealth <= 0f)
+                {
+                    attackPhase = 5;
                     anim.SetTrigger("doDie");
                     isDead = true;
                     
@@ -116,12 +129,13 @@ public class Boss : Enemy
     {
         int i = 0;
 
-        summonedSubBosses = new SubBoss[2];
+        summonedSubBosses = new SubBoss[4];
         foreach (Transform position in summonPositions)
         {
             if (position == null)
                 continue;
 
+            anim.SetTrigger("doSummon");
             SubBoss summoned = Instantiate<SubBoss>(SubBossRangeTemplate, position.position, SubBossRangeTemplate.transform.rotation);
             summoned.gameObject.SetActive(true);
             summonedSubBosses[i++] = summoned;
@@ -151,25 +165,33 @@ public class Boss : Enemy
         //TODO: 기획 내용에 따라 보스 패턴을 변경, 아직 불분명
         yield return new WaitForSeconds(0.1f);
 
-        int ranAction = Random.Range(0, 5);
-        switch (ranAction)
-        {
-            case 0:
-                StartCoroutine(AwlAttack());
-                break;
-            case 1:
-                StartCoroutine(AwlAttack2());
-                break;
-            case 2:
-                StartCoroutine(MissileShot());
-                break;
-            case 3:
-                StartCoroutine(MissileShot2());
-                break;
-            case 4:
-                StartCoroutine(MissileShot3());
-                break;
-         }
+     
+       
+         int ranAction = Random.Range(0, 5);
+        
+         switch (ranAction)
+         {
+             case 0:
+                 StartCoroutine(AwlAttack());
+                 break;
+             case 1:
+                 StartCoroutine(AwlAttack2());
+                 break;
+             case 2:
+                 StartCoroutine(MissileShot());
+                 break;
+             case 3:
+                 StartCoroutine(MissileShot2());
+                 break;
+             case 4:
+                 StartCoroutine(MissileShot3());
+                 break;
+             case 5:
+                 StartCoroutine(AwlAttack());
+                 StartCoroutine(AwlAttack2());
+                 break;
+
+            }
     }
 
     void Heal()
