@@ -64,16 +64,15 @@ public class SubBoss : Enemy
                     anim.SetTrigger("doAttack");
                 }
                 break;
-            case Status.Die:
-                if((float)curHealth/maxHealth <= 0f)
-                {
-                    anim.SetTrigger("doDie");
-                    isdead = true;
 
-                }
-                break;
         }
 
+        if ((float)curHealth / maxHealth <= 0f && isdead == false)
+        {
+            anim.SetTrigger("doDie");
+            isdead = true;
+            Destroy(gameObject, 3f);
+        }
 
     }
 
