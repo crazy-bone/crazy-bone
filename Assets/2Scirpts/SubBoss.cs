@@ -23,7 +23,6 @@ public class SubBoss : Enemy
     public int contactDamage = 10;
 
     Animator anim;
-    bool isdead = false;
 
     private enum Status
     {

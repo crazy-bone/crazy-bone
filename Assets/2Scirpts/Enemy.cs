@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     NavMeshAgent nav;
     public GameObject body;
 
+    public bool isdead = false;
 
 
     public void Awake()
@@ -50,7 +51,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // 무기 타입에 따라 데미지
-        if(other.tag == "Melee")
+        if(other.tag == "Melee" && isdead == false)
         {
             
             Weapon weapon = other.GetComponent<Weapon>();
