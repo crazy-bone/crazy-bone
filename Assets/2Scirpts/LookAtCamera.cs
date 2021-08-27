@@ -11,6 +11,6 @@ public class LookAtCamera : MonoBehaviour
         Vector3 v = camera.transform.position - transform.position;
         v.x = v.z = 0.0f;
         transform.LookAt(camera.transform.position - v);
-        transform.Rotate(0, 180, 0);
+        transform.Rotate(0, 0, 0);
     }
 }
