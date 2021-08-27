@@ -12,7 +12,7 @@ public class BossMissile : Bullet
 
     void Update()
     {
-        // 5초 후 소멸
+        // 일정시간 후 소멸
         if (destroyTime > 0f)
             Destroy(gameObject, destroyTime);
 
