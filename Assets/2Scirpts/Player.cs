@@ -77,12 +77,7 @@ public class Player : MonoBehaviour
         Dodge();
         Interation();
         Swap();
-
-        if (health <= 0 && isDead == false)
-        {
-            // 피가 0이하면 죽음. 한번 죽었을시 계속 죽지 않도록 isDead의 조건 추가
-            OnDie();
-        }
+        Die();
     }
 
     void GetInput()
@@ -256,6 +251,15 @@ public class Player : MonoBehaviour
 
                 Destroy(nearObject);
             }
+        }
+    }
+
+    void Die()
+    {
+        if (health <= 0 && isDead == false)
+        {
+            // 피가 0이하면 죽음. 한번 죽었을시 계속 죽지 않도록 isDead의 조건 추가
+            OnDie();
         }
     }
 
