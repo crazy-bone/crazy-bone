@@ -42,8 +42,12 @@ public class Enemy : MonoBehaviour
     {
         if (healthBar == null)
             return;
-        
-        float ratio = (float)curHealth / maxHealth;
+
+        float health = curHealth;
+        if (health < 0f)
+            health = 0f;
+
+        float ratio = (float)health / maxHealth;
         healthBar.localPosition = new Vector3(1.6f - ratio * 1.6f, 0f, 0f);
         healthBar.localScale = new Vector3(ratio * 10f, 1f, 1f);
     }
