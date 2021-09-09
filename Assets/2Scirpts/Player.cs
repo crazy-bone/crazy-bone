@@ -25,12 +25,12 @@ public class Player : MonoBehaviour
 
     bool wDown;
     bool jDown;
-    bool fDown;
     bool iDown;
     bool sDown1;
     bool sDown2;
     bool sDown3;
-    bool xDown;
+    bool ctrlDown;
+    bool leftMouseDown;
 
     bool isJump;
     bool isDodge;
@@ -87,12 +87,12 @@ public class Player : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
         wDown = Input.GetButton("Run");
         jDown = Input.GetButtonDown("Jump");
-        fDown = Input.GetButtonDown("Fire1");
         iDown = Input.GetButtonDown("Interation");
         sDown1 = Input.GetButtonDown("Swap1");
         sDown2 = Input.GetButtonDown("Swap2");
         sDown3 = Input.GetButtonDown("Swap3");
-        xDown = Input.GetButtonDown("xDown");
+        ctrlDown = Input.GetKeyDown(KeyCode.LeftControl);
+        leftMouseDown = Input.GetMouseButtonDown(0);
     }
 
     void Move()
@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
         fireDelay += Time.deltaTime;
         isFireReady = equipWeapon.rate < fireDelay;
 
-        if (fDown && isFireReady && !isDodge && !isSwap && !isDead)
+        if (leftMouseDown && isFireReady && !isDodge && !isSwap && !isDead)
         {
             equipWeapon.Use();
             anim.SetTrigger("doSwing");
@@ -164,7 +164,7 @@ public class Player : MonoBehaviour
      void Dodge()
        {
         // 플레이어 구르기 로직
-           if (xDown && !isDodge && !isSwap)
+           if (ctrlDown && !isDodge && !isSwap)
            {
                dodgeVec = moveVec;
                anim.SetTrigger("doDodge");
