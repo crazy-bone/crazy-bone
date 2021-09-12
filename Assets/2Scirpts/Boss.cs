@@ -340,6 +340,21 @@ public class Boss : Enemy
 
         yield return new WaitForSeconds(2f);
 
+        // 플레이어 위치에 하나씩 소환
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3 position = target.position;
+            Quaternion rotation = target.rotation;
+
+            yield return new WaitForSeconds(2f);
+            Instantiate(AwlNoti, position, rotation);
+            yield return new WaitForSeconds(1f);
+            Instantiate(Awl, position, rotation);
+            Instantiate(AwlDamage, position, rotation);
+        }
+
+        yield return new WaitForSeconds(2f);
+
         StartCoroutine(Think());
 
         //GameObject instantMissile = Instantiate(Awl, AwlPort.position, AwlPort.rotation);
@@ -389,6 +404,22 @@ public class Boss : Enemy
         Instantiate(AwlDamage2, AwlPortH.position, AwlPortH.rotation);
 
         yield return new WaitForSeconds(2f);
+
+        // 플레이어 위치에 하나씩 소환
+        for (int i = 0; i < 3; i++)
+        {
+            Vector3 position = target.position;
+            Quaternion rotation = target.rotation;
+
+            yield return new WaitForSeconds(2f);
+            Instantiate(AwlNoti, position, rotation);
+            yield return new WaitForSeconds(1f);
+            Instantiate(Awl, position, rotation);
+            Instantiate(AwlDamage, position, rotation);
+        }
+
+        yield return new WaitForSeconds(2f);
+
 
         StartCoroutine(Think());
 
