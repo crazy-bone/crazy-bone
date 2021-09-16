@@ -51,7 +51,6 @@ public class Player : MonoBehaviour
     Weapon equipWeapon;
 
     int equipWeaponIndex = -1;
-    float fireDelay;
 
 
     // Start is called before the first frame update
@@ -146,18 +145,17 @@ public class Player : MonoBehaviour
 
     void Attack()
     {
-        // 무기를 들었을때, 공격로직, isFireReady가 만족할때, 즉 fireDelay가 끝나면 공격할 수 있음
+        // 무기를 들었을때, 공격로직, isFireReady가 만족할때, 즉 rate가 끝나면 공격할 수 있음
         if (equipWeapon == null)
             return;
 
-        fireDelay += Time.deltaTime;
-        isFireReady = equipWeapon.rate < fireDelay;
+        isFireReady = equipWeapon.rate <= 0;
 
         if (leftMouseDown && isFireReady && !isDodge && !isSwap && !isDead)
         {
             equipWeapon.Use();
+            equipWeapon.rate = 1;
             anim.SetTrigger("doSwing");
-            fireDelay = 1;
         }
     }
 

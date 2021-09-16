@@ -18,12 +18,17 @@ public class Weapon : MonoBehaviour
     public Transform bulletCasePos;
     public GameObject bulletCase;
 
-
+    void Update()
+    {
+        if (rate > 0)
+            rate -= Time.deltaTime;
+    }
 
     public void Use()
     {
         // 무기의 타입에 맞게 공격하는 로직. 단, 아직 원거리 무기는 없음
         damageEnabled = true;
+        rate = 0;
         if (type == Type.Melee)
         {
             StopCoroutine("Swing");
