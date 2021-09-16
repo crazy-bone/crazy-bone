@@ -341,12 +341,11 @@ public class Boss : Enemy
         yield return new WaitForSeconds(2f);
 
         // 플레이어 위치에 하나씩 소환
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             Vector3 position = target.position;
             Quaternion rotation = target.rotation;
 
-            yield return new WaitForSeconds(2f);
             Instantiate(AwlNoti, position, rotation);
             yield return new WaitForSeconds(1f);
             Instantiate(Awl, position, rotation);
@@ -406,12 +405,11 @@ public class Boss : Enemy
         yield return new WaitForSeconds(2f);
 
         // 플레이어 위치에 하나씩 소환
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             Vector3 position = target.position;
             Quaternion rotation = target.rotation;
 
-            yield return new WaitForSeconds(2f);
             Instantiate(AwlNoti, position, rotation);
             yield return new WaitForSeconds(1f);
             Instantiate(Awl, position, rotation);
