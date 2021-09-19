@@ -3759,6 +3759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionModal: {fileID: 1661697114}
+  instructionModal: {fileID: 223974226}
   fadeIn: {fileID: 490387185}
 --- !u!114 &490387185
 MonoBehaviour:
@@ -10657,6 +10658,7 @@ MonoBehaviour:
   menuPanel: {fileID: 490387184}
   gamePanel: {fileID: 932381271}
   overPanel: {fileID: 3860390005261472352}
+  instructionModal: {fileID: 223974230}
   A: {fileID: 1165986323}
   B: {fileID: 1195487938}
   C: {fileID: 126507750}
