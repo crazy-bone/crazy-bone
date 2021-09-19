@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject optionModal;
+    public GameObject instructionModal;
     public FadeIn fadeIn;
 
     void Start()
@@ -15,6 +16,9 @@ public class Menu : MonoBehaviour
 
     public void Open()
     {
+        if (instructionModal.activeSelf)
+            return;
+
         fadeIn.StartFadeIn(0f, .9f, .5f, OnMenuOpened);
     }
 

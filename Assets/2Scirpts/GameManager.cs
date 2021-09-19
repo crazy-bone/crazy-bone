@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public Menu menuPanel;
     public GameObject gamePanel;
     public GameObject overPanel;
+    public InstructionModal instructionModal;
     public Text A;
     public Text B;
     public Text C;
@@ -25,7 +26,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            menuPanel.Toggle();
+            if (instructionModal.gameObject.activeSelf)
+                instructionModal.Close();
+            else
+                menuPanel.Toggle();
     }
 
     void LateUpdate()
