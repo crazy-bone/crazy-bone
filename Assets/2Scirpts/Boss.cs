@@ -70,10 +70,10 @@ public class Boss : Enemy
 
         if (isLook && isDead == false)
         {
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
-            lookVec = new Vector3(h, 0, v) * 5f;
-            transform.LookAt(target.position + lookVec);
+            Quaternion newRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.forward);
+            newRotation.x = 0f;
+            newRotation.z = 0f;
+            transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 2f);
         }
 
         // 공격 페이즈
