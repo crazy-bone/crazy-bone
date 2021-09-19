@@ -82,9 +82,6 @@ public class SubBoss : Enemy
 
             player.health -= contactDamage;
 
-
-            if (type == Type.Range) // 원거리 서브웬디고
-                Destroy(gameObject); //TODO: 웬디고가 플레이어 근처까지 안 쫓아옴
         }
     }
 
@@ -92,19 +89,19 @@ public class SubBoss : Enemy
     {
         status = Status.Attack;
 
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.5f);
 
         // 미사일 발사
         foreach (Transform missilePort in missilePorts)
         {
             BossMissile missile = Instantiate<BossMissile>(missileTemplate, missilePort.position, missilePort.rotation);
-            missile.transform.localScale = new Vector3(1f, 1f, 1f); 
+            missile.transform.localScale = new Vector3(.1f, .1f, .1f); 
             missile.target = target;
             missile.moveSpeed = 50f;
             missile.turnSpeed = 180f;
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         status = Status.IDLE;
     }

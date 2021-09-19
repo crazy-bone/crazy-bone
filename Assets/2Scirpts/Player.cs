@@ -327,10 +327,10 @@ public class Player : MonoBehaviour
                 health -= enemyBullet.damage;
 
                 StartCoroutine(OnDamge());
-
-                if (other.GetComponent<Rigidbody>() != null)
-                    Destroy(other.gameObject);
             }
+
+            if (other.GetComponent<Rigidbody>() != null)
+                Destroy(other.gameObject);
         }
 
         else if (other.tag == "EnemyAwl")
