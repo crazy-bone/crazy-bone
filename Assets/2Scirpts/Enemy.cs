@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     /// <summary> ÇÇ°Ý ½Ã ³Ë¹é </summary>
     public float knockBack = 0f;
 
+
     Rigidbody rigid;
     BoxCollider boxCollider;
     Material mat;

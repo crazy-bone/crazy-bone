@@ -49,6 +49,9 @@ public class Boss : Enemy
     {
         base.Awake();
 
+
+        transform.position = new Vector3(-28.6000004f, 0.400000006f, 38.0999985f);
+
         anim = GetComponent<Animator>();
         if (isDead == false)
         {
@@ -66,7 +69,13 @@ public class Boss : Enemy
     // Update is called once per frame
     void Update()
     {
+
         base.Update();
+
+
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+
+
 
         if (isLook && isDead == false)
         {
@@ -95,14 +104,23 @@ public class Boss : Enemy
                 if ((float)curHealth/maxHealth <= 1f/2f ) // 체력이 1/2 이하인 경우
                 {
                     attackPhase = 2;
+                    transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
+
                     SummonMeleeSubBosses();
-                    
+
+
+
+                    if (gos.Length <= 2)
+                        transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
+                   
+
                 }
                 break;
             case 2:
                 if((float)curHealth/maxHealth <= 1f/3f ) // 체력 1/3 이하인 경우
                 {
                     attackPhase = 3;
+                    transform.position = new Vector3(31.2000008f, 0.400000006f, 35.4000015f);
                     SummonRangeSubBosses();
                 }
                 break;
@@ -156,7 +174,9 @@ public class Boss : Enemy
             SubBoss summoned = Instantiate<SubBoss>(SubBossMeleeTemplate, position.position, SubBossMeleeTemplate.transform.rotation);
             summoned.gameObject.SetActive(true);
             summonedSubBosses[i++] = summoned;
+
         }
+
     }
 
     IEnumerator Think()

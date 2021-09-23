@@ -22,6 +22,10 @@ public class SubBoss : Enemy
     /// <summary> 접촉 데미지 </summary>
     public int contactDamage = 10;
 
+    public GameObject Wall;
+
+
+
     Animator anim;
 
     private enum Status
@@ -71,6 +75,8 @@ public class SubBoss : Enemy
             anim.SetTrigger("doDie");
             isdead = true;
             Destroy(gameObject, 3f);
+            Wall.SetActive(false);
+
         }
 
     }

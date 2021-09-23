@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Text B;
     public Text C;
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -32,6 +33,8 @@ public class GameManager : MonoBehaviour
                 instructionModal.Close();
             else
                 menuPanel.Toggle();
+
+       
     }
 
     void LateUpdate()
