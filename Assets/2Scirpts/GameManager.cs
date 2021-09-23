@@ -59,6 +59,6 @@ public class GameManager : MonoBehaviour
         // 게임 오버시에 Panel을 보여줌
         gamePanel.SetActive(false);
         retryPanel.SetActive(true);
-        skyBox.SetActive(false);
+        skyBox.SetActive(true);
     }
 }
