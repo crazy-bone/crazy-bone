@@ -19,5 +19,6 @@ public class Follow : MonoBehaviour
     {
         // Player을 따라가는 카메라 설정
         transform.position = target.position + offset;
+
     }
 }

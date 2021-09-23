@@ -293,21 +293,25 @@ public class Player : MonoBehaviour
             Item item = other.GetComponent<Item>();
             switch (item.type)
             {
+                    //총알
                 case Item.Type.Ammo:
                     ammo += item.value;
                     if (ammo > maxAmmo)
                         ammo = maxAmmo;
                     break;
+                    // 코인
                 case Item.Type.Coin:
                     coin += item.value;
                     if (coin > maxCoin)
                         coin = maxCoin;
                     break;
+                    // 피
                 case Item.Type.Heart:
                     health += item.value;
                     if (health > maxHealth)
                         health = maxHealth;
                     break;
+                    // 폭탄
                 case Item.Type.Grenade:
                     grenades[hasGrenades].SetActive(true);
                     hasGrenades += item.value;
@@ -315,14 +319,16 @@ public class Player : MonoBehaviour
                         hasGrenades = maxHasGrenades;
                     break;
 
-            }
+            }// 먹으면 오브젝트는 사라짐
             Destroy(other.gameObject);
 
         }
+        // 투사체에 맞은 경우
         else if (other.tag == "EnemyBullet")
         {
             if (!isDamage && !isDead)
             {
+                // 피가 닳고 데미지 맡는 로직이 발생
                 Bullet enemyBullet = other.GetComponent<Bullet>();
                 health -= enemyBullet.damage;
 
@@ -333,6 +339,7 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
         }
 
+        // 송곳 공격에 맞은 경우
         else if (other.tag == "EnemyAwl")
         {
             if (!isDamage && !isDead)
@@ -345,7 +352,7 @@ public class Player : MonoBehaviour
 
             }
         }
-
+        // 송곳 공격 두번째
         else if (other.tag == "AwlDamage2")
         {
             if (!isDamage && !isDead)
@@ -367,19 +374,20 @@ public class Player : MonoBehaviour
         // 데미지를 받을 때 표현하기 위해서 mesh 색깔이 바뀌는 로직
         if (isDead == false)
         {
+            // 데미지 받는 중이라는 것 체크
             isDamage = true;
             foreach (MeshRenderer mesh in meshs)
-            {
+            {// mesh 색을 바꿔줌
                 mesh.material.color = Color.yellow;
             }
-
+            // 데미지 받는 애니메이션
             anim.SetTrigger("doDamaged");
             yield return new WaitForSeconds(1f);
 
             isDamage = false;
 
             foreach (MeshRenderer mesh in meshs)
-            {
+            {// 원상 복귀
                 mesh.material.color = Color.white;
             }
         }
@@ -390,6 +398,7 @@ public class Player : MonoBehaviour
         // 죽을 때
         anim.SetTrigger("doDie");
         isDead = true;
+        // 죽는 Panel 
         manager.GameOver();
     }
 
