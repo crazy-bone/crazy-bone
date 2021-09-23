@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public Menu menuPanel;
     public GameObject gamePanel;
     public GameObject overPanel;
+    public GameObject retryPanel;
+    public GameObject skyBox;
     public InstructionModal instructionModal;
     public Text A;
     public Text B;
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
     {
         // 게임 오버시에 Panel을 보여줌
         gamePanel.SetActive(false);
-        overPanel.SetActive(true);
+        retryPanel.SetActive(true);
+        skyBox.SetActive(false);
     }
 }
