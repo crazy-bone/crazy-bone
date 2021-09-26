@@ -220,6 +220,7 @@ public class Boss : Enemy
     void Heal()
     {
         // 힐을 하고 파티클 효과를 몇 초 뒤에 사라지게 하는 로직 
+        anim.SetTrigger("doHeal");
         particle.SetActive(true);
         curHealth += 50;
         Disable();
