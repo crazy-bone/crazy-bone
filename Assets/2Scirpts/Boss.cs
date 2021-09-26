@@ -39,7 +39,7 @@ public class Boss : Enemy
     Vector3 tauntVec;
 
     bool isDead = false;
-    
+
     bool isLook = true;
     public SubBoss[] summonedSubBosses;
 
@@ -58,7 +58,7 @@ public class Boss : Enemy
             StartCoroutine(Think());
         }
 
-        if ((float)curHealth/maxHealth <= 1f/2f)
+        if ((float)curHealth / maxHealth <= 1f / 2f)
         {
             // 피가 줄어들면 Heal로직 
             //TODO: Heal할때 재단으로 웬디고가 이동하는 로직 구현하기
@@ -89,7 +89,7 @@ public class Boss : Enemy
         switch (attackPhase)
         {
             case 0: // 페이즈 A 전환
-                if ((float)curHealth/maxHealth <= 2f/3f ) // 체력이 2/3 이하인 경우
+                if ((float)curHealth / maxHealth <= 2f / 3f) // 체력이 2/3 이하인 경우
                 {
                     anim.SetTrigger("doHeal");
                     attackPhase = 1;
@@ -101,27 +101,30 @@ public class Boss : Enemy
                 break;
 
             case 1: // 페이즈 B 전환
-                if ((float)curHealth/maxHealth <= 1f/2f ) // 체력이 1/2 이하인 경우
+                if ((float)curHealth / maxHealth <= 1f / 2f) // 체력이 1/2 이하인 경우
                 {
                     attackPhase = 2;
-                    transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
 
                     SummonMeleeSubBosses();
 
+                    StartCoroutine(GoAltar());
 
 
                     if (gos.Length <= 2)
                         transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
-                   
 
                 }
                 break;
             case 2:
-                if((float)curHealth/maxHealth <= 1f/3f ) // 체력 1/3 이하인 경우
+                if ((float)curHealth / maxHealth <= 1f / 3f) // 체력 1/3 이하인 경우
                 {
                     attackPhase = 3;
-                    transform.position = new Vector3(31.2000008f, 0.400000006f, 35.4000015f);
+
                     SummonRangeSubBosses();
+
+                    StartCoroutine(GoAltar2());
+
+
                 }
                 break;
             case 3:
@@ -131,13 +134,13 @@ public class Boss : Enemy
                     Heal();
                 }
                 break;
-            case 4: 
-                if((float)curHealth/maxHealth <= 0f)
+            case 4:
+                if ((float)curHealth / maxHealth <= 0f)
                 {
                     attackPhase = 5;
                     anim.SetTrigger("doDie");
                     isDead = true;
-                    
+
                 }
                 break;
         }
@@ -185,33 +188,33 @@ public class Boss : Enemy
         //TODO: 기획 내용에 따라 보스 패턴을 변경, 아직 불분명
         yield return new WaitForSeconds(0.1f);
 
-     
-       
-         int ranAction = Random.Range(0, 5);
-        
-         switch (ranAction)
-         {
-             case 0:
-                 StartCoroutine(AwlAttack());
-                 break;
-             case 1:
-                 StartCoroutine(AwlAttack2());
-                 break;
-             case 2:
-                 StartCoroutine(MissileShot());
-                 break;
-             case 3:
-                 StartCoroutine(MissileShot2());
-                 break;
-             case 4:
-                 StartCoroutine(MissileShot3());
-                 break;
-             case 5:
-                 StartCoroutine(AwlAttack());
-                 StartCoroutine(AwlAttack2());
-                 break;
 
-            }
+
+        int ranAction = Random.Range(0, 5);
+
+        switch (ranAction)
+        {
+            case 0:
+                StartCoroutine(AwlAttack());
+                break;
+            case 1:
+                StartCoroutine(AwlAttack2());
+                break;
+            case 2:
+                StartCoroutine(MissileShot());
+                break;
+            case 3:
+                StartCoroutine(MissileShot2());
+                break;
+            case 4:
+                StartCoroutine(MissileShot3());
+                break;
+            case 5:
+                StartCoroutine(AwlAttack());
+                StartCoroutine(AwlAttack2());
+                break;
+
+        }
     }
 
     void Heal()
@@ -440,6 +443,28 @@ public class Boss : Enemy
 
 
         StartCoroutine(Think());
+
+
+    }
+    IEnumerator GoAltar()
+    {
+        // 시간 벌기
+        yield return new WaitForSeconds(7f);
+
+
+        transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
+
+
+    }
+
+
+    IEnumerator GoAltar2()
+    {
+        // 시간 벌기2
+
+        yield return new WaitForSeconds(7f);
+
+        transform.position = new Vector3(31.2000008f, 0.400000006f, 35.4000015f);
 
     }
 }
