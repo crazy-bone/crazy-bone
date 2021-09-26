@@ -54,7 +54,7 @@ public class SubBoss : Enemy
         base.Update();
 
         if(isdead == false)
-        navMeshAgent.SetDestination(target.position);
+            navMeshAgent.SetDestination(target.position);
         
        
         switch (status)

@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     BoxCollider boxCollider;
     Material mat;
     NavMeshAgent nav;
+    Animator anim;
     public GameObject body;
 
     public bool isdead = false;
@@ -29,6 +30,7 @@ public class Enemy : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
         mat = GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
     public void Update()
@@ -75,6 +77,10 @@ public class Enemy : MonoBehaviour
     {
         //TODO: mesh를 넣었음에도 찾을 수 없다는 오류가 뜸
         //mat.color = Color.red;
+
+        // 피격 애니메이션
+        anim.SetTrigger("doDamaged");
+
         yield return new WaitForSeconds(0.1f);
 
         if(curHealth > 0)
