@@ -25,9 +25,6 @@ public class SubBoss : Enemy
     public GameObject Wall;
 
 
-
-    Animator anim;
-
     private enum Status
     {
         IDLE,
@@ -46,7 +43,7 @@ public class SubBoss : Enemy
 
     void Awake()
     {
-        anim = GetComponentInChildren<Animator>();
+        base.Awake();
     }
 
     void Update()

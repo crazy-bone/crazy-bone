@@ -18,17 +18,16 @@ public class Enemy : MonoBehaviour
     BoxCollider boxCollider;
     Material mat;
     NavMeshAgent nav;
-    Animator anim;
+    protected Animator anim;
     public GameObject body;
 
     public bool isdead = false;
-
 
     public void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
-        mat = GetComponent<MeshRenderer>().material;
+        //mat = GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
     }
