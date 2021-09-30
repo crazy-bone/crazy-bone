@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     bool ctrlDown;
     bool leftMouseDown;
 
+    public bool isHealth = false;
+
     bool isJump;
     bool isDodge;
     bool isSwap;
@@ -310,6 +312,7 @@ public class Player : MonoBehaviour
                     health += item.value;
                     if (health > maxHealth)
                         health = maxHealth;
+                    isHealth = true;
                     break;
                     // ÆøÅº
                 case Item.Type.Grenade:

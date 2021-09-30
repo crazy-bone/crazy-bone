@@ -11,6 +11,11 @@ public class Boss : Enemy
     public GameObject Awl;
     public GameObject AwlDamage;
     public GameObject AwlDamage2;
+    public GameObject Heart;
+
+    public Player player;
+
+
     public SubBoss SubBossRangeTemplate;
     public SubBoss SubBossMeleeTemplate;
     public GameObject AwlNoti;
@@ -29,8 +34,10 @@ public class Boss : Enemy
     public Transform AwlPortF;
     public Transform AwlPortG;
     public Transform AwlPortH;
+    public Transform AwlPortI;
     public Transform[] summonPositions;
 
+    bool isHealth = true;
 
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
@@ -47,6 +54,9 @@ public class Boss : Enemy
 
     void Awake()
     {
+
+
+
         base.Awake();
 
 
@@ -64,6 +74,13 @@ public class Boss : Enemy
             //TODO: Heal할때 재단으로 웬디고가 이동하는 로직 구현하기
             Heal();
         }
+
+
+       
+    }
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -144,6 +161,14 @@ public class Boss : Enemy
                 }
                 break;
         }
+        GameObject obj1 = GameObject.Find("Item Heart (1)");
+        if (obj1 == null && isHealth == true)
+        {
+            StartCoroutine(BaitAwl());
+            StopCoroutine(BaitAwl());
+        }
+
+
     }
 
     private void SummonRangeSubBosses()
@@ -466,6 +491,27 @@ public class Boss : Enemy
         yield return new WaitForSeconds(7f);
 
         transform.position = new Vector3(31.2000008f, 0.400000006f, 35.4000015f);
+
+    }
+
+    IEnumerator BaitAwl()
+    {
+        // 미끼 Awl
+        anim.SetTrigger("doOrbit");
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(AwlNoti, AwlPortI.position, AwlPortI.rotation);
+
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(Awl, AwlPortI.position, AwlPortI.rotation);
+
+        Instantiate(AwlDamage, AwlPortI.position, AwlPortI.rotation);
+
+        isHealth = false;
+
+        yield break;
+
 
     }
 }
