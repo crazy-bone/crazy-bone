@@ -498,6 +498,9 @@ public class Boss : Enemy
     {
         // 미끼 Awl
         anim.SetTrigger("doOrbit");
+
+        isHealth = false;
+
         yield return new WaitForSeconds(1f);
 
         Instantiate(AwlNoti, AwlPortI.position, AwlPortI.rotation);
@@ -508,7 +511,6 @@ public class Boss : Enemy
 
         Instantiate(AwlDamage, AwlPortI.position, AwlPortI.rotation);
 
-        isHealth = false;
 
         yield break;
 
