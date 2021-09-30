@@ -35,9 +35,11 @@ public class Boss : Enemy
     public Transform AwlPortG;
     public Transform AwlPortH;
     public Transform AwlPortI;
+    public Transform AwlPortJ;
+    public Transform AwlPortK;
     public Transform[] summonPositions;
 
-    bool isHealth = true;
+    public bool isHealth = true;
 
     /// <summary> 공격 페이즈 </summary>
     public int attackPhase = 0;
@@ -161,13 +163,24 @@ public class Boss : Enemy
                 }
                 break;
         }
-        GameObject obj1 = GameObject.Find("Item Heart (1)");
-        if (obj1 == null && isHealth == true)
+        GameObject objI = GameObject.Find("Item Heart (1)");
+        if (objI == null && isHealth == true)
         {
-            StartCoroutine(BaitAwl());
-            StopCoroutine(BaitAwl());
+            StartCoroutine(BaitAwlI());
+            StopCoroutine(BaitAwlI());
         }
-
+        GameObject objJ = GameObject.Find("Item Heart (2)");
+        if (objJ == null && isHealth == true)
+        {
+            StartCoroutine(BaitAwlJ());
+            StopCoroutine(BaitAwlJ());
+        }
+        GameObject objK = GameObject.Find("Item Heart");
+        if (objK == null && isHealth == true)
+        {
+            StartCoroutine(BaitAwlK());
+            StopCoroutine(BaitAwlK());
+        }
 
     }
 
@@ -494,7 +507,7 @@ public class Boss : Enemy
 
     }
 
-    IEnumerator BaitAwl()
+    IEnumerator BaitAwlI()
     {
         // 미끼 Awl
         anim.SetTrigger("doOrbit");
@@ -513,7 +526,45 @@ public class Boss : Enemy
 
 
         yield break;
+    }
+    IEnumerator BaitAwlJ()
+    {
+        // 미끼 Awl
+        anim.SetTrigger("doOrbit");
+
+        isHealth = false;
+
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(AwlNoti, AwlPortJ.position, AwlPortJ.rotation);
+
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(Awl, AwlPortJ.position, AwlPortJ.rotation);
+
+        Instantiate(AwlDamage, AwlPortJ.position, AwlPortJ.rotation);
 
 
+        yield break;
+    }
+    IEnumerator BaitAwlK()
+    {
+        // 미끼 Awl
+        anim.SetTrigger("doOrbit");
+
+        isHealth = false;
+
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(AwlNoti, AwlPortK.position, AwlPortK.rotation);
+
+        yield return new WaitForSeconds(1f);
+
+        Instantiate(Awl, AwlPortK.position, AwlPortK.rotation);
+
+        Instantiate(AwlDamage, AwlPortK.position, AwlPortK.rotation);
+
+        isHealth = true;
+        yield break;
     }
 }
