@@ -44,7 +44,7 @@ public class Menu : MonoBehaviour
     public void OnStartButtonClicked()
     {
         if (fader != null)
-            fader.StartFadeIn(0f, 1f, 1f, () => SceneManager.LoadScene("SampleScene") );
+            fader.StartFadeIn(0f, 1f, .75f, () => SceneManager.LoadScene("SampleScene") );
         else
             SceneManager.LoadScene("SampleScene");
     }

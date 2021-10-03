@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
         Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
 
-        fader.StartFadeIn(1f, 0f, 1f, () => instructionModal.gameObject.SetActive(true));
+        fader.StartFadeIn(1f, 0f, .75f, () => instructionModal.gameObject.SetActive(true));
     }
 
     public void GameOver()
