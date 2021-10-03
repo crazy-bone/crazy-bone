@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject retryPanel;
     public GameObject skyBox;
     public InstructionModal instructionModal;
+    public FadeIn fader;
     public Text A;
     public Text B;
     public Text C;
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
         int enemyLayer = LayerMask.NameToLayer("Enemy");
         int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
         Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
+
+        fader.StartFadeIn(1f, 0f, 1f, () => instructionModal.gameObject.SetActive(true));
     }
 
     public void GameOver()
