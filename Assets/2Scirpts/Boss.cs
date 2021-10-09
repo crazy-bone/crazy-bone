@@ -67,7 +67,7 @@ public class Boss : Enemy
         transform.position = new Vector3(-28.6000004f, 0.400000006f, 38.0999985f);
 
         anim = GetComponent<Animator>();
-        if (isDead == false)
+        if (isDead == false && isdead == false)
         {
             StartCoroutine(Think());
         }
@@ -126,9 +126,13 @@ public class Boss : Enemy
                 {
                     attackPhase = 2;
 
-                    SummonMeleeSubBosses();
-                    if(isdead == false)
+                    if (isdead == false && isDead == false)
+                    {
+
+
+                        SummonMeleeSubBosses();
                         StartCoroutine(GoAltar());
+                    }
 
                     BlueBox.SetActive(true);
 
@@ -142,11 +146,14 @@ public class Boss : Enemy
                 {
                     attackPhase = 3;
 
-                    SummonRangeSubBosses();
+                    if (isdead == false && isDead == false)
+                    {
 
-                    if (isdead == false)
+                        SummonRangeSubBosses();
+
                         StartCoroutine(GoAltar2());
 
+                    }
 
                 }
                 break;
@@ -154,7 +161,9 @@ public class Boss : Enemy
                 if ((float)curHealth / maxHealth <= 1f / 4f) // 체력 1/4 이하인 경우
                 {
                     attackPhase = 4;
-                    Heal();
+
+                    if (isdead == false && isDead == false)
+                        Heal();
                 }
                 break;
             case 4:
@@ -165,9 +174,9 @@ public class Boss : Enemy
                     isDead = true;
                     isdead = true;
 
+                    Reward.SetActive(true);
 
-
-
+                    
                 }
                 break;
         }
@@ -237,29 +246,31 @@ public class Boss : Enemy
 
 
         int ranAction = Random.Range(0, 5);
-
-        switch (ranAction)
+        if (isdead == false && isDead == false)
         {
-            case 0:
-                StartCoroutine(AwlAttack());
-                break;
-            case 1:
-                StartCoroutine(AwlAttack2());
-                break;
-            case 2:
-                StartCoroutine(MissileShot());
-                break;
-            case 3:
-                StartCoroutine(MissileShot2());
-                break;
-            case 4:
-                StartCoroutine(MissileShot3());
-                break;
-            case 5:
-                StartCoroutine(AwlAttack());
-                StartCoroutine(AwlAttack2());
-                break;
+            switch (ranAction)
+            {
+                case 0:
+                    StartCoroutine(AwlAttack());
+                    break;
+                case 1:
+                    StartCoroutine(AwlAttack2());
+                    break;
+                case 2:
+                    StartCoroutine(MissileShot());
+                    break;
+                case 3:
+                    StartCoroutine(MissileShot2());
+                    break;
+                case 4:
+                    StartCoroutine(MissileShot3());
+                    break;
+                case 5:
+                    StartCoroutine(AwlAttack());
+                    StartCoroutine(AwlAttack2());
+                    break;
 
+            }
         }
     }
 
