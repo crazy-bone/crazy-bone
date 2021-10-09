@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public GameObject overPanel;
     public GameObject retryPanel;
     public GameObject skyBox;
+    public GameObject RedBox;
+    public GameObject BlueBox;
     public InstructionModal instructionModal;
     public FadeIn fader;
     public Text A;
@@ -31,11 +33,26 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             if (instructionModal.gameObject.activeSelf)
+            {
                 instructionModal.Close();
+                RedBox.SetActive(true);
+            }
             else
                 menuPanel.Toggle();
 
-       
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (RedBox.activeSelf)
+            {
+                RedBox.SetActive(false);
+                Time.timeScale = 1f;
+            }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (BlueBox.activeSelf)
+            {
+                BlueBox.SetActive(false);
+            }
+
     }
 
     void LateUpdate()
@@ -55,6 +72,9 @@ public class GameManager : MonoBehaviour
         Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
 
         fader.StartFadeIn(1f, 0f, .75f, () => instructionModal.gameObject.SetActive(true));
+
+
+
     }
 
     public void GameOver()

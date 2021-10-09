@@ -11,7 +11,6 @@ public class InstructionModal : MonoBehaviour
 
     public void Close()
     {
-        Time.timeScale = 1f;
         gameObject.SetActive(false);
     }
 }

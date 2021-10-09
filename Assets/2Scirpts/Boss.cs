@@ -12,6 +12,7 @@ public class Boss : Enemy
     public GameObject AwlDamage;
     public GameObject AwlDamage2;
     public GameObject Heart;
+    public GameObject BlueBox;
 
     public Player player;
 
@@ -128,6 +129,7 @@ public class Boss : Enemy
 
                     StartCoroutine(GoAltar());
 
+                    BlueBox.SetActive(true);
 
                     if (gos.Length <= 2)
                         transform.position = new Vector3(0.800000012f, 14.21f, 63.2000008f);
@@ -159,6 +161,9 @@ public class Boss : Enemy
                     attackPhase = 5;
                     anim.SetTrigger("doDie");
                     isDead = true;
+
+
+
 
                 }
                 break;
