@@ -13,6 +13,7 @@ public class Boss : Enemy
     public GameObject AwlDamage2;
     public GameObject Heart;
     public GameObject BlueBox;
+    public GameObject Reward;
 
     public Player player;
 
@@ -126,8 +127,8 @@ public class Boss : Enemy
                     attackPhase = 2;
 
                     SummonMeleeSubBosses();
-
-                    StartCoroutine(GoAltar());
+                    if(isdead == false)
+                        StartCoroutine(GoAltar());
 
                     BlueBox.SetActive(true);
 
@@ -143,7 +144,8 @@ public class Boss : Enemy
 
                     SummonRangeSubBosses();
 
-                    StartCoroutine(GoAltar2());
+                    if (isdead == false)
+                        StartCoroutine(GoAltar2());
 
 
                 }
@@ -161,6 +163,7 @@ public class Boss : Enemy
                     attackPhase = 5;
                     anim.SetTrigger("doDie");
                     isDead = true;
+                    isdead = true;
 
 
 

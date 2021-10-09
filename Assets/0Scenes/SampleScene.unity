@@ -2083,6 +2083,7 @@ MonoBehaviour:
   AwlDamage: {fileID: 7292831750749488659, guid: b5e680435409ad7408866cbcf8d510fa, type: 3}
   AwlDamage2: {fileID: 2156408165323978584, guid: bc4f30253aa75c34a9394559f6feda0b, type: 3}
   Heart: {fileID: 856299242}
+  BlueBox: {fileID: 1890906904}
   player: {fileID: 0}
   SubBossRangeTemplate: {fileID: 419084051}
   SubBossMeleeTemplate: {fileID: 1050253494}
