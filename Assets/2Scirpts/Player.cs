@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public GameObject[] grenades;
     public int hasGrenades;
     public GameManager manager;
+    public HealthHUD healthHUD;
 
     public int ammo;
     public int coin;
@@ -79,6 +80,7 @@ public class Player : MonoBehaviour
         Interation();
         Swap();
         Die();
+        UpdateHealthHUD();
     }
 
     void GetInput()
@@ -261,6 +263,14 @@ public class Player : MonoBehaviour
             // 피가 0이하면 죽음. 한번 죽었을시 계속 죽지 않도록 isDead의 조건 추가
             OnDie();
         }
+    }
+
+    void UpdateHealthHUD()
+    {
+        if (healthHUD == null)
+            return;
+
+        healthHUD.UpdateHealthBar(health, maxHealth);
     }
 
 
