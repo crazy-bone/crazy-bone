@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
         //mat.color = Color.red;
 
         // 피격 애니메이션
-        if(isdead == false)
+        
         anim.SetTrigger("doDamaged");
 
         yield return new WaitForSeconds(0.1f);

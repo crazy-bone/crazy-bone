@@ -28,6 +28,15 @@ public class GameManager : MonoBehaviour
     public Text B;
     public Text C;
 
+    public  Text TalkText;
+    public GameObject scanObject;
+
+    public void Action(GameObject scanObj)
+    {
+        scanObject = scanObj;
+        TalkText.text = "이것의 이름은 " + scanObject.name + "이라고 한다." ;
+    }
+
 
     void Update()
     {
