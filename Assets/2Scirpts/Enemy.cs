@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public Transform target;
     /// <summary> 체력바 </summary>
     public Transform healthBar;
+    public HealthHUD healthHUD;
     /// <summary> 피격 시 넉백 </summary>
     public float knockBack = 0f;
 
@@ -52,6 +53,9 @@ public class Enemy : MonoBehaviour
         float ratio = (float)health / maxHealth;
         healthBar.localPosition = new Vector3(1.6f - ratio * 1.6f, 0f, 0f);
         healthBar.localScale = new Vector3(ratio * 10f, 1f, 1f);
+
+        if (healthHUD != null)
+            healthHUD.UpdateHealthBar(health, maxHealth);
     }
 
     private void OnTriggerEnter(Collider other)
