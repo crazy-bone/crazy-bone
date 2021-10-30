@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject gamePanel;
     public GameObject overPanel;
     public GameObject retryPanel;
+    public GameObject ClearPanel;
     public GameObject skyBox;
     public GameObject RedBox;
     public GameObject BlueBox;
@@ -92,5 +93,12 @@ public class GameManager : MonoBehaviour
         gamePanel.SetActive(false);
         retryPanel.SetActive(true);
         skyBox.SetActive(true);
+    }
+
+    public void GameClear()
+    {
+        // 게임 클리어시에 Panel을 보여줌
+        retryPanel.SetActive(true);
+        ClearPanel.SetActive(true);
     }
 }

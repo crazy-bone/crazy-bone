@@ -14,9 +14,11 @@ public class Boss : Enemy
     public GameObject Heart;
     public GameObject BlueBox;
     public GameObject Reward;
+    
 
     public Player player;
 
+    public GameManager manager;
 
     public SubBoss SubBossRangeTemplate;
     public SubBoss SubBossMeleeTemplate;
@@ -176,6 +178,7 @@ public class Boss : Enemy
 
                     Reward.SetActive(true);
 
+                    manager.GameClear();
                     
                 }
                 break;
