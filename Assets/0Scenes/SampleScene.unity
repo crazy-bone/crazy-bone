@@ -2240,7 +2240,6 @@ MonoBehaviour:
   Heart: {fileID: 856299242}
   BlueBox: {fileID: 1890906904}
   Reward: {fileID: 1760290512}
-  Clear: {fileID: 0}
   player: {fileID: 0}
   manager: {fileID: 820473230}
   SubBossRangeTemplate: {fileID: 419084051}
@@ -18461,8 +18460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -34.5, y: 0}
-  m_SizeDelta: {x: 69, y: 50}
+  m_AnchoredPosition: {x: -65.5, y: 0}
+  m_SizeDelta: {x: 111, y: 61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590215509
 MonoBehaviour:
@@ -18484,7 +18483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 023a1e0db75baf943a15c7fdde2660a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89ce6e9cb855682488b86e77cd98d992, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
