@@ -2151,6 +2151,7 @@ MonoBehaviour:
   healthHUD: {fileID: 1872192319}
   knockBack: 0
   body: {fileID: 4404148686937759915}
+  Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
   particle: {fileID: 662975672}
   Player: {fileID: 0}
@@ -3580,6 +3581,7 @@ MonoBehaviour:
   healthHUD: {fileID: 0}
   knockBack: 0
   body: {fileID: 0}
+  Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
   type: 0
   player: {fileID: 514652970}
@@ -14311,6 +14313,7 @@ MonoBehaviour:
   healthHUD: {fileID: 0}
   knockBack: 0
   body: {fileID: 0}
+  Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
   type: 1
   player: {fileID: 514652970}
