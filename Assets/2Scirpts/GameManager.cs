@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject skyBox;
     public GameObject RedBox;
     public GameObject BlueBox;
+    public Cutscene cutscene;
     public InstructionModal instructionModal;
     public FadeIn fader;
     public Text A;
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
             else
                 menuPanel.Toggle();
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        /*if (Input.GetKeyDown(KeyCode.Mouse0))
             if (RedBox.activeSelf)
             {
                 RedBox.SetActive(false);
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
             if (BlueBox.activeSelf)
             {
                 BlueBox.SetActive(false);
-            }
+            }*/
 
     }
 
@@ -83,8 +84,8 @@ public class GameManager : MonoBehaviour
 
         fader.StartFadeIn(1f, 0f, .75f, () => instructionModal.gameObject.SetActive(true));
 
-
-
+        // 컷신 실행
+        cutscene.Run("StartCutscene");
     }
 
     public void GameOver()
