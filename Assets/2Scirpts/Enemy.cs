@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     NavMeshAgent nav;
     protected Animator anim;
     public GameObject body;
+    public GameObject Par;
 
     public bool isdead = false;
 
@@ -84,6 +85,7 @@ public class Enemy : MonoBehaviour
         // 피격 애니메이션
         
         anim.SetTrigger("doDamaged");
+        Instantiate(Par, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), transform.rotation);
 
         yield return new WaitForSeconds(0.1f);
 
