@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
     NavMeshAgent nav;
     protected Animator anim;
     public GameObject body;
-    public GameObject Par;
 
     public bool isdead = false;
 
@@ -83,7 +82,7 @@ public class Enemy : MonoBehaviour
         //mat.color = Color.red;
 
         // 피격 애니메이션
-        Instantiate(Par, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), transform.rotation);
+        
         anim.SetTrigger("doDamaged");
 
         yield return new WaitForSeconds(0.1f);
