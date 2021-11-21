@@ -14,7 +14,10 @@ public class Boss : Enemy
     public GameObject Heart;
     public GameObject BlueBox;
     public GameObject Reward;
-    
+<<<<<<< Updated upstream
+=======
+    public GameObject Particle;
+>>>>>>> Stashed changes
 
     public Player player;
 
