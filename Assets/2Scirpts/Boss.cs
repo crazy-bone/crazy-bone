@@ -46,7 +46,7 @@ public class Boss : Enemy
     public bool isHealth = true;
 
     /// <summary> 공격 페이즈 </summary>
-    public int attackPhase = 0;
+    public static int attackPhase = 0;
     // Start is called before the first frame update
     Vector3 lookVec;
     Vector3 tauntVec;

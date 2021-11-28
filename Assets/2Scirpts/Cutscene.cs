@@ -54,6 +54,6 @@ public class Cutscene : MonoBehaviour
             dialogueBox.SetActive(false);
         dialogueBoxes[ui].SetActive(true);
 
-        textMeshes[ui].SetText(dialog);
+        //textMeshes[ui].SetText(dialog);
     }
 }
