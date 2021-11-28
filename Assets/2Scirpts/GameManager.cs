@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public  Text TalkText;
     public GameObject scanObject;
+    public GameObject[] Fire;
 
     public void Action(GameObject scanObj)
     {
@@ -63,6 +64,53 @@ public class GameManager : MonoBehaviour
             {
                 BlueBox.SetActive(false);
             }*/
+        if(Boss.attackPhase == 0)
+        {
+            Fire[0].gameObject.SetActive(true);
+            Fire[1].gameObject.SetActive(true);
+            Fire[2].gameObject.SetActive(true);
+            Fire[3].gameObject.SetActive(true);
+            Fire[4].gameObject.SetActive(true);
+            Fire[5].gameObject.SetActive(true);
+        }
+        if (Boss.attackPhase == 1)
+        {
+            Fire[0].gameObject.SetActive(false);
+            Fire[1].gameObject.SetActive(false);
+            Fire[2].gameObject.SetActive(true);
+            Fire[3].gameObject.SetActive(true);
+            Fire[4].gameObject.SetActive(true);
+            Fire[5].gameObject.SetActive(true);
+        }
+        if (Boss.attackPhase == 2)
+        {
+            Fire[0].gameObject.SetActive(false);
+            Fire[1].gameObject.SetActive(false);
+            Fire[2].gameObject.SetActive(false);
+            Fire[3].gameObject.SetActive(true);
+            Fire[4].gameObject.SetActive(true);
+            Fire[5].gameObject.SetActive(true);
+        }
+        if (Boss.attackPhase == 3)
+        {
+            Fire[0].gameObject.SetActive(false);
+            Fire[1].gameObject.SetActive(false);
+            Fire[2].gameObject.SetActive(false);
+            Fire[3].gameObject.SetActive(false);
+            Fire[4].gameObject.SetActive(true);
+            Fire[5].gameObject.SetActive(true);
+        }
+        if (Boss.attackPhase == 4)
+        {
+            Fire[0].gameObject.SetActive(false);
+            Fire[1].gameObject.SetActive(false);
+            Fire[2].gameObject.SetActive(false);
+            Fire[3].gameObject.SetActive(false);
+            Fire[4].gameObject.SetActive(false);
+            Fire[5].gameObject.SetActive(true);
+        }
+
+
 
     }
 
