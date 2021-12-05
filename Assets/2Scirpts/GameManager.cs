@@ -45,11 +45,8 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             if (instructionModal.gameObject.activeSelf)
-            {
                 instructionModal.Close();
-                RedBox.SetActive(true);
-            }
-            else
+            else if (!cutscene.running)
                 menuPanel.Toggle();
 
         /*if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -130,10 +127,9 @@ public class GameManager : MonoBehaviour
         int bulletLayer = LayerMask.NameToLayer("EnemyBullet");
         Physics.IgnoreLayerCollision(enemyLayer, bulletLayer, true);
 
-        fader.StartFadeIn(1f, 0f, .75f, () => instructionModal.gameObject.SetActive(true));
-
         // 컷신 실행
-        cutscene.Run("StartCutscene");
+        fader.StartFadeIn(1f, 0f, .75f, () =>
+            cutscene.Run("StartCutscene", OnStartCutsceneEnd));
     }
 
     public void GameOver()
@@ -149,5 +145,10 @@ public class GameManager : MonoBehaviour
         // 게임 클리어시에 Panel을 보여줌
         retryPanel.SetActive(true);
         ClearPanel.SetActive(true);
+    }
+
+    private void OnStartCutsceneEnd()
+    {
+        instructionModal.gameObject.SetActive(true);
     }
 }

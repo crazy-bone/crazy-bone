@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,9 @@ public class Cutscene : MonoBehaviour
     public GameObject[] dialogueBoxes;
     public TextMeshProUGUI[] textMeshes;
 
-    private bool running = false;
+    private Action callback;
+
+    public bool running = false;
     private int currentIndex = 0;
     private List<Dictionary<string, object>> script;
 
@@ -21,16 +24,33 @@ public class Cutscene : MonoBehaviour
         }
     }
 
-    public void Run(string dialogueFile)
+    public void Run(string dialogueName, Action callback=null)
     {
-        script = CSVReader.Read(dialogueFile);
+        this.callback = callback;
+
+        script = CSVReader.Read(dialogueName);
         running = true;
+
+        Time.timeScale = 0f; // 게임 정지
+
         Show(0);
     }
 
     public void ShowNext()
     {
-        Show(currentIndex + 1);
+        if (currentIndex == script.Count - 1)
+        {
+            Time.timeScale = 1f; // 게임 재개
+
+            running = false;
+            foreach (GameObject dialogueBox in dialogueBoxes)
+                dialogueBox.SetActive(false);
+
+            if (callback != null)
+                callback?.Invoke();
+        }
+        else
+            Show(currentIndex + 1);
     }
 
     private void Show(int index)
