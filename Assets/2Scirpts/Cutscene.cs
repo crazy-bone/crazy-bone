@@ -12,11 +12,13 @@ public class Cutscene : MonoBehaviour
     private int currentIndex = 0;
     private List<Dictionary<string, object>> script;
 
-    void Start()
+    void Update()
     {
-        textMeshes = new TextMeshProUGUI[dialogueBoxes.Length];
-        for (int i = 0; i < dialogueBoxes.Length; i++)
-            textMeshes[i] = dialogueBoxes[i].transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        if (running)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                ShowNext();
+        }
     }
 
     public void Run(string dialogueFile)
@@ -54,6 +56,6 @@ public class Cutscene : MonoBehaviour
             dialogueBox.SetActive(false);
         dialogueBoxes[ui].SetActive(true);
 
-        //textMeshes[ui].SetText(dialog);
+        textMeshes[ui].SetText(dialog);
     }
 }

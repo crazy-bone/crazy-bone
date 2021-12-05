@@ -13932,7 +13932,9 @@ MonoBehaviour:
   dialogueBoxes:
   - {fileID: 659669259}
   - {fileID: 1890906904}
-  textMeshes: []
+  textMeshes:
+  - {fileID: 1423220598}
+  - {fileID: 1501626510}
 --- !u!4 &1015207642
 Transform:
   m_ObjectHideFlags: 0
