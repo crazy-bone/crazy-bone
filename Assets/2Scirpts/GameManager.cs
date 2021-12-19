@@ -142,8 +142,8 @@ public class GameManager : MonoBehaviour
     {
         // 게임 클리어시에 Panel을 보여줌
         fader.StartFadeIn(0f, .5f, 2f);
-        retryPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 2f);
-        ClearPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 2f);
+        ClearPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 2f, () =>
+            retryPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 1f));
     }
 
     private void OnStartCutsceneEnd()

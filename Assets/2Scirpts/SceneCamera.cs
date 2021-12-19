@@ -62,7 +62,8 @@ public class SceneCamera : MonoBehaviour
         if (Boss.attackPhase == 5 && num == 5)
         {
             Debug.Log("페이즈 5");
-            StartCoroutine(Move5());
+            //StartCoroutine(Move5());
+            // 마지막 페이즈(클리어) 시에는 화면 그대로 둠
 
         }
     }

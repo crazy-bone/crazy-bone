@@ -176,7 +176,8 @@ public class Boss : Enemy
                     Reward.SetActive(true);
 
                     manager.GameClear();
-                    
+                    ClearSummons();
+                    StopAllCoroutines();
                 }
                 break;
         }
@@ -199,6 +200,16 @@ public class Boss : Enemy
             StopCoroutine(BaitAwlK());
         }
 
+    }
+
+    private void ClearSummons()
+    {
+        foreach (SubBoss subboss in FindObjectsOfType<SubBoss>())
+            Destroy(subboss.gameObject);
+        foreach (BossMissile missile in FindObjectsOfType<BossMissile>())
+            Destroy(missile.gameObject);
+        foreach (BossAwl awl in FindObjectsOfType<BossAwl>())
+            Destroy(awl.gameObject);
     }
 
     private void SummonRangeSubBosses()
