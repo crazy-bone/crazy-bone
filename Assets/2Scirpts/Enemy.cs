@@ -85,7 +85,8 @@ public class Enemy : MonoBehaviour
         // 피격 애니메이션
         
         anim.SetTrigger("doDamaged");
-        Instantiate(Par, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), transform.rotation);
+        GameObject particle = Instantiate(Par, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), transform.rotation);
+        Destroy(particle, 5f);
 
         yield return new WaitForSeconds(0.1f);
 
@@ -100,7 +101,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-          // mat.color = Color.gray; 
+            // mat.color = Color.gray; 
         }
     }
 
