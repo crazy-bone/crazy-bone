@@ -519,6 +519,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_Healing
       objectReference: {fileID: 0}
+    - target: {fileID: 3594458071059096416, guid: 68241810980f07849b104888f39bf272, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3663831674606402508, guid: 68241810980f07849b104888f39bf272, type: 3}
       propertyPath: m_RootOrder
       value: 10
