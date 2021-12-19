@@ -7,13 +7,28 @@ using TMPro;
 public class Cutscene : MonoBehaviour
 {
     public GameObject[] dialogueBoxes;
-    public TextMeshProUGUI[] textMeshes;
+    public TextMeshProUGUI[] names;
+    public TextMeshProUGUI[] contents;
 
     private Action callback;
 
     public bool running = false;
     private int currentIndex = 0;
     private List<Dictionary<string, object>> script;
+
+    private void Start()
+    {
+        int numSpeakers = dialogueBoxes.Length;
+
+        names = new TextMeshProUGUI[numSpeakers];
+        contents = new TextMeshProUGUI[numSpeakers];
+
+        for (int i = 0; i < numSpeakers; i++)
+        {
+            names[i] = dialogueBoxes[i].transform.Find("Name").GetComponent<TextMeshProUGUI>();
+            contents[i] = dialogueBoxes[i].transform.Find("Content").GetComponent<TextMeshProUGUI>();
+        }
+    }
 
     void Update()
     {
@@ -31,7 +46,7 @@ public class Cutscene : MonoBehaviour
         script = CSVReader.Read(dialogueName);
         running = true;
 
-        Time.timeScale = 0f; // °ÔÀÓ Á¤Áö
+        Time.timeScale = 0f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
         Show(0);
     }
@@ -43,7 +58,7 @@ public class Cutscene : MonoBehaviour
 
         if (currentIndex == script.Count - 1)
         {
-            Time.timeScale = 1f; // °ÔÀÓ Àç°³
+            Time.timeScale = 1f; // ï¿½ï¿½ï¿½ï¿½ ï¿½ç°³
 
             running = false;
             foreach (GameObject dialogueBox in dialogueBoxes)
@@ -79,6 +94,7 @@ public class Cutscene : MonoBehaviour
             dialogueBox.SetActive(false);
         dialogueBoxes[ui].SetActive(true);
 
-        textMeshes[ui].SetText(dialog);
+        names[ui].SetText(speaker);
+        contents[ui].SetText(dialog);
     }
 }
