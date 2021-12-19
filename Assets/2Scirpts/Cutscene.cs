@@ -38,6 +38,9 @@ public class Cutscene : MonoBehaviour
 
     public void ShowNext()
     {
+        if (!running)
+            return;
+
         if (currentIndex == script.Count - 1)
         {
             Time.timeScale = 1f; // 게임 재개

@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: f8b8b21b1c1a2bc43b923a92ac625e3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6659706214031627910
+    second: clear_motion_sprite_0
+  - first:
+      213: 289465895318204997
+    second: clear_motion_sprite_1
+  - first:
+      213: 4291940074031521518
+    second: clear_motion_sprite_2
+  - first:
+      213: -743781636079278087
+    second: clear_motion_sprite_3
+  - first:
+      213: -1589607412960554760
+    second: clear_motion_sprite_4
+  - first:
+      213: 1263256155921517285
+    second: clear_motion_sprite_5
+  - first:
+      213: -2700928876460055959
+    second: clear_motion_sprite_6
+  - first:
+      213: -1448406904502193070
+    second: clear_motion_sprite_7
+  - first:
+      213: -7601175478328995081
+    second: clear_motion_sprite_8
+  - first:
+      213: -8751566337962191947
+    second: clear_motion_sprite_9
+  - first:
+      213: 7493257631318907202
+    second: clear_motion_sprite_10
+  - first:
+      213: -8567744658912444718
+    second: clear_motion_sprite_11
+  - first:
+      213: -3690819691350911533
+    second: clear_motion_sprite_12
+  - first:
+      213: -1580471666807603936
+    second: clear_motion_sprite_13
+  - first:
+      213: -7122009621377785943
+    second: clear_motion_sprite_14
+  - first:
+      213: 7877247014474525498
+    second: clear_motion_sprite_15
+  - first:
+      213: 6275483763253445276
+    second: clear_motion_sprite_16
+  - first:
+      213: -2130604668833905903
+    second: clear_motion_sprite_17
+  - first:
+      213: -1611500684806777214
+    second: clear_motion_sprite_18
+  - first:
+      213: 2367476365902402614
+    second: clear_motion_sprite_19
+  - first:
+      213: 7842046594981436393
+    second: clear_motion_sprite_20
+  - first:
+      213: -9018019276580477333
+    second: clear_motion_sprite_21
+  - first:
+      213: -1508629053932251838
+    second: clear_motion_sprite_22
+  - first:
+      213: 210193510258650132
+    second: clear_motion_sprite_23
+  - first:
+      213: -5366017537601156772
+    second: clear_motion_sprite_24
+  - first:
+      213: 1252269019183705060
+    second: clear_motion_sprite_25
+  - first:
+      213: 4488144044659704429
+    second: clear_motion_sprite_26
+  - first:
+      213: 8096655261670567687
+    second: clear_motion_sprite_27
+  - first:
+      213: 8894893164562573883
+    second: clear_motion_sprite_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clear_motion_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68611db54870c6c50800000000000000
+      internalID: 6659706214031627910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 500
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5423809b2b3640400800000000000000
+      internalID: 289465895318204997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 500
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee99e5f1c8009b30800000000000000
+      internalID: 4291940074031521518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 500
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7290fea8e8da5f0800000000000000
+      internalID: -743781636079278087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 500
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f09822ea7490f9e0800000000000000
+      internalID: -1589607412960554760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea0702e7ccf78110800000000000000
+      internalID: 1263256155921517285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 400
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962e00b3f7f548ad0800000000000000
+      internalID: -2700928876460055959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2547ce6289936ebe0800000000000000
+      internalID: -1448406904502193070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 400
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f25acadc23338690800000000000000
+      internalID: -7601175478328995081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 400
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b35f7d88c03c8680800000000000000
+      internalID: -8751566337962191947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2499f3d5d166df760800000000000000
+      internalID: 7493257631318907202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 300
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2def54760a1491980800000000000000
+      internalID: -8567744658912444718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_12
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 300
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d51307ab0397ccc0800000000000000
+      internalID: -3690819691350911533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_13
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 300
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02dfc5a8469011ae0800000000000000
+      internalID: -1580471666807603936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 300
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afdcdebbf9892d90800000000000000
+      internalID: -7122009621377785943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ba2c99c6a915d60800000000000000
+      internalID: 7877247014474525498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_16
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 200
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c920476db3ff61750800000000000000
+      internalID: 6275483763253445276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_17
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113cd5597529e62e0800000000000000
+      internalID: -2130604668833905903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_18
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 200
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2861bce4aacc2a9e0800000000000000
+      internalID: -1611500684806777214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_19
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 200
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634debb1637fad020800000000000000
+      internalID: 2367476365902402614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb1ee544db84dc60800000000000000
+      internalID: 7842046594981436393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_21
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 100
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66abc95f3f89d280800000000000000
+      internalID: -9018019276580477333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_22
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 100
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 245d8865ed5401be0800000000000000
+      internalID: -1508629053932251838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_23
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 100
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c2f0942e1cae200800000000000000
+      internalID: 210193510258650132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_24
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 100
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5944ccda731885b0800000000000000
+      internalID: -5366017537601156772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebeba3c904f06110800000000000000
+      internalID: 1252269019183705060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_26
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d620ababa37194e30800000000000000
+      internalID: 4488144044659704429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_27
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70feba400191d5070800000000000000
+      internalID: 8096655261670567687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clear_motion_sprite_28
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 350
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a6dccb432017b70800000000000000
+      internalID: 8894893164562573883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9190f9c34b510534780efabebbef6f10
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     public GameObject retryPanel;
     public GameObject ClearPanel;
     public GameObject skyBox;
-    public GameObject RedBox;
-    public GameObject BlueBox;
     public Cutscene cutscene;
     public InstructionModal instructionModal;
     public FadeIn fader;
@@ -143,8 +141,9 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         // 게임 클리어시에 Panel을 보여줌
-        retryPanel.SetActive(true);
-        ClearPanel.SetActive(true);
+        fader.StartFadeIn(0f, .5f, 2f);
+        retryPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 2f);
+        ClearPanel.GetComponent<FadeIn>().StartFadeIn(0f, 1f, 2f);
     }
 
     private void OnStartCutsceneEnd()

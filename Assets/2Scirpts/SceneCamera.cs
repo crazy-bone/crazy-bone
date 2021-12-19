@@ -83,7 +83,7 @@ public class SceneCamera : MonoBehaviour
 
     IEnumerator Move1()
     {
-        this.transform.position = new Vector3(0, 136, -128);
+        this.transform.position = new Vector3(0, 50, -128);
         yield return new WaitForSeconds(2f);
         if (num == 1)
         {
@@ -93,7 +93,7 @@ public class SceneCamera : MonoBehaviour
     }
     IEnumerator Move2()
     {
-        this.transform.position = new Vector3(0, 136, -128);
+        this.transform.position = new Vector3(0, 50, -128);
         yield return new WaitForSeconds(2f);
         if (num == 2)
         {
@@ -103,7 +103,7 @@ public class SceneCamera : MonoBehaviour
     }
     IEnumerator Move3()
     {
-        this.transform.position = new Vector3(0, 136, -128);
+        this.transform.position = new Vector3(0, 50, -128);
         yield return new WaitForSeconds(2f);
         if (num == 3)
         {
@@ -113,7 +113,7 @@ public class SceneCamera : MonoBehaviour
     }
     IEnumerator Move4()
     {
-        this.transform.position = new Vector3(0, 136, -128);
+        this.transform.position = new Vector3(0, 50, -128);
         yield return new WaitForSeconds(2f);
         if (num == 4)
         {
@@ -123,7 +123,7 @@ public class SceneCamera : MonoBehaviour
     }
     IEnumerator Move5()
     {
-        this.transform.position = new Vector3(0, 136, -128);
+        this.transform.position = new Vector3(0, 50, -128);
         yield return new WaitForSeconds(2f);
         if (num == 5)
         {
