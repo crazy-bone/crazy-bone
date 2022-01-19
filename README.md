@@ -24,7 +24,7 @@
 - Platform: PC
 - Graphics: 3D
 - Genre: Adventure
-- [Download](https://github.com/crazy-bone/crazy-bone/releases) the latest release.
+- [Download](https://github.com/crazy-bone/crazy-bone/releases) the lastest release.
 
 ## Trailer
 
