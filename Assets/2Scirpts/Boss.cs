@@ -251,10 +251,8 @@ public class Boss : Enemy
     IEnumerator Think()
     {
         // 공격을 랜덤하게 배치함
-        //TODO: 기획 내용에 따라 보스 패턴을 변경, 아직 불분명
+        //TODO: 기획 내용에 따라 패턴을 변경, 아직 불분명
         yield return new WaitForSeconds(0.1f);
-
-
 
         int ranAction = Random.Range(0, 5);
         if (isdead == false && isDead == false)
