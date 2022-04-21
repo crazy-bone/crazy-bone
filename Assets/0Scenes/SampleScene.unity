@@ -21600,7 +21600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  damageEnabled: 0
+  damageEnabled: 1
   damage: 10
   rate: 0.1
   meleeArea: {fileID: 0}
@@ -29766,7 +29766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1ba72da07ca8fe41bf30847264c2aa7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1ba72da07ca8fe41bf30847264c2aa7, type: 3}
       propertyPath: m_TagString
@@ -30059,9 +30059,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050253493}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.02
+  m_Radius: 0.06
   m_Height: 0.09
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -0.01}
