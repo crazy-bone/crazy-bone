@@ -17,6 +17,7 @@ public class Weapon : MonoBehaviour
     public GameObject bullet;
     public Transform bulletCasePos;
     public GameObject bulletCase;
+    public int Speed = 50;
 
     void Update()
     {
@@ -68,7 +69,7 @@ public class Weapon : MonoBehaviour
         //√—æÀ πﬂªÁ
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
-        bulletRigid.velocity = bulletPos.forward * 50;
+        bulletRigid.velocity = bulletPos.forward * Speed;
  
         yield return null;
         //≈∫«« πË√‚

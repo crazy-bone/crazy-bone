@@ -831,6 +831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Staff_LP
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f5ed0a2c408c740dbb1fd686f2e8b726, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5ed0a2c408c740dbb1fd686f2e8b726, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -853,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5ed0a2c408c740dbb1fd686f2e8b726, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.67
+      value: 9.33
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f5ed0a2c408c740dbb1fd686f2e8b726, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8156,7 +8160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94af709284403c94f90de2ce19485d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 4
   value: 0
 --- !u!54 &382471770
 Rigidbody:
@@ -8169,7 +8173,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -8441,6 +8445,10 @@ PrefabInstance:
     - target: {fileID: 5736628127881041897, guid: 90032ee95a7c22c46a56127b9c13a5bd, type: 3}
       propertyPath: m_Name
       value: Weapon Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736628127881041897, guid: 90032ee95a7c22c46a56127b9c13a5bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90032ee95a7c22c46a56127b9c13a5bd, type: 3}
@@ -21925,7 +21933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &820473230
 MonoBehaviour:
   m_ObjectHideFlags: 0
