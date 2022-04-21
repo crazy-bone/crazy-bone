@@ -63,6 +63,22 @@ public class Weapon : MonoBehaviour
         trailEffect.enabled = false;
     }
 
+    IEnumerator Shot()
+    {
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 50;
+ 
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2,3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+    }
+
 
    /* private void OnTriggerEnter(Collider other)
     {

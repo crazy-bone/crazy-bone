@@ -1,0 +1,5 @@
+PREFAB AND OBJECT MANAGER DEMO
+
+This demo requires the "Human Character" from Infinity PBR, and makes use of the wardrobe from the Human, Elf, and Half-Orc character packs.
+
+Without the "Human Character" in the project, this demo will NOT work. Without the Elf and Half-Orc in the project, some textures will be pink!

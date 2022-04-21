@@ -160,6 +160,7 @@ public class Player : MonoBehaviour
             equipWeapon.Use();
             equipWeapon.rate = 1;
             anim.SetTrigger(equipWeapon.type == Weapon.Type.Melee ? "doSwing" : "doShot");
+           
         }
     }
 

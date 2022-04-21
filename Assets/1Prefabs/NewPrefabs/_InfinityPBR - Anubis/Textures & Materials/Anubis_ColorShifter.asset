@@ -1,0 +1,696 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84469202498e54409ae324f879e1c504, type: 3}
+  m_Name: Anubis_ColorShifter
+  m_EditorClassIdentifier: 
+  activeColorSetIndex: 0
+  activeColors: 42
+  colorSets:
+  - name: Anubis_1
+    colorShifterItems:
+    - name: Ankle Bands
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Armband
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Armband 2
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Belt
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.06551723
+      saturation: 0.7352941
+      value: 0.31617647
+    - name: Belt Front
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.06666666
+      saturation: 0.7216981
+      value: 0.1792453
+    - name: Belt Front Cloth
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0.1176422
+      saturation: 0.22169809
+      value: 0.8679245
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.2830189
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.1981132
+    - name: Body 3
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.13207549
+    - name: Body 4
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.26415092
+    - name: Body Face Ears Inner
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0.25943398
+      value: 0.3773585
+    - name: Body Face Eye Outline 1
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.24528301
+    - name: Body Face Eye Outline 2
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.26415092
+    - name: Body Face Eye Outline 3
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.1792453
+    - name: Body Face Eyebrows
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0.5
+      value: 0.5
+    - name: Body Face Eyes
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0.0146778235
+      saturation: 1
+      value: 0.735849
+    - name: Body Mouth Inner
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0.0033682464
+      saturation: 0.9764151
+      value: 0.21698111
+    - name: Body Mouth Lips
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0.97932297
+      saturation: 0.2971698
+      value: 0.26415092
+    - name: Body Mouth Teeth
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0.11979165
+      saturation: 0.18396226
+      value: 0.9811321
+    - name: Body Mouth Tongue
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0.9853502
+      saturation: 0.8443396
+      value: 0.7169812
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.16037738
+    - name: Body Nose
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0.081594564
+      saturation: 0.70283014
+      value: 0.2735849
+    - name: Body Nose Nostrils
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.009433985
+    - name: Bracers
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Bracers Trim
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 0}
+      hue: 0.10588237
+      saturation: 0.30660376
+      value: 0.9528302
+    - name: Color 11
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.8999999
+      saturation: 0.5
+      value: 0.5
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 0}
+      hue: 0
+      saturation: 0.5
+      value: 0.5
+    - name: Color 38
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 40
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Cowl
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Headpiece 1
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Headpiece 2
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0.105882354
+      saturation: 0.9764151
+      value: 0.6603774
+    - name: Headpiece 3
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0.105882354
+      saturation: 0.5801887
+      value: 0.9622642
+    - name: Headpiece 4
+      isOn: 0
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Headpiece Sides 1
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Headpiece Sides 2
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0.105882354
+      saturation: 1
+      value: 0.5
+    - name: Skirt
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0.116672255
+      saturation: 0.18382351
+      value: 0.9852941
+    - name: Staff Trim
+      isOn: 1
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 0}
+      hue: 0.106060416
+      saturation: 0.02358495
+      value: 0.6132076
+    - name: Waistpiece
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.06666667
+      saturation: 0.3443396
+      value: 0.3207547
+    - name: Waistpiece Trim
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 0}
+      hue: 0.06551723
+      saturation: 0.7352941
+      value: 0.31617647
+  - name: Anubis_2
+    colorShifterItems:
+    - name: Ankle Bands
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Armband
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Armband 2
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Belt
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.022875816
+      saturation: 0.93867916
+      value: 0.5754717
+    - name: Belt Front
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.022875817
+      saturation: 1
+      value: 0.4245283
+    - name: Belt Front Cloth
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0.11904762
+      saturation: 0.5141509
+      value: 0.5188679
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0.06551723
+      saturation: 0.7352941
+      value: 0.31617647
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0.066666655
+      saturation: 0.5613208
+      value: 0.4433962
+    - name: Body 3
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0.066666655
+      saturation: 0.7216981
+      value: 0.26415092
+    - name: Body 4
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0.06551723
+      saturation: 0.7352941
+      value: 0.31617647
+    - name: Body Face Ears Inner
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0.8632075
+      value: 0.5377358
+    - name: Body Face Eye Outline 1
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0.06551723
+      saturation: 0.7352941
+      value: 0.31617647
+    - name: Body Face Eye Outline 2
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0.066666655
+      saturation: 0.7216981
+      value: 0.20754719
+    - name: Body Face Eye Outline 3
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0.066666655
+      saturation: 0.7216981
+      value: 0.103773594
+    - name: Body Face Eyebrows
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0.066666655
+      saturation: 0.5990566
+      value: 0.4056604
+    - name: Body Face Eyes
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0.49689487
+      saturation: 1
+      value: 0.7372549
+    - name: Body Mouth Inner
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0.0030864188
+      saturation: 0.5518868
+      value: 0.122641504
+    - name: Body Mouth Lips
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0.06666666
+      saturation: 1
+      value: 0.14150941
+    - name: Body Mouth Teeth
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0.11956522
+      saturation: 0.7311321
+      value: 0.6415094
+    - name: Body Mouth Tongue
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0.9595967
+      saturation: 0.8469945
+      value: 0.7176471
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0.10056973
+      saturation: 0.39150944
+      value: 0.6698113
+    - name: Body Nose
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0.08163265
+      saturation: 0.6556604
+      value: 0.103773594
+    - name: Body Nose Nostrils
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.009433985
+    - name: Bracers
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 0}
+      hue: 0
+      saturation: 0
+      value: 0.8308824
+    - name: Bracers Trim
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 0}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Color 11
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.8999999
+      saturation: 0.5
+      value: 0.5
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 0}
+      hue: 0
+      saturation: 0.5
+      value: 0.5
+    - name: Color 38
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 40
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+    - name: Cowl
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.8308824
+    - name: Headpiece 1
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.8308824
+    - name: Headpiece 2
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+    - name: Headpiece 3
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.8308824
+    - name: Headpiece 4
+      isOn: 0
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0.10588237
+      saturation: 0.5707547
+      value: 0.9811321
+    - name: Headpiece Sides 1
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+    - name: Headpiece Sides 2
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0.7112069
+      saturation: 0.6823529
+      value: 1
+    - name: Skirt
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0.1279762
+      saturation: 0.46698114
+      value: 0.7169812
+    - name: Staff Trim
+      isOn: 0
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 0}
+      hue: 0.022875817
+      saturation: 1
+      value: 1
+    - name: Waistpiece
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.022690257
+      saturation: 1
+      value: 1
+    - name: Waistpiece Trim
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 0}
+      hue: 0.022875816
+      saturation: 0.94811326
+      value: 0.6226415
+  material: {fileID: 2100000, guid: df515dba7dcd7464786d293a85b7e189, type: 2}
+  exportPath: /Users/infinitypbr/Asset Store Projects - Low Poly/Assets/InfinityPBR/_InfinityPBR
+    - Anubis/Textures & Materials
