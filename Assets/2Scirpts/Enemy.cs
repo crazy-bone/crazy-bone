@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            // mat.color = Color.gray; 
+            mat.color = Color.gray; 
         }
     }
 
