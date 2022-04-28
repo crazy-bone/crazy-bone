@@ -7460,6 +7460,7 @@ MonoBehaviour:
   healthBar: {fileID: 1902077108}
   healthHUD: {fileID: 1872192319}
   knockBack: 0
+  meleeArea: {fileID: 0}
   body: {fileID: 4404148686937759915}
   Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
@@ -9007,6 +9008,7 @@ MonoBehaviour:
   healthBar: {fileID: 336181343}
   healthHUD: {fileID: 0}
   knockBack: 0
+  meleeArea: {fileID: 0}
   body: {fileID: 0}
   Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
@@ -15415,6 +15417,7 @@ MonoBehaviour:
   healthBar: {fileID: 1138431345}
   healthHUD: {fileID: 0}
   knockBack: 0
+  meleeArea: {fileID: 1180502653}
   body: {fileID: 0}
   Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0
@@ -32573,6 +32576,7 @@ MonoBehaviour:
   healthBar: {fileID: 1229538588}
   healthHUD: {fileID: 0}
   knockBack: 0
+  meleeArea: {fileID: 0}
   body: {fileID: 0}
   Par: {fileID: 93625978556617599, guid: f87fd209203ba9148b550c6b3e900711, type: 3}
   isdead: 0

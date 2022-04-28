@@ -14,6 +14,10 @@ public class Enemy : MonoBehaviour
     /// <summary> 피격 시 넉백 </summary>
     public float knockBack = 0f;
 
+    public BoxCollider meleeArea;
+    public bool isAttack;
+
+    bool isChase;
 
     Rigidbody rigid;
     BoxCollider boxCollider;
@@ -29,17 +33,51 @@ public class Enemy : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
-        //mat = GetComponent<MeshRenderer>().material;
+        mat = GetComponent<MeshRenderer>().material;
         nav = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+
+        Invoke("ChaseStart", 2);
+    }
+
+    void ChaseStart()
+    {
+        isChase = true;
+        anim.SetBool("isWalk", true);
     }
 
     public void Update()
     {
+        if (nav.enabled)
+        {
+            nav.SetDestination(target.position);
+            nav.isStopped = !isChase;
+        }
+
         //nav.SetDestination(target.position);
 
         // 체력바 업데이트
         UpdateHealthBar();
+    }
+
+    void FreezeVelocity()
+    {
+        if (isChase)
+        {
+            rigid.velocity = Vector3.zero;
+            rigid.angularVelocity = Vector3.zero;
+        }
+    }
+
+    void Targeting()
+    {
+
+    }
+
+    private void FixedUpdate()
+    {
+        Targeting();
+        FreezeVelocity();
     }
 
     private void UpdateHealthBar()
