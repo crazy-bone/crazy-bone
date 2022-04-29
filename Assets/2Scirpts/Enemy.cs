@@ -102,15 +102,17 @@ public class Enemy : MonoBehaviour
         // 무기 타입에 따라 데미지
         if(other.tag == "Melee" && isdead == false)
         {
-            
             Weapon weapon = other.GetComponent<Weapon>();
             curHealth -= weapon.damage;
+
             StartCoroutine(OnDamage());
         }
          else if (other.tag == "Bullet")
         {
             Bullet bullet = other.GetComponent<Bullet>();
             curHealth -= bullet.damage;
+
+
             StartCoroutine(OnDamage());
         }
     }
