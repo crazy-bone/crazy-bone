@@ -8,25 +8,24 @@ public class Enemy : MonoBehaviour
     public int maxHealth;
     public int curHealth;
     public Transform target;
-    /// <summary> 체력바 </summary>
-    public Transform healthBar;
-    public HealthHUD healthHUD;
-    /// <summary> 피격 시 넉백 </summary>
-    public float knockBack = 0f;
-
     public BoxCollider meleeArea;
+    public bool isChase;
     public bool isAttack;
-
-    bool isChase;
 
     Rigidbody rigid;
     BoxCollider boxCollider;
     Material mat;
     NavMeshAgent nav;
     protected Animator anim;
+
+
+    /// <summary> 체력바 </summary>
+    public Transform healthBar;
+    public HealthHUD healthHUD;
+    /// <summary> 피격 시 넉백 </summary>
+    public float knockBack = 0f;
     public GameObject body;
     public GameObject Par;
-
     public bool isdead = false;
 
     public void Awake()
@@ -37,7 +36,7 @@ public class Enemy : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         anim = GetComponentInChildren<Animator>();
 
-        Invoke("ChaseStart", 2);
+        Invoke("ChaseStart", 1);
     }
 
     void ChaseStart()
@@ -54,8 +53,6 @@ public class Enemy : MonoBehaviour
             nav.isStopped = !isChase;
         }
 
-        //nav.SetDestination(target.position);
-
         // 체력바 업데이트
         UpdateHealthBar();
     }
@@ -71,7 +68,35 @@ public class Enemy : MonoBehaviour
 
     void Targeting()
     {
+        float targetRadius = 4f;
+        float targetRange = 5f;
+       
+        RaycastHit[] rayHits = Physics.SphereCastAll(transform.position, targetRadius, transform.forward, targetRange, LayerMask.GetMask("Player"));
 
+
+        if (rayHits.Length > 0 && !isAttack)
+        {
+            StartCoroutine(Attack());
+        }
+    }
+
+    IEnumerator Attack()
+    {
+        isChase = false;
+        isAttack = true;
+        anim.SetBool("isAttack", true);
+
+        yield return new WaitForSeconds(0.2f);
+        meleeArea.enabled = true;
+
+        yield return new WaitForSeconds(0.5f);
+        meleeArea.enabled = false;
+
+        isChase = true;
+        isAttack = false;
+        anim.SetBool("isAttack", false);
+
+        yield return null;
     }
 
     private void FixedUpdate()
