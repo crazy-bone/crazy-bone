@@ -1,0 +1,14 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl wood
+Kd 0.8666667 0.5333334 0.3098039
+
+newmtl rock
+Kd 0.6666667 0.6862745 0.7568628
+
+newmtl woodDark
+Kd 0.627451 0.3843137 0.2235294
+
+newmtl metal
+Kd 0.7843137 0.8078431 0.8901961
+

@@ -1,0 +1,8 @@
+Greetings user!
+
+-This package is using couple of Image Effects from Unity Standart Assets. 
+If you dont have them already, you can import them for free from Standart Packages and set on your camera by add component.
+
+-All the settings of effects is on the screenshot below.
+
+-For any info feel free to ask at zugzug.art@gmail.com
