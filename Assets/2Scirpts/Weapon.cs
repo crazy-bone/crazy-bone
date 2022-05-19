@@ -85,10 +85,46 @@ public class Weapon : MonoBehaviour
         CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
-
-   /* private void OnTriggerEnter(Collider other)
+    IEnumerator Shot2()
     {
-        if (other.transform.tag == "Enemy")
-            other.GetComponent<Enemy>().OnDamage(10);
-    }*/
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+       // instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation.x + 30.0f);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+    }
+
+    IEnumerator Shot3()
+    {
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+    }
+
+
+    /* private void OnTriggerEnter(Collider other)
+     {
+         if (other.transform.tag == "Enemy")
+             other.GetComponent<Enemy>().OnDamage(10);
+     }*/
 }

@@ -19,8 +19,7 @@ public class Select : MonoBehaviour
 
     public void Resume()
     {
-        fader.StartFadeIn(.9f, 0f, .2f, OnMenuClosed);
-        Time.timeScale = 1f;
+       
     }
 
     public void Toggle()
