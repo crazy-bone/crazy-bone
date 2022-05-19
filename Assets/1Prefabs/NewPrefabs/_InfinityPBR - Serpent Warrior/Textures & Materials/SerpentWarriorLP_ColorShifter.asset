@@ -1,0 +1,2968 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84469202498e54409ae324f879e1c504, type: 3}
+  m_Name: SerpentWarriorLP_ColorShifter
+  m_EditorClassIdentifier: 
+  activeColorSetIndex: 0
+  activeColors: 42
+  colorSets:
+  - name: Red
+    colorShifterItems:
+    - name: Armor Bags
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 2
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 3
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 1}
+      hue: 0.093103446
+      saturation: 0.7941176
+      value: 0.2794118
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt Center
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 1
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 2
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0.105882354
+      saturation: 1
+      value: 0.5566038
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0.10303035
+      saturation: 0.05188681
+      value: 0.8584906
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest Rope
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0.90094334
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0.9198113
+      value: 0.16981131
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Back
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Head 1
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.008873813
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Head Hood
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0.7311321
+      value: 0.5943396
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Main
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.3820755
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Palms
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.8915094
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Underside
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0.11152468
+      saturation: 0.504717
+      value: 0.7830189
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 1
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 13
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.9245283
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 19
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 2
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 20
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 27
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 32
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 33
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 34
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 36
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 4
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 5
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 6
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 7
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 9
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face
+      isOn: 0
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0.7971698
+      value: 0.7075472
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eye Outline
+      isOn: 0
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.92924523
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eyes
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0.34898755
+      saturation: 1
+      value: 0.990566
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Mouth Inner
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.63679254
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Teeth
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0.1208899
+      saturation: 0.2688679
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Tongue
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.033890214
+      saturation: 1
+      value: 0.9150943
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 42
+      isOn: 0
+      shaderIndex: 42
+      orderIndex: 42
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 43
+      isOn: 0
+      shaderIndex: 43
+      orderIndex: 43
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 44
+      isOn: 0
+      shaderIndex: 44
+      orderIndex: 44
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 45
+      isOn: 0
+      shaderIndex: 45
+      orderIndex: 45
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 46
+      isOn: 0
+      shaderIndex: 46
+      orderIndex: 46
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 47
+      isOn: 0
+      shaderIndex: 47
+      orderIndex: 47
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 48
+      isOn: 0
+      shaderIndex: 48
+      orderIndex: 48
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+  - name: Green
+    colorShifterItems:
+    - name: Armor Bags
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 2
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 3
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 1}
+      hue: 0.093103446
+      saturation: 0.7941176
+      value: 0.2794118
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt Center
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 1
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 2
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0.105882354
+      saturation: 1
+      value: 0.5566038
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0.10303035
+      saturation: 0.05188681
+      value: 0.8584906
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest Rope
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0.90094334
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: -0.41
+      childValueShift: 0.24
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0.9198113
+      value: 0.16981131
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.17
+      childSaturationShift: -0.43
+      childValueShift: -0.29
+    - name: Body Back
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: -0.5
+    - name: Body Head 1
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.3764706
+      saturation: 0.6556604
+      value: 0.3584906
+      testView: 0
+      children: 0d0000000e0000000b0000000a0000000900000024000000
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Head Hood
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0.7311321
+      value: 0.5943396
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.12
+      childSaturationShift: -0.27
+      childValueShift: -0.05
+    - name: Body Main
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.06
+      childSaturationShift: 0.2
+      childValueShift: -0.21
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.3820755
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Palms
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.8915094
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Underside
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0.11152468
+      saturation: 0.504717
+      value: 0.7830189
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 1
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 13
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.9245283
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 19
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 2
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 20
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 27
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 32
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 33
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 34
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 36
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 4
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 5
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 6
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 7
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 9
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face
+      isOn: 0
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0.7971698
+      value: 0.7075472
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eye Outline
+      isOn: 0
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.92924523
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eyes
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0.34898755
+      saturation: 1
+      value: 0.990566
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Mouth Inner
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.63679254
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Teeth
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0.1208899
+      saturation: 0.2688679
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Tongue
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.033890214
+      saturation: 1
+      value: 0.9150943
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 42
+      isOn: 0
+      shaderIndex: 42
+      orderIndex: 42
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 43
+      isOn: 0
+      shaderIndex: 43
+      orderIndex: 43
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 44
+      isOn: 0
+      shaderIndex: 44
+      orderIndex: 44
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 45
+      isOn: 0
+      shaderIndex: 45
+      orderIndex: 45
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 46
+      isOn: 0
+      shaderIndex: 46
+      orderIndex: 46
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 47
+      isOn: 0
+      shaderIndex: 47
+      orderIndex: 47
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 48
+      isOn: 0
+      shaderIndex: 48
+      orderIndex: 48
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+  - name: Blue
+    colorShifterItems:
+    - name: Armor Bags
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 2
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 3
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 1}
+      hue: 0.093103446
+      saturation: 0.7941176
+      value: 0.2794118
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt Center
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 1
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 2
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0.105882354
+      saturation: 1
+      value: 0.5566038
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0.10303035
+      saturation: 0.05188681
+      value: 0.8584906
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest Rope
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0.90094334
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: -0.41
+      childValueShift: 0.24
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0.9198113
+      value: 0.16981131
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.17
+      childSaturationShift: -0.43
+      childValueShift: -0.29
+    - name: Body Back
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: -0.5
+    - name: Body Head 1
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.63962483
+      saturation: 0.8632075
+      value: 0.764151
+      testView: 0
+      children: 0d0000000e0000000b0000000a0000000900000024000000
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Head Hood
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0.7311321
+      value: 0.5943396
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.12
+      childSaturationShift: -0.27
+      childValueShift: -0.05
+    - name: Body Main
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.06
+      childSaturationShift: 0.2
+      childValueShift: -0.21
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.3820755
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Palms
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.8915094
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Underside
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0.11152468
+      saturation: 0.504717
+      value: 0.7830189
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 1
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 13
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.9245283
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 19
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 2
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 20
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 27
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 32
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 33
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 34
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 36
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 4
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 5
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 6
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 7
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 9
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face
+      isOn: 1
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0.7971698
+      value: 0.7075472
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.05
+      childSaturationShift: 0.13
+      childValueShift: 0
+    - name: Face Eye Outline
+      isOn: 0
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.92924523
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eyes
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0.34898755
+      saturation: 1
+      value: 0.990566
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Mouth Inner
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.63679254
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Teeth
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0.1208899
+      saturation: 0.2688679
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Tongue
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.033890214
+      saturation: 1
+      value: 0.9150943
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 42
+      isOn: 0
+      shaderIndex: 42
+      orderIndex: 42
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 43
+      isOn: 0
+      shaderIndex: 43
+      orderIndex: 43
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 44
+      isOn: 0
+      shaderIndex: 44
+      orderIndex: 44
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 45
+      isOn: 0
+      shaderIndex: 45
+      orderIndex: 45
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 46
+      isOn: 0
+      shaderIndex: 46
+      orderIndex: 46
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 47
+      isOn: 0
+      shaderIndex: 47
+      orderIndex: 47
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 48
+      isOn: 0
+      shaderIndex: 48
+      orderIndex: 48
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+  - name: Black
+    colorShifterItems:
+    - name: Armor Bags
+      isOn: 0
+      shaderIndex: 24
+      orderIndex: 24
+      color: {r: 0.19607843, g: 0, b: 0, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 2
+      isOn: 0
+      shaderIndex: 38
+      orderIndex: 38
+      color: {r: 0.19607843, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bags 3
+      isOn: 0
+      shaderIndex: 31
+      orderIndex: 31
+      color: {r: 0, g: 0.76862746, b: 0, a: 1}
+      hue: 0.093103446
+      saturation: 0.7941176
+      value: 0.2794118
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt
+      isOn: 0
+      shaderIndex: 11
+      orderIndex: 11
+      color: {r: 0, g: 0.5019608, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Belt Center
+      isOn: 0
+      shaderIndex: 18
+      orderIndex: 18
+      color: {r: 0.39215687, g: 0, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 1
+      isOn: 0
+      shaderIndex: 25
+      orderIndex: 25
+      color: {r: 0, g: 0.19607843, b: 0, a: 1}
+      hue: 0.10612825
+      saturation: 1
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Bracers 2
+      isOn: 0
+      shaderIndex: 17
+      orderIndex: 17
+      color: {r: 0.5019608, g: 1, b: 1, a: 1}
+      hue: 0.105882354
+      saturation: 1
+      value: 0.5566038
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest
+      isOn: 0
+      shaderIndex: 12
+      orderIndex: 12
+      color: {r: 1, g: 0.5019608, b: 0.5019608, a: 1}
+      hue: 0.10303035
+      saturation: 0.05188681
+      value: 0.8584906
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Armor Chest Rope
+      isOn: 0
+      shaderIndex: 10
+      orderIndex: 10
+      color: {r: 0.5019608, g: 0, b: 1, a: 1}
+      hue: 0.05146614
+      saturation: 1
+      value: 0.4056604
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body 1
+      isOn: 0
+      shaderIndex: 8
+      orderIndex: 8
+      color: {r: 0.5019608, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0.90094334
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: -0.41
+      childValueShift: 0.24
+    - name: Body 2
+      isOn: 0
+      shaderIndex: 22
+      orderIndex: 22
+      color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0.9198113
+      value: 0.16981131
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.17
+      childSaturationShift: -0.43
+      childValueShift: -0.29
+    - name: Body Back
+      isOn: 0
+      shaderIndex: 30
+      orderIndex: 30
+      color: {r: 0.76862746, g: 0, b: 0, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: -0.5
+    - name: Body Head 1
+      isOn: 0
+      shaderIndex: 28
+      orderIndex: 28
+      color: {r: 0.19607843, g: 0, b: 0.19607843, a: 1}
+      hue: 0.63988096
+      saturation: 0.3820755
+      value: 0.21698111
+      testView: 0
+      children: 0d0000000e0000000b0000000a0000000900000024000000
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Head Hood
+      isOn: 0
+      shaderIndex: 29
+      orderIndex: 29
+      color: {r: 0, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0.7311321
+      value: 0.5943396
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.12
+      childSaturationShift: -0.27
+      childValueShift: -0.05
+    - name: Body Main
+      isOn: 0
+      shaderIndex: 23
+      orderIndex: 23
+      color: {r: 0, g: 0.39215687, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 1
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: -0.06
+      childSaturationShift: 0.2
+      childValueShift: -0.21
+    - name: Body Nails
+      isOn: 0
+      shaderIndex: 16
+      orderIndex: 16
+      color: {r: 1, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.3820755
+      value: 0.09433961
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Palms
+      isOn: 0
+      shaderIndex: 14
+      orderIndex: 14
+      color: {r: 0.5019608, g: 0.5019608, b: 1, a: 1}
+      hue: 0
+      saturation: 0.8915094
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Body Underside
+      isOn: 0
+      shaderIndex: 15
+      orderIndex: 15
+      color: {r: 1, g: 1, b: 0.5019608, a: 1}
+      hue: 0.11152468
+      saturation: 0.504717
+      value: 0.7830189
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 1
+      isOn: 0
+      shaderIndex: 1
+      orderIndex: 1
+      color: {r: 0, g: 1, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 13
+      isOn: 0
+      shaderIndex: 13
+      orderIndex: 13
+      color: {r: 0.5019608, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 0.9245283
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 19
+      isOn: 0
+      shaderIndex: 19
+      orderIndex: 19
+      color: {r: 0, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 2
+      isOn: 0
+      shaderIndex: 2
+      orderIndex: 2
+      color: {r: 0, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 20
+      isOn: 0
+      shaderIndex: 20
+      orderIndex: 20
+      color: {r: 0, g: 0, b: 0.39215687, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 27
+      isOn: 0
+      shaderIndex: 27
+      orderIndex: 27
+      color: {r: 0.19607843, g: 0.19607843, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 32
+      isOn: 0
+      shaderIndex: 32
+      orderIndex: 32
+      color: {r: 0, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 33
+      isOn: 0
+      shaderIndex: 33
+      orderIndex: 33
+      color: {r: 0.76862746, g: 0.76862746, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 34
+      isOn: 0
+      shaderIndex: 34
+      orderIndex: 34
+      color: {r: 0.76862746, g: 0, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 36
+      isOn: 0
+      shaderIndex: 36
+      orderIndex: 36
+      color: {r: 0.76862746, g: 0.19607843, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 37
+      isOn: 0
+      shaderIndex: 37
+      orderIndex: 37
+      color: {r: 0.19607843, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 39
+      isOn: 0
+      shaderIndex: 39
+      orderIndex: 39
+      color: {r: 0.76862746, g: 0.76862746, b: 0.19607843, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 4
+      isOn: 0
+      shaderIndex: 4
+      orderIndex: 4
+      color: {r: 1, g: 0, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 41
+      isOn: 0
+      shaderIndex: 41
+      orderIndex: 41
+      color: {r: 0.19607843, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 5
+      isOn: 0
+      shaderIndex: 5
+      orderIndex: 5
+      color: {r: 0, g: 1, b: 1, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 6
+      isOn: 0
+      shaderIndex: 6
+      orderIndex: 6
+      color: {r: 1, g: 0.5019608, b: 0, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 7
+      isOn: 0
+      shaderIndex: 7
+      orderIndex: 7
+      color: {r: 1, g: 0, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 9
+      isOn: 0
+      shaderIndex: 9
+      orderIndex: 9
+      color: {r: 0, g: 1, b: 0.5019608, a: 1}
+      hue: 0
+      saturation: 0
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face
+      isOn: 1
+      shaderIndex: 21
+      orderIndex: 21
+      color: {r: 0.39215687, g: 0.39215687, b: 0, a: 1}
+      hue: 0
+      saturation: 0.7971698
+      value: 0.7075472
+      testView: 0
+      children: 
+      isChild: 1
+      parentIndex: 12
+      childHueShift: 0.14
+      childSaturationShift: 0.14
+      childValueShift: -0.1
+    - name: Face Eye Outline
+      isOn: 0
+      shaderIndex: 35
+      orderIndex: 35
+      color: {r: 0, g: 0.76862746, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.92924523
+      value: 0.33962262
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Eyes
+      isOn: 0
+      shaderIndex: 0
+      orderIndex: 0
+      color: {r: 1, g: 0, b: 0, a: 1}
+      hue: 0.9898009
+      saturation: 1
+      value: 0.99215686
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Mouth Inner
+      isOn: 0
+      shaderIndex: 40
+      orderIndex: 40
+      color: {r: 0.76862746, g: 0.19607843, b: 0.76862746, a: 1}
+      hue: 0
+      saturation: 0.63679254
+      value: 0.4339623
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Teeth
+      isOn: 0
+      shaderIndex: 3
+      orderIndex: 3
+      color: {r: 1, g: 1, b: 0, a: 1}
+      hue: 0.1208899
+      saturation: 0.2688679
+      value: 1
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Face Tongue
+      isOn: 0
+      shaderIndex: 26
+      orderIndex: 26
+      color: {r: 0, g: 0, b: 0.19607843, a: 1}
+      hue: 0.033890214
+      saturation: 1
+      value: 0.9150943
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 42
+      isOn: 0
+      shaderIndex: 42
+      orderIndex: 42
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 43
+      isOn: 0
+      shaderIndex: 43
+      orderIndex: 43
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 44
+      isOn: 0
+      shaderIndex: 44
+      orderIndex: 44
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 45
+      isOn: 0
+      shaderIndex: 45
+      orderIndex: 45
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 46
+      isOn: 0
+      shaderIndex: 46
+      orderIndex: 46
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 47
+      isOn: 0
+      shaderIndex: 47
+      orderIndex: 47
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+    - name: Color 48
+      isOn: 0
+      shaderIndex: 48
+      orderIndex: 48
+      color: {r: 0, g: 0, b: 0, a: 0}
+      hue: 0.5
+      saturation: 0.5
+      value: 0.5
+      testView: 0
+      children: 
+      isChild: 0
+      parentIndex: 0
+      childHueShift: 0
+      childSaturationShift: 0
+      childValueShift: 0
+  material: {fileID: 2100000, guid: 822f3389e943d4dde9e53e5e332030a0, type: 2}
+  exportPath: /Users/infinitypbr/Asset Store Projects - Low Poly/Assets/InfinityPBR/_InfinityPBR
+    - Serpent Warrior/Textures & Materials

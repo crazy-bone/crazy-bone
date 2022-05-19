@@ -55,6 +55,15 @@ public class Enemy : MonoBehaviour
 
         // 체력바 업데이트
         UpdateHealthBar();
+
+        if ((float)curHealth / maxHealth <= 0f && isdead == false)
+        {
+            anim.SetTrigger("doDie");
+            isdead = true;
+            Destroy(gameObject, 3f);
+
+        }
+
     }
 
     void FreezeVelocity()
@@ -86,10 +95,10 @@ public class Enemy : MonoBehaviour
         isAttack = true;
         anim.SetBool("isAttack", true);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.7f);
         meleeArea.enabled = true;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         meleeArea.enabled = false;
 
         isChase = true;

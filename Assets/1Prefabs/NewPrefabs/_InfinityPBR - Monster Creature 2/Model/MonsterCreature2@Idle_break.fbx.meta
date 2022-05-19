@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 721b06a95790e1e4c9c0b67235c2555e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cheeck_L1
+    100002: cheeck_L2
+    100004: cheeck_R1
+    100006: cheeck_R2
+    100008: eye_L
+    100010: eye_R
+    100012: eyeL
+    100014: eyeR
+    100016: head
+    100018: hips
+    100020: Leg_L_B
+    100022: Leg_L_B1
+    100024: Leg_L_B2
+    100026: Leg_L_B3
+    100028: Leg_L_B4
+    100030: Leg_L_B5
+    100032: Leg_L_F
+    100034: Leg_L_F1
+    100036: Leg_L_F2
+    100038: Leg_L_F3
+    100040: Leg_L_F4
+    100042: Leg_L_F5
+    100044: Leg_R_B
+    100046: Leg_R_B1
+    100048: Leg_R_B2
+    100050: Leg_R_B3
+    100052: Leg_R_B4
+    100054: Leg_R_B5
+    100056: Leg_R_F
+    100058: Leg_R_F1
+    100060: Leg_R_F2
+    100062: Leg_R_F3
+    100064: Leg_R_F4
+    100066: Leg_R_F5
+    100068: //RootNode
+    100070: mouth
+    100072: mouth1
+    100074: neck
+    100076: root
+    100078: spine2
+    100080: spine3
+    100082: spine4
+    100084: tail1
+    100086: tail10
+    100088: tail11
+    100090: tail2
+    100092: tail3
+    100094: tail4
+    100096: tail5
+    100098: tail6
+    100100: tail7
+    100102: tail8
+    100104: tail9
+    100106: tongue
+    100108: tongue2
+    100110: tongue3
+    100112: tongue4
+    100114: tongue5
+    100116: tongue6
+    100118: tusk_L4
+    100120: tusk_R4
+    400000: cheeck_L1
+    400002: cheeck_L2
+    400004: cheeck_R1
+    400006: cheeck_R2
+    400008: eye_L
+    400010: eye_R
+    400012: eyeL
+    400014: eyeR
+    400016: head
+    400018: hips
+    400020: Leg_L_B
+    400022: Leg_L_B1
+    400024: Leg_L_B2
+    400026: Leg_L_B3
+    400028: Leg_L_B4
+    400030: Leg_L_B5
+    400032: Leg_L_F
+    400034: Leg_L_F1
+    400036: Leg_L_F2
+    400038: Leg_L_F3
+    400040: Leg_L_F4
+    400042: Leg_L_F5
+    400044: Leg_R_B
+    400046: Leg_R_B1
+    400048: Leg_R_B2
+    400050: Leg_R_B3
+    400052: Leg_R_B4
+    400054: Leg_R_B5
+    400056: Leg_R_F
+    400058: Leg_R_F1
+    400060: Leg_R_F2
+    400062: Leg_R_F3
+    400064: Leg_R_F4
+    400066: Leg_R_F5
+    400068: //RootNode
+    400070: mouth
+    400072: mouth1
+    400074: neck
+    400076: root
+    400078: spine2
+    400080: spine3
+    400082: spine4
+    400084: tail1
+    400086: tail10
+    400088: tail11
+    400090: tail2
+    400092: tail3
+    400094: tail4
+    400096: tail5
+    400098: tail6
+    400100: tail7
+    400102: tail8
+    400104: tail9
+    400106: tongue
+    400108: tongue2
+    400110: tongue3
+    400112: tongue4
+    400114: tongue5
+    400116: tongue6
+    400118: tusk_L4
+    400120: tusk_R4
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a512f6ed7b0b84b678b866d4bff6a6e0,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

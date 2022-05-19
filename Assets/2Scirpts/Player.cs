@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
         if (isDodge)
             moveVec = dodgeVec;
 
-        if (isSwap || isDead || isDamage)
+        if (isSwap || isDead)
             moveVec = Vector3.zero;
 
         if (!isBorder)
