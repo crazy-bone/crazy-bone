@@ -1,0 +1,8 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl heart
+Kd 0.9764706 0.2901961 0.372549
+
+newmtl dirt
+Kd 0.8784314 0.5764706 0.372549
+
