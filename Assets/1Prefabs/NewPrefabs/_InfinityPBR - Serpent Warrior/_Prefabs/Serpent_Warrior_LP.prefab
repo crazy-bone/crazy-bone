@@ -354,6 +354,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -392,8 +393,8 @@ SkinnedMeshRenderer:
   - {fileID: 1362682531004977798}
   - {fileID: 1362682531004977990}
   m_BlendShapeWeights:
-  - 0
-  - -0
+  - 100
+  - -100
   m_RootBone: {fileID: 1362682531004977948}
   m_AABB:
     m_Center: {x: 0.020133078, y: 0.266738, z: -0.041429996}
@@ -791,7 +792,7 @@ MonoBehaviour:
       fullName: BodyThikness2.SFB_BSM_belt_BodyThiknessPlus
       triggerName: BodyThikness
       isMinus: 0
-      value: 0
+      value: 100
       min: -100
       max: 100
       limitMin: -100
@@ -809,7 +810,7 @@ MonoBehaviour:
       fullName: BodyThikness2.SFB_BSM_belt_BodyThiknessMinus
       triggerName: BodyThikness
       isMinus: 1
-      value: -0
+      value: -100
       min: -100
       max: 100
       limitMin: -100
@@ -833,12 +834,12 @@ MonoBehaviour:
       fullName: BodyThikness.SFB_BS_BodyThiknessPlus
       triggerName: BodyThikness
       isMinus: 0
-      value: 0
+      value: 100
       min: -100
       max: 100
       limitMin: -100
       limitMax: 100
-      lastValue: 0
+      lastValue: 100
       showValueOptions: 0
       isOpen: 0
       matchThisObjectIndex: 0
@@ -851,7 +852,7 @@ MonoBehaviour:
       fullName: BodyThikness.SFB_BS_BodyThiknessMinus
       triggerName: BodyThikness
       isMinus: 1
-      value: -0
+      value: -100
       min: -100
       max: 100
       limitMin: -100
@@ -953,7 +954,7 @@ MonoBehaviour:
       matchThisValueIndex: 0
       matchAnotherValue: 0
       otherValuesMatchThis: []
-    showValues: 0
+    showValues: 1
   - gameObjectName: Chest_Plate
     gameObject: {fileID: 1362682531004616496}
     smr: {fileID: 1362682531018277424}
@@ -965,7 +966,7 @@ MonoBehaviour:
       fullName: BodyThikness1.SFB_BSM_chestplate_BodyThiknessPlus
       triggerName: BodyThikness
       isMinus: 0
-      value: 0
+      value: 100
       min: -100
       max: 100
       limitMin: -100
@@ -983,7 +984,7 @@ MonoBehaviour:
       fullName: BodyThikness1.SFB_BSM_chestplate_BodyThiknessMinus
       triggerName: BodyThikness
       isMinus: 1
-      value: -0
+      value: -100
       min: -100
       max: 100
       limitMin: -100
@@ -1007,7 +1008,7 @@ MonoBehaviour:
       fullName: BodyThikness4.SFB_BSM_bR_BodyThiknessPlus
       triggerName: BodyThikness
       isMinus: 0
-      value: 0
+      value: 100
       min: -100
       max: 100
       limitMin: -100
@@ -1025,7 +1026,7 @@ MonoBehaviour:
       fullName: BodyThikness4.SFB_BSM_bR_BodyThiknessMinus
       triggerName: BodyThikness
       isMinus: 1
-      value: -0
+      value: -100
       min: -100
       max: 100
       limitMin: -100
@@ -1049,7 +1050,7 @@ MonoBehaviour:
       fullName: BodyThikness5.SFB_BSM_bL_BodyThiknessPlus
       triggerName: BodyThikness
       isMinus: 0
-      value: 0
+      value: 100
       min: -100
       max: 100
       limitMin: -100
@@ -1067,7 +1068,7 @@ MonoBehaviour:
       fullName: BodyThikness5.SFB_BSM_bL_BodyThiknessMinus
       triggerName: BodyThikness
       isMinus: 1
-      value: -0
+      value: -100
       min: -100
       max: 100
       limitMin: -100
@@ -1132,46 +1133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c023f4138a334623acb9140fdbbe0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  presets:
-  - name: Random
-    presetValues:
-    - objectName: Body
-      valueTriggerName: BodyThikness
-      onTriggerMode: Random
-      onTriggerModeIndex: 1
-      shapeValue: 0
-      limitMin: -100
-      limitMax: 100
-      min: -100
-      max: 100
-    - objectName: Body
-      valueTriggerName: ClawLength
-      onTriggerMode: Random
-      onTriggerModeIndex: 1
-      shapeValue: 0
-      limitMin: -100
-      limitMax: 100
-      min: -100
-      max: 100
-    - objectName: Body
-      valueTriggerName: EarSize
-      onTriggerMode: Random
-      onTriggerModeIndex: 1
-      shapeValue: 0
-      limitMin: -100
-      limitMax: 100
-      min: -100
-      max: 100
-    - objectName: Body
-      valueTriggerName: MouthOpen
-      onTriggerMode: Random
-      onTriggerModeIndex: 1
-      shapeValue: 0
-      limitMin: 0
-      limitMax: 100
-      min: 0
-      max: 100
-    showValues: 1
+  presets: []
   onTriggerMode:
   - Explicit
   - Random
@@ -2682,6 +2644,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2962,6 +2925,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3000,8 +2964,8 @@ SkinnedMeshRenderer:
   - {fileID: 1362682531004978002}
   - {fileID: 1362682531004977984}
   m_BlendShapeWeights:
-  - 0
-  - -0
+  - 100
+  - -100
   m_RootBone: {fileID: 1362682531004977948}
   m_AABB:
     m_Center: {x: 0.020133056, y: -0.2645134, z: -0.043030262}
@@ -3114,6 +3078,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3331,6 +3296,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3380,8 +3346,8 @@ SkinnedMeshRenderer:
   - {fileID: 1362682531004977990}
   - {fileID: 1362682531004977984}
   m_BlendShapeWeights:
-  - 0
-  - -0
+  - 100
+  - -100
   m_RootBone: {fileID: 1362682531004977948}
   m_AABB:
     m_Center: {x: -0.30382013, y: 0.006621033, z: 0.20935604}
@@ -3466,6 +3432,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3503,8 +3470,8 @@ SkinnedMeshRenderer:
   - {fileID: 1362682531004977990}
   - {fileID: 1362682531004977984}
   m_BlendShapeWeights:
-  - 0
-  - -0
+  - 100
+  - -100
   m_RootBone: {fileID: 1362682531004977948}
   m_AABB:
     m_Center: {x: -0.05647763, y: -0.00024977326, z: -0.025633574}
@@ -3556,6 +3523,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3678,8 +3646,8 @@ SkinnedMeshRenderer:
   - {fileID: 1362682531004977990}
   - {fileID: 1362682531004977984}
   m_BlendShapeWeights:
-  - 0
-  - -0
+  - 100
+  - -100
   - 0
   - -0
   - 0
@@ -4507,6 +4475,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
