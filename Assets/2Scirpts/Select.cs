@@ -8,60 +8,29 @@ public class Select : MonoBehaviour
     public GameObject optionModal;
     public GameObject instructionModal;
     public FadeIn fader;
+    public GameObject weapon;
+    public GameObject bullet;
+    public GameObject player;
 
-    public void Open()
+
+
+    public void YonBalButtonClicked()
     {
-        if (instructionModal.activeSelf)
-            return;
-
-        fader.StartFadeIn(0f, .9f, .5f, OnMenuOpened);
-    }
-
-    public void Resume()
-    {
-       
-    }
-
-    public void Toggle()
-    {
-        if (gameObject.activeSelf)
-            Resume();
-        else
-            Open();
-    }
-
-    private void OnMenuOpened()
-    {
-        Time.timeScale = 0f;
-    }
-
-    private void OnMenuClosed()
-    {
-        optionModal.SetActive(false);
-    }
-
-    public void OnStartButtonClicked()
-    {
-        if (fader != null)
-            fader.StartFadeIn(0f, 1f, .75f, () => SceneManager.LoadScene("SampleScene") );
-        else
-            SceneManager.LoadScene("SampleScene");
-    }
-
-    public void OnResumeButtonClicked()
-    {
-        if (fader == null) return;
-        Resume();
-    }
-
-    public void OnGalleryButtonClicked()
-    {
+        weapon.GetComponent<Weapon>().ChangeYonBal();
+        gameObject.SetActive(false);
 
     }
 
-    public void OnOptionButtonClicked()
+    public void BomWeButtonClicked()
     {
-        optionModal.SetActive(true);
+        weapon.GetComponent<Weapon>().ChangeBomWe();
+        gameObject.SetActive(false);
+    }
+
+    public void CheRukButtonClicked()
+    {
+        player.GetComponent<Player>().CheRukUp();
+        gameObject.SetActive(false);
     }
 
     public void OnExitButtonClicked()

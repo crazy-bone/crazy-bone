@@ -169,7 +169,9 @@ public class Player : MonoBehaviour
         // 플레이어 구르기 로직
            if (ctrlDown && !isDodge && !isSwap)
            {
-               dodgeVec = moveVec;
+                equipWeapon.Use();
+                equipWeapon.rate = 1;
+                dodgeVec = moveVec;
                anim.SetTrigger("doDodge");
                 
                 if (wDown)
@@ -428,5 +430,10 @@ public class Player : MonoBehaviour
         if (other.tag == "Weapon")
             nearObject = null;
 
+    }
+    public void CheRukUp()
+    {
+        maxHealth += 100;
+      
     }
 }

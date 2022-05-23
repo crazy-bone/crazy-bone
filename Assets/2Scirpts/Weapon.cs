@@ -15,9 +15,20 @@ public class Weapon : MonoBehaviour
     public TrailRenderer trailEffect;
     public Transform bulletPos;
     public GameObject bullet;
+    public GameObject bullet2;
+    public GameObject bullet3;
+    public GameObject bullet4;
+    public GameObject bullet5;
+    public GameObject bullet6;
+    public GameObject bullet7;
+    public GameObject bullet8;
+    public GameObject bullet9;
     public Transform bulletCasePos;
     public GameObject bulletCase;
-  
+    public int YonBal = 1;
+    public int BomWe = 1;
+
+
 
     private void Start()
     {
@@ -40,12 +51,30 @@ public class Weapon : MonoBehaviour
             StopCoroutine("Swing");
             StartCoroutine("Swing");
         }
+
         else if (type == Type.Range)
         {
-            StartCoroutine("Shot");
+            if (YonBal == 1 && BomWe ==1)
+                StartCoroutine("ShotA");
+            else if (YonBal == 2 && BomWe == 1)
+                StartCoroutine("ShotB");
+            else if (YonBal == 3 && BomWe == 1)
+                StartCoroutine("ShotC"); 
+            else if (YonBal == 1 && BomWe == 2)
+                StartCoroutine("ShotD");
+            else if (YonBal == 2 && BomWe == 2)
+                StartCoroutine("ShotE");
+            else if (YonBal == 3 && BomWe == 2)
+                StartCoroutine("ShotF");
+            else if (YonBal == 1 && BomWe == 3)
+                StartCoroutine("ShotG");
+            else if (YonBal == 2 && BomWe == 3)
+                StartCoroutine("ShotH");
+            else if (YonBal == 3 && BomWe == 3)
+                StartCoroutine("ShotI");
         }
     }
-
+   
     public void Unuse()
     {
         damageEnabled = false;
@@ -53,6 +82,15 @@ public class Weapon : MonoBehaviour
         {
             meleeArea.enabled = false;
         }
+    }
+
+    public void ChangeYonBal()
+    {
+        YonBal++;
+    }
+    public void ChangeBomWe()
+    {
+        BomWe++;
     }
 
     IEnumerator Swing()
@@ -68,8 +106,21 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         trailEffect.enabled = false;
     }
+    IEnumerator SwingB()
+    {
+        // π´±‚¿« π¸¿ßøÕ ¿Ã∆Â∆Æ∏¶ Ω√∞£ø° º¯º≠ø° µ˚∂Û πËƒ°
+        yield return new WaitForSeconds(0.1f); //0.1√  ¥Î±‚
+        meleeArea.enabled = true;
+        trailEffect.enabled = true;
 
-    IEnumerator Shot()
+        yield return new WaitForSeconds(1f);
+        meleeArea.enabled = false;
+
+        yield return new WaitForSeconds(0.3f);
+        trailEffect.enabled = false;
+    }
+
+    IEnumerator ShotA()
     {
         //√—æÀ πﬂªÁ
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
@@ -85,27 +136,39 @@ public class Weapon : MonoBehaviour
         CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
-    IEnumerator Shot2()
+    IEnumerator ShotB()
     {
         //√—æÀ πﬂªÁ
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
         bulletRigid.velocity = bulletPos.forward * 500;
 
-       // instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation.x + 30.0f);
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet2, bulletPos.position, bulletPos.rotation);
         bulletRigid = instantBullet.GetComponent<Rigidbody>();
         bulletRigid.velocity = bulletPos.forward * 500;
 
         yield return null;
         //≈∫«« πË√‚
-        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
-        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
-        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
         CaseRigid.AddForce(caseVec, ForceMode.Impulse);
         CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
     }
 
-    IEnumerator Shot3()
+    IEnumerator ShotC()
     {
         //√—æÀ πﬂªÁ
         GameObject instantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
@@ -119,12 +182,222 @@ public class Weapon : MonoBehaviour
         Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
         CaseRigid.AddForce(caseVec, ForceMode.Impulse);
         CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet2, bulletPos.position, bulletPos.rotation);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet3, bulletPos.position, bulletPos.rotation);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
     }
 
+    IEnumerator ShotD()
+    {
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet4, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
 
-    /* private void OnTriggerEnter(Collider other)
-     {
-         if (other.transform.tag == "Enemy")
-             other.GetComponent<Enemy>().OnDamage(10);
-     }*/
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+    }
+
+    IEnumerator ShotE()
+    {
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet4, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet5, bulletPos.position, bulletPos.rotation);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+    }
+    IEnumerator ShotF()
+    {
+        //√—æÀ πﬂªÁ
+        GameObject instantBullet = Instantiate(bullet4, bulletPos.position, bulletPos.rotation);
+        Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+        Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet5, bulletPos.position, bulletPos.rotation);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+
+        //√—æÀ πﬂªÁ
+        instantBullet = Instantiate(bullet6, bulletPos.position, bulletPos.rotation);
+        bulletRigid = instantBullet.GetComponent<Rigidbody>();
+        bulletRigid.velocity = bulletPos.forward * 500;
+
+        yield return null;
+        //≈∫«« πË√‚
+        instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+        CaseRigid = instantCase.GetComponent<Rigidbody>();
+        caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+        CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+        CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+    }
+
+     IEnumerator ShotG()
+        {
+            //√—æÀ πﬂªÁ
+            GameObject instantBullet = Instantiate(bullet7, bulletPos.position, bulletPos.rotation);
+            Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+            Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+        }
+
+        IEnumerator ShotH()
+        {
+            //√—æÀ πﬂªÁ
+            GameObject instantBullet = Instantiate(bullet7, bulletPos.position, bulletPos.rotation);
+            Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+            Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+            yield return new WaitForSeconds(0.2f);
+
+            //√—æÀ πﬂªÁ
+            instantBullet = Instantiate(bullet8, bulletPos.position, bulletPos.rotation);
+            bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            CaseRigid = instantCase.GetComponent<Rigidbody>();
+            caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+        }
+        IEnumerator ShotI()
+        {
+            //√—æÀ πﬂªÁ
+            GameObject instantBullet = Instantiate(bullet7, bulletPos.position, bulletPos.rotation);
+            Rigidbody bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            GameObject instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            Rigidbody CaseRigid = instantCase.GetComponent<Rigidbody>();
+            Vector3 caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+            yield return new WaitForSeconds(0.2f);
+
+            //√—æÀ πﬂªÁ
+            instantBullet = Instantiate(bullet8, bulletPos.position, bulletPos.rotation);
+            bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            CaseRigid = instantCase.GetComponent<Rigidbody>();
+            caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+
+            yield return new WaitForSeconds(0.2f);
+
+            //√—æÀ πﬂªÁ
+            instantBullet = Instantiate(bullet9, bulletPos.position, bulletPos.rotation);
+            bulletRigid = instantBullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = bulletPos.forward * 500;
+
+            yield return null;
+            //≈∫«« πË√‚
+            instantCase = Instantiate(bulletCase, bulletCasePos.position, bulletCasePos.rotation);
+            CaseRigid = instantCase.GetComponent<Rigidbody>();
+            caseVec = bulletCasePos.forward * Random.Range(-3, -2) + Vector3.up * Random.Range(2, 3);
+            CaseRigid.AddForce(caseVec, ForceMode.Impulse);
+            CaseRigid.AddTorque(Vector3.up * 10, ForceMode.Impulse);
+        }
+    
 }

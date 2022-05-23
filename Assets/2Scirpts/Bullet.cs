@@ -6,7 +6,11 @@ public class Bullet : MonoBehaviour
 {
     public int damage;
 
-    void OnCollisionEnter(Collision collision)
+    private void Start()
+    {
+    }
+
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Floor")
         {
@@ -18,5 +22,10 @@ public class Bullet : MonoBehaviour
             // 총알이 벽을 맞을 시 제거
             Destroy(gameObject);
         }
+    }
+
+    public void DamageUp()
+    {
+        damage += 100;
     }
 }
