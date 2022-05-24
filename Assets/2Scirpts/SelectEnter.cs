@@ -12,6 +12,10 @@ using UnityEngine;
 public class SelectEnter : MonoBehaviour
 {
     public GameObject UI;
+    public GameObject MonsterA;
+    public GameObject MonsterB;
+    public GameObject MonsterC;
+    public GameObject MonsterD;
 
     void Start()
     {
@@ -22,5 +26,10 @@ public class SelectEnter : MonoBehaviour
     {
         if (other.tag == "Player")
             UI.SetActive(true);
+        MonsterA.SetActive(true);
+        MonsterB.SetActive(true);
+        MonsterC.SetActive(true);
+        MonsterD.SetActive(true);
+
     }
 }
