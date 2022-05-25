@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public GameObject Aposition;
     public GameObject Bposition;
     public GameObject Cposition;
+    public GameObject Dposition;
+    public GameObject Eposition;
 
     public int ammo;
     public int coin;

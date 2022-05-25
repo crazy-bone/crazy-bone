@@ -10,5 +10,6 @@ public class TriggerSetActive : MonoBehaviour
     public void setActive()
     {
         Door.SetActive(true);
+        NPC.SetActive(true);
     }
 }

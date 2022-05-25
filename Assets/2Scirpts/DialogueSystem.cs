@@ -9,6 +9,7 @@ public class DialogueSystem : MonoBehaviour
     public Text txtSentence;
     public GameObject Target;
     DialogueTrigger DialogueTrigger;
+    bool isTak = false;
 
     Queue<string> sentences = new Queue<string>();
     public void Begin(Dialogue info)
@@ -38,9 +39,13 @@ public class DialogueSystem : MonoBehaviour
     {
         txtSentence.text = string.Empty;
         //DialogueTrigger.GetComponent<DialogueTrigger>().ChangeTrigger();
+        
         Target.SetActive(false);
-        var vlieageEnter = FindObjectOfType<DialogueRewardTrigger>();
-        vlieageEnter.ChangeTrigger();
-
+        if (isTak == false)
+        {
+            isTak = true;
+            var vlieageEnter = FindObjectOfType<DialogueRewardTrigger>();
+            vlieageEnter.ChangeTrigger();
+        }
     }
 }
