@@ -8,6 +8,7 @@ public class DialogueSystem : MonoBehaviour
     public Text txtName;
     public Text txtSentence;
     public GameObject Target;
+    DialogueTrigger DialogueTrigger;
 
     Queue<string> sentences = new Queue<string>();
     public void Begin(Dialogue info)
@@ -36,7 +37,8 @@ public class DialogueSystem : MonoBehaviour
     private void End()
     {
         txtSentence.text = string.Empty;
+        //DialogueTrigger.GetComponent<DialogueTrigger>().ChangeTrigger();
         Target.SetActive(false);
-            
+
     }
 }

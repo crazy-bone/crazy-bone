@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
     public int hasGrenades;
     public GameManager manager;
     public HealthHUD healthHUD;
+    public Vector3 position;
+    public GameObject Aposition;
+    public GameObject Bposition;
+    public GameObject Cposition;
 
     public int ammo;
     public int coin;
@@ -435,5 +439,18 @@ public class Player : MonoBehaviour
     {
         maxHealth += 100;
       
+    }
+
+    public void RePositionA()
+    {
+        transform.position = Aposition.transform.position;
+    }
+    public void RePositionB()
+    {
+        transform.position = Bposition.transform.position;
+    }
+    public void RePositionC()
+    {
+        transform.position = Cposition.transform.position;
     }
 }
