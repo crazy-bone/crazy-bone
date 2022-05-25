@@ -57,6 +57,11 @@ public class Player : MonoBehaviour
     GameObject nearObject;
     Weapon equipWeapon;
 
+    public GameObject triggerSetActive;
+    public GameObject triggerSetActive2;
+    public GameObject triggerSetActive3;
+    public GameObject triggerSetActive4;
+    public GameObject triggerSetActive5;
     int equipWeaponIndex = -1;
 
 
@@ -85,6 +90,32 @@ public class Player : MonoBehaviour
         Swap();
         Die();
         UpdateHealthHUD();
+
+        if(coin == 100)
+        {
+            coin = 0;
+            triggerSetActive.GetComponent<TriggerSetActive>().setActive();
+        }
+        if (coin == 200)
+        {
+            coin = 0;
+            triggerSetActive2.GetComponent<TriggerSetActive>().setActive();
+        }
+        if (coin == 300)
+        {
+            coin = 0;
+            triggerSetActive3.GetComponent<TriggerSetActive>().setActive();
+        }
+        if (coin == 400)
+        {
+            coin = 0;
+            triggerSetActive4.GetComponent<TriggerSetActive>().setActive();
+        }
+        if (coin == 500)
+        {
+            coin = 0;
+            triggerSetActive5.GetComponent<TriggerSetActive>().setActive();
+        }
     }
 
     void GetInput()
@@ -462,4 +493,5 @@ public class Player : MonoBehaviour
     {
         transform.position = Cposition.transform.position;
     }
+
 }

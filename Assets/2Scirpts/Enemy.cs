@@ -27,7 +27,8 @@ public class Enemy : MonoBehaviour
     public GameObject body;
     public GameObject Par;
     public bool isdead = false;
-
+    public AudioSource audio;
+    public AudioSource audio2;
     public void Awake()
     {
         rigid = GetComponent<Rigidbody>();
@@ -60,7 +61,10 @@ public class Enemy : MonoBehaviour
         {
             anim.SetTrigger("doDie");
             isdead = true;
+
+            audio.Play();
             Destroy(gameObject, 3f);
+
 
         }
 
@@ -95,6 +99,7 @@ public class Enemy : MonoBehaviour
         isAttack = true;
         anim.SetBool("isAttack", true);
 
+        audio2.Play();
         yield return new WaitForSeconds(0.7f);
         meleeArea.enabled = true;
 

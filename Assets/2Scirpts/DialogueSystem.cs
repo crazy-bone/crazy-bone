@@ -39,6 +39,8 @@ public class DialogueSystem : MonoBehaviour
         txtSentence.text = string.Empty;
         //DialogueTrigger.GetComponent<DialogueTrigger>().ChangeTrigger();
         Target.SetActive(false);
+        var vlieageEnter = FindObjectOfType<DialogueRewardTrigger>();
+        vlieageEnter.ChangeTrigger();
 
     }
 }

@@ -20,6 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     public void ChangeTrigger()
     {
         istrigger = false;
+
         Destroy(gameObject);
     }
    
