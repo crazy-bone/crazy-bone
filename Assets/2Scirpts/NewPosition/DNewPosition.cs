@@ -22,7 +22,7 @@ public class DNewPosition : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            player.GetComponent<Player>().RePositionC();
+            player.GetComponent<Player>().RePositionD();
            
         }
     }

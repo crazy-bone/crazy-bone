@@ -8,8 +8,12 @@ public class DialogueTrigger : MonoBehaviour
     bool istrigger = false;
     public void OnTriggerEnter(Collider other)
     {
-        if(istrigger == false)
-        Trigger();
+        if(other.tag == "Player")
+        {
+
+            if (istrigger == false)
+                Trigger();
+        }
     }
     public void Trigger()
     {

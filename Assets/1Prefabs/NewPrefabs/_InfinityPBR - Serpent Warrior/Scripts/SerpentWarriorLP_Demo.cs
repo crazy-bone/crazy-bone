@@ -24,8 +24,8 @@ public class SerpentWarriorLP_Demo : MonoBehaviour
         {
             SuperRandom();
         }
-        if (Input.GetKeyDown(KeyCode.C))
-            UI.SetActive(!UI.activeSelf);
+     //   if (Input.GetKeyDown(KeyCode.C))
+          //  UI.SetActive(!UI.activeSelf);
     }
 
     public void Locomotion(float newValue){

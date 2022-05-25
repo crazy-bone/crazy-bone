@@ -106,7 +106,7 @@ public class Boss : Enemy
             newRotation.z = 0f;
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 2f);
         }
-
+        /*
         // 공격 페이즈
         switch (attackPhase)
         {
@@ -199,7 +199,7 @@ public class Boss : Enemy
             StartCoroutine(BaitAwlK());
             StopCoroutine(BaitAwlK());
         }
-
+        */
     }
 
     private void ClearSummons()

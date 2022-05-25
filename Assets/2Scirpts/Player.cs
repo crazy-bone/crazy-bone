@@ -495,5 +495,14 @@ public class Player : MonoBehaviour
     {
         transform.position = Cposition.transform.position;
     }
+    public void RePositionD()
+    {
+        transform.position = Dposition.transform.position;
+    }
+    public void RePositionE()
+    {
+        transform.position = Eposition.transform.position;
+    }
+
 
 }
