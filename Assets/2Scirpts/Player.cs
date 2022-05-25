@@ -317,12 +317,14 @@ public class Player : MonoBehaviour
                     ammo += item.value;
                     if (ammo > maxAmmo)
                         ammo = maxAmmo;
+                    Destroy(other.gameObject);
                     break;
                     // 코인
                 case Item.Type.Coin:
                     coin += item.value;
                     if (coin > maxCoin)
                         coin = maxCoin;
+                    Destroy(other.gameObject);
                     break;
                     // 피
                 case Item.Type.Heart:
@@ -330,6 +332,7 @@ public class Player : MonoBehaviour
                     if (health > maxHealth)
                         health = maxHealth;
                     isHealth = true;
+                    Destroy(other.gameObject);
                     break;
                     // 폭탄
                 case Item.Type.Grenade:
@@ -337,10 +340,16 @@ public class Player : MonoBehaviour
                     hasGrenades += item.value;
                     if (hasGrenades > maxHasGrenades)
                         hasGrenades = maxHasGrenades;
+                    Destroy(other.gameObject);
+                    break;
+                case Item.Type.Trap:
+                    health += item.value;
+                    if (health > maxHealth)
+                        health = maxHealth;
+                    isHealth = true;
                     break;
 
             }// 먹으면 오브젝트는 사라짐
-            Destroy(other.gameObject);
 
         }
         // 투사체에 맞은 경우
