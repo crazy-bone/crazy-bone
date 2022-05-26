@@ -100,7 +100,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("isAttack", true);
 
         audio2.Play();
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.2f);
         meleeArea.enabled = true;
 
         yield return new WaitForSeconds(0.1f);

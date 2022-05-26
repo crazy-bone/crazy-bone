@@ -457,9 +457,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isJump
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: doJump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -1667,7 +1664,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400022, guid: 343a7040028934477b814e4771201009, type: 3}
+  m_Motion: {fileID: 7400026, guid: 343a7040028934477b814e4771201009, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -164,9 +164,9 @@ public class Player : MonoBehaviour
         if (jDown && !isJump && !isDodge && !isSwap)
         {
             rigid.AddForce(Vector3.up * 40, ForceMode.Impulse);
-            anim.SetBool("isJump", true);
+            //anim.SetBool("isJump", true);
             anim.SetTrigger("doJump");
-            isJump = true;
+            //isJump = true;
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -213,30 +213,30 @@ public class Player : MonoBehaviour
                 
                 if (wDown)
                 {
-                    speed *= 2;
+                    speed *= 10;
                 }
 
                 if (!wDown)
                 {
-                    speed *= 3;
+                    speed *= 6;
                 }
 
                isDodge = true;
 
-               Invoke("DodgeOut", 0.3f);
+               Invoke("DodgeOut", 0.2f);
            }
        }
     
     void DodgeOut()
     {
         // 닷지를 끝낼 즈음에 속도 원상복귀, 달리기냐 걷기냐에 따라 다름
-        if(speed == 30)
+        if(speed == 200)
         {
-            speed *= 1 / 2f;
+            speed *= 1 / 10f;
         }
-        if (speed == 45)
+        if (speed == 120)
         {
-            speed *= 1 / 3f;
+            speed *= 1 / 6f;
         }
         isDodge = false;
 
